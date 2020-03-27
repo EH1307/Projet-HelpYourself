@@ -190,6 +190,7 @@ header nav {
     display: flex;
     justify-content: center;
     
+    
 }
 #ajout-user-labelInput > input {
     width: 300px;
@@ -199,7 +200,7 @@ header nav {
     font-size: medium;
 }
 #ajout-user-labelInput > label {
-    margin-bottom: - 10px;
+    padding-top: 20px;
     font-size: medium;
 }
 #ajout-user-labelInput > button {
@@ -209,45 +210,31 @@ header nav {
     background-color: green;
     color: white;
 }
-#section-users-ajouter {
-    
+#section-users-ajouter-utilisateur {
+    display: flex;
     flex-direction: column;
     width: 500px;
+    align-items: center;
     
   
 }
-#section-users-ajouter > label {
-    font-size: large;
-}
-#section-users-ajouter > input {
-    width: 500px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-}
-#section-users-ajouter button {
+
+#section-users-ajouter-utilisateur button {
     width: 100px;
     padding: 10px;
-    
-    
     background-color: red;
     color: white;
     font-size: medium;
-    
+      
 }
-.ajout-user-btn > button {
+.ajout-user-btn button{
     padding: 15px 30px;
     border-radius: 5px;
     font-size: large;
     background-color: blue;
     color: white;
     
-
 }
-/*  .......  */
 
 /*  contenu page d'accueil étudiants  */
 
@@ -369,6 +356,65 @@ header nav {
     font-size: 17px;
 }
 
+/*********** Page créer une classe ********/
+
+.title-creer-classe {
+    text-align: center;
+}
+.nom-cree-classe {
+    display: flex;
+    justify-content: center;
+}
+.nom-cree-classe label {
+    font-size: medium;
+    padding-top: 10px;
+}
+.nom-cree-classe input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;
+}
+.ajout-etudiant-cree-classe {
+    display: flex;
+    justify-content: center;
+}
+.ajout-etudiant-cree-classe input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;
+}
+.ajout-etudiant-cree-classe label {
+    padding-top: 20px;
+    font-size: medium;
+}
+.ajout-etudiant-cree-classe button {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: large;
+    background-color: green;
+    color: white;
+}
+#section-ajoutEtudiants-creer-classe {
+    padding-top: 50px;
+}
+#section-ajoutEtudiants-creer-classe > ul > li {
+    width: 500px;
+    margin: 10px;
+}
+
+.creer-classe-btn button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: large;
+    background-color: blue;
+    color: white;
+}
 
 
 
