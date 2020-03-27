@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Crée une classe</title>
 </head>
-<body>
+<body class="container">
     <section id="top-section-header-and-title">
         <header>
             <img src="res/img/logo.png" alt="logo">
@@ -21,25 +21,35 @@
             </nav>
         </header>
     </section>
-    <h1>Crée une classe</h1>
-    <div>
+    <div class="title-creer-classe">
+        <h1>Crée une classe</h1>
+    </div>
+    <div class="nom-cree-classe">
         <label for="">Nom de la classe : </label>
-        <input type="text" placeholder="Fc Dev"><br/>
+        <input type="text" placeholder="Fc Dev">
+    </div>
+    <div class="ajout-etudiant-cree-classe">      
         <label for="">Ajout d'étudiants : </label>
         <input type="text" placeholder="Antoine La">
-        <button>Search</button><br/>
+        <button class="button button-success">Search</button><br/>
     </div>
-    <section>
-        <label for="">Les étudiants déjà ajoutés à cette classe : </label><br/>
-        <input type="text" value="Aurélien Durand"> <button>Supprimer</button></br>
-        <input type="text" value="Céline Bernard"> <button>Supprimer</button></br>
-        <input type="text" value="Alain Marechal"> <button>Supprimer</button></br>
-        <input type="text" value="Laure Da Silva"> <button>Supprimer</button></br>
-        <input type="text" value="Etienne Boucher"> <button>Supprimer</button></br>
-        <input type="text" value="Magalie Perret"> <button>Supprimer</button></br>
-        <input type="text" value="Christelle Monget"> <button>Supprimer</button></br>
-        <button>Créer la classe</button>
+    <section id="section-ajoutEtudiants-creer-classe">
+        <label>Les étudiants déjà ajoutés à cette classe : </label>
+        <ul>
+            <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
+            <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
+            <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
+            <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
+            <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
+            <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
+            <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
+        </ul>
+        <button class="button button-info">Créer la classe</button>
     </section>
+    <div class="creer-classe-btn">
+        <button>Créer la classe</button>
+    </div>    
+    
 
     <script src="lib/all.min.js"></script>
 </body>
