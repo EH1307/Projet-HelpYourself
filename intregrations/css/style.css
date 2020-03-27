@@ -228,7 +228,7 @@ header nav {
     display: flex;
     justify-content: center;
 }
-#section-users-ajouter > button {
+#section-users-ajouter button {
     width: 100px;
     padding: 10px;
     
