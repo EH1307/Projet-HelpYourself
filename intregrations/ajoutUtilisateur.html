@@ -8,18 +8,35 @@
     <title>Ajouter un utilisateur</title>
 </head>
 <body>
-    <h1>Ajouter un utilisateur</h1>
-    <select name="" id="">
-        <option value="">Administrateur </option>
-        <option value="">Etudiant</option>
-        <option value="">Formateur</option> 
-    </select>
-    <div>
+    <section id="top-section-header-and-title">
+        <header>
+            <img src="res/img/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <a href="" alt="" >Déconnexion</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <div class="title-ajout-utilisateur">
+        <h1>Ajouter un utilisateur</h1>
+    </div>
+    <div id="select-ajout-utilisateur">
+        <select>
+            <option value="">Administrateur </option>
+            <option value="">Etudiant</option>
+            <option value="">Formateur</option> 
+        </select>
+    </div>
+    <div id="ajout-user-labelInput">
         <label for="">Ajouter un utilisateur : </label>
         <input type="text" placeholder="Antoine La">
         <button>Search</button><br/>
     </div>
-    <section>
+    <section id="section-users-ajouter">
         <label for="">Les utilisateurs déjà ajoutés : </label><br/>
         <input type="text" value="Aurélien Durand"> <button>Supprimer</button></br>
         <input type="text" value="Céline Bernard"> <button>Supprimer</button></br>
@@ -28,7 +45,13 @@
         <input type="text" value="Etienne Boucher"> <button>Supprimer</button></br>
         <input type="text" value="Magalie Perret"> <button>Supprimer</button></br>
         <input type="text" value="Christelle Monget"> <button>Supprimer</button></br>
-        <button>Ajouter</button>
-    </section> 
+        
+    
+        <div class="ajout-user-btn">
+            <button>Ajouter</button>
+        </div>
+    </section>
+    
+    <script src="lib/all.min.js"></script>
 </body>
 </html>

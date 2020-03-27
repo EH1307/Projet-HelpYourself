@@ -8,27 +8,47 @@
     <title>Ajouter un cours</title>
 </head>
 <body>
-    <h1>Ajouter un cours</h1>
-    <input type="text" value="Nom du cours"></br>
-    <select name="" id="">
-        <option value="">Fc Dev </option>
-        <option value="">Chef de Projets</option>
-        <option value="">Fc Ux</option>
-        <option value="">Fc Motion Design</option>
-    </select>
-    <section>
-        <div>
+    <section id="top-section-header-and-title">
+        <header>
+            <img src="res/img/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <a href="" alt="" >Déconnexion</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <div class="title-ajouter-cours">    
+        <h1>Ajouter un cours</h1>
+    </div>
+    <div class="champs-ajout-cours">
+        <input type="text" value="Nom du cours">
+    </div>
+    <div id="select-ajout-cours">
+        <select>
+            <option value="">Fc Dev </option>
+            <option value="">Chef de Projets</option>
+            <option value="">Fc Ux</option>
+            <option value="">Fc Motion Design</option>
+        </select>
+    </div>
+    <section id="calandar-ajout-cours">
+        <div class="date-debut">
             <label for="">Date de début :</label></br>
             <input type="date">
             <input type="time" value="09:30">
         </div>
-        <div>
+        <div class="date-fin">
             <label for="">Date de fin :</label></br>
             <input type="date">
-            <input type="time" value="17:30">
-            
+            <input type="time" value="17:30">  
         </div>
         <button>Ajouter</button>
     </section>
+
+    <script src="lib/all.min.js"></script>
 </body>
 </html>

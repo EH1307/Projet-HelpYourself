@@ -57,6 +57,7 @@ header nav {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    
 }
 
 
@@ -93,7 +94,165 @@ header nav {
     color: whitesmoke;
 }
 
+/*********** Page adminAccueil ********/
 
+#section-admin-accueil , #top-section-header-and-title ,a {
+    text-decoration: none;
+    
+}
+#section-admin-accueil {
+    display: flex;
+    justify-content: center;
+}
+.title-admin-accueil  {
+    text-align: center;
+    
+}
+#section-admin-accueil > div {
+    border: 2px skyblue solid;
+    display: inline-flex;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    text-align: center;
+   
+}
 
+/*********** Page ajouterCours ********/
+
+.title-ajouter-cours h1 {
+    text-align: center;
+}
+.champs-ajout-cours {
+    display: flex;
+    justify-content: center;
+}
+.champs-ajout-cours input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;
+    
+}
+
+#select-ajout-cours > select{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;   
+}
+#select-ajout-cours {
+    display: flex;
+    justify-content: center;
+}
+#calandar-ajout-cours {
+    display: flex;
+    justify-content: center;
+    
+}
+.date-debut , .date-fin {
+    margin: 10px 20px 0;
+    
+}
+.date-debut > label {
+    font-size: large;
+}
+.date-debut > input {
+    padding: 10px;
+    font-size: medium;
+}
+.date-fin > label {
+    font-size: large;
+}
+.date-fin > input {
+    padding: 10px;
+    font-size: medium;
+}
+#calandar-ajout-cours button {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+/*********** Page ajouterUtilisateur ********/
+
+.title-ajout-utilisateur {
+    text-align: center;
+}
+#select-ajout-utilisateur > select{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;   
+}
+#select-ajout-utilisateur {
+    display: flex;
+    justify-content: center;
+}
+#ajout-user-labelInput {
+    display: flex;
+    justify-content: center;
+    
+}
+#ajout-user-labelInput > input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;
+}
+#ajout-user-labelInput > label {
+    margin-bottom: - 10px;
+    font-size: medium;
+}
+#ajout-user-labelInput > button {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: green;
+    color: white;
+}
+#section-users-ajouter {
+    
+    flex-direction: column;
+    width: 500px;
+    
+  
+}
+#section-users-ajouter > label {
+    font-size: large;
+}
+#section-users-ajouter > input {
+    width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(248, 246, 246);
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+}
+#section-users-ajouter > button {
+    width: 100px;
+    padding: 10px;
+    
+    
+    background-color: red;
+    color: white;
+    font-size: medium;
+    
+}
+.ajout-user-btn > button {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: large;
+    background-color: blue;
+    color: white;
+    
+
+}
 /*  .......  */
 >>>>>>> e9cde4fc15bc5e6b396363ce00e02ef865fc1ef8
