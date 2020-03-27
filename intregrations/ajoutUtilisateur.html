@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Ajouter un utilisateur</title>
 </head>
-<body>
+<body class="container">
     <section id="top-section-header-and-title">
         <header>
             <img src="res/img/logo.png" alt="logo">
@@ -34,23 +34,25 @@
     <div id="ajout-user-labelInput">
         <label for="">Ajouter un utilisateur : </label>
         <input type="text" placeholder="Antoine La">
-        <button>Rechercher</button><br/>
+        <button class="button button-success">Rechercher</button><br/>
     </div>
     <section id="section-users-ajouter-utilisateur">
         <label for="">Les utilisateurs déjà ajoutés : </label><br/>
         <ul>
-            <li>Aurélien Durand <button>Supprimer</button></li>
-            <li>Céline Bernard <button>Supprimer</button></li>
-            <li>Alain Marechal <button>Supprimer</button></li>
-            <li>Laure Da Silva <button>Supprimer</button></li>
-            <li>Etienne Boucher <button>Supprimer</button></li>
-            <li>Magalie Perret <button>Supprimer</button></li>
-            <li>Christelle Monget <button>Supprimer</button></li>
+            <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
+            <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
+            <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
+            <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
+            <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
+            <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
+            <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
         </ul>
+    
+        <div class="ajout-user-btn">
+            <button class="button button-info">Ajouter</button>
+        </div>
     </section>
-    <div class="ajout-user-btn">
-        <button>Ajouter</button>
-    </div>
+    
     
     
     <script src="lib/all.min.js"></script>

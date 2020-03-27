@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Liste des cours</title>
 </head>
-<body>
+<body class="container">
     <section id="top-section-header-and-title">
         <header>
             <img src="res/img/logo.png" alt="logo">
@@ -22,6 +22,14 @@
         </header>
     </section>
     <h1>Les Cours</h1>
+
+    
+    <div>
+        <a href="#" class="button button-info">Ajouter un cours</a>
+    </div>
+
+    <hr>
+
     <div>
        Classe :
         <select name="" id="">
@@ -33,18 +41,17 @@
 
        Date du cours :
        <input type="date">
+       <button class="button button-success">Rechercher un cours</button>
 
-       <button>Rechercher un cours</button>
-       <button>Ajouter un cours</button>
     </div>
     <section>
         <ul>
-            <li>Cours de ReactJS (exemple) <button>Modifier</button><button>Supprimer</button></li>
-            <li>Cours de HTML / CSS <button>Modifier</button><button>Supprimer</button></li>
-            <li>Cours de JavaScript <button>Modifier</button><button>Supprimer</button></li>
-            <li>Cours de PHP (Laravel) <button>Modifier</button><button>Supprimer</button></li>
-            <li>Crée un site Web avec WordPress <button>Modifier</button><button>Supprimer</button></li>
-            <li>Le Framework React <button>Modifier</button><button>Supprimer</button></li>
+            <li>Cours de ReactJS (exemple) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Cours de HTML / CSS <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Cours de JavaScript <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Cours de PHP (Laravel) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Crée un site Web avec WordPress <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Le Framework React <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
         </ul>
     </section>
 

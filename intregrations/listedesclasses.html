@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Liste des Classe</title>
 </head>
-<body>
+<body class="container">
     <section id="top-section-header-and-title">
         <header>
             <img src="res/img/logo.png" alt="logo">
@@ -23,6 +23,11 @@
     </section>
     <h1>Les Classes</h1>
     <div>
+        <a href="#" class="button button-info">Ajouter une classe</a>
+    </div>
+
+    <hr>
+    <div>
         <select name="" id="">
             <option value="">Fc Dev </option>
             <option value="">Chef de Projets</option>
@@ -30,15 +35,14 @@
             <option value="">Fc Motion Design</option>
         </select>
         Rechercher une classe : <input type="text">
-        <button>Rechercher</button>
-        <button>Ajouter une classe</button>
+        <button class="button button-success">Rechercher</button>
     </div>
     <section>
         <ul>
-            <li>Fc Dev <button>Modifier</button><button>Supprimer</button></li>
-            <li>Chef de Projets <button>Modifier</button><button>Supprimer</button></li>
-            <li>Fc UX <button>Modifier</button><button>Supprimer</button></li>
-            <li>Fc Motion Design <button>Modifier</button><button>Supprimer</button></li>
+            <li>Fc Dev <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Chef de Projets <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Fc UX <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <li>Fc Motion Design <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
         </ul>
     </section>
 
