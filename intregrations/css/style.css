@@ -15,6 +15,7 @@
     font-family: 'Rubik-regular';
 }
 
+
 /* header à utiliser sur toutes les pages */
 
 header nav {
@@ -54,6 +55,12 @@ header nav {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#top-section-header-and-title nav > ul > li > a {
+    color: black;
     
 }
 
@@ -269,6 +276,7 @@ header nav {
     border: 2px solid skyblue;
     background-color: green;
     padding: 5px;
+    margin-top: -100px;
     margin-bottom: 400px;
 }
 
@@ -284,7 +292,6 @@ header nav {
 }
 
 #middle-section-home-students button {
-    color: white;
     border: 2px solid white;
     background-color: skyblue;
     border-radius: 15px ;
@@ -296,7 +303,11 @@ header nav {
     cursor: pointer;
     font-size: 17px;
     width: 300px;
-    margin-top: -220px;
+    margin-top: -250px;
+}
+
+#middle-section-home-students button a {
+    color: whitesmoke;
 }
 
 
@@ -321,6 +332,7 @@ header nav {
     background-color: green;
     padding: 5px;
     margin-bottom: 300px;
+    margin-top: -200px;
 }
 
 .icon-user {
@@ -334,7 +346,7 @@ header nav {
     color: whitesmoke;
 }
 
-#middle-section-home-teachers > #button-home-teachers {
+#button-home-teachers {
     color: white;
     border: 2px solid white;
     background-color: skyblue;
@@ -347,12 +359,11 @@ header nav {
     cursor: pointer;
     font-size: 17px;
     width: 350px;
-    margin-top: -100px;
-    
+    margin-top: -100px;  
 }
 
 
-#middle-section-home-teachers > #button-home-teachers-two {
+#button-home-teachers-two {
     color: white;
     border: 2px solid white;
     background-color: skyblue;
@@ -369,9 +380,237 @@ header nav {
     font-size: 17px;
 }
 
+#button-home-teachers a {
+    color: whitesmoke;
+}
+
+#button-home-teachers-two a {
+    color: whitesmoke;
+} 
 
 
+/* contenu de la page de connexion du formateur */
 
 
+#middle-section-connection-teachers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
 
+#middle-section-connection-teachers > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 200px;
+    margin-top: -50px;
+}
+
+#middle-section-connection-teachers h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+
+#form-teachers {
+    margin-top: -150px;
+    margin-bottom: 80px;
+}
+
+#form-teachers p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#form-teachers p input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+
+#button-connection-teachers {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 350px;
+     
+}
+
+/* contenu de la page de connexion de l'étudiant */
+
+#middle-section-connection-students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-connection-students > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 200px;
+    margin-top: -50px;
+}
+
+#middle-section-connection-students h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+
+#form-students {
+    margin-top: -150px;
+    margin-bottom: 80px;
+}
+
+#form-students p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#form-students p input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+
+#button-connection-students {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 350px;
+     
+}
+
+
+/* contenu de la page d'inscription de l'étudiant */
+
+
+#middle-section-registration-students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-registration-students > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 200px;
+    margin-top: -15px;
+}
+
+#middle-section-registration-students h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+
+#form-students-registration {
+    margin-top: -200px;
+    margin-bottom: 10px;
+}
+
+#form-students-registration p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#form-students-registration p input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+
+#button-registration-students {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 350px;
+     
+}
 
