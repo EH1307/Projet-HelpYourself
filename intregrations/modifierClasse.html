@@ -21,16 +21,25 @@
             </nav>
         </header>
     </section>
-    <h1>Modifier une classe</h1>
-    <div>
-        <label for="">Nom de la classe : </label>
-        <input type="text" placeholder="Fc Dev"><br/>
-        <label for="">Ajout d'étudiants : </label>
-        <input type="text" placeholder="Antoine La">
-        <button class="button button-success">Search</button><br/>
-    </div>
-    <section>
-        <label for="">Les étudiants déjà ajoutés à cette classe : </label><br/>
+    <h1 id="title-modifier-classe">Modifier une classe</h1>
+
+    <button class="button button-info">Modifier la classe</button>
+
+    <hr>
+
+    <form id="form-modifier-classe">
+        <div class="nom-modifier-classe">
+            <label>Nom de la classe : </label>
+            <input type="text" placeholder="Fc Dev">
+        </div>
+        <div class="ajout-etudiant-modifier-classe">
+            <label>Ajout d'étudiants : </label>
+            <input type="text" placeholder="Antoine La">
+            <button class="button button-success">Rechercher</button>
+        </div>
+    </form>
+    <section id="section-ajoutEtudiants-modifier-classe">
+        <label>Les étudiants déjà ajoutés à cette classe : </label><br/>
         <ul>
             <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
             <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
@@ -40,7 +49,7 @@
             <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
             <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
         </ul>
-        <button class="button button-info">Modifier la classe</button>
+        
     </section>
 
     <script src="lib/all.min.js"></script>

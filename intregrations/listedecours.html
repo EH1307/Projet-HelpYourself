@@ -21,17 +21,15 @@
             </nav>
         </header>
     </section>
-    <h1>Les Cours</h1>
-
-    
+    <h1 id="lesCours">Liste des Cours</h1>
     <div>
         <a href="#" class="button button-info">Ajouter un cours</a>
     </div>
 
     <hr>
 
-    <div>
-       Classe :
+    <form id="form-liste-de-cours">
+       <label>Classe :</label>
         <select name="" id="">
            <option value="">Fc Dev </option>
            <option value="">Chef de Projets</option>
@@ -39,12 +37,12 @@
            <option value="">Fc Motion Design</option>
        </select>
 
-       Date du cours :
+       <label>Date du cours :</label>
        <input type="date">
        <button class="button button-success">Rechercher un cours</button>
 
-    </div>
-    <section>
+    </form>
+    <section id="section-liste-de-cours">
         <ul>
             <li>Cours de ReactJS (exemple) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
             <li>Cours de HTML / CSS <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
