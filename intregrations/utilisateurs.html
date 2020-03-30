@@ -21,28 +21,29 @@
             </nav>
         </header>
     </section>
-    <h1>Les Utilisateurs</h1>
+    <h1 id="users">Les Utilisateurs</h1>
     <div>
         <a href="#" class="button button-info">Ajouter un utilisateur</a>
     </div>
     <hr>
-    <div>
-        <label for="">Filtrer les résultats de la liste :</label></br>
-        <select name="" id="">
+    <form id="form-utilisateurs">
+        <label>Filtrer les résultats de la liste :</label></br>
+        <select>
             <option value="">Administrateur </option>
             <option value="">Etudiant</option>
             <option value="">Formateur</option> 
         </select>
-        <select name="" id="">
+        <select>
             <option value="">Fc Dev </option>
             <option value="">Chef de Projets</option>
             <option value="">Fc Ux</option>
             <option value="">Fc Motion Design</option>
         </select>
-        <input type="text" placeholder="Choisir une nom">
-        <button class="button button-success">Search</button>
-    </div>
-    <section>
+        <input type="text" placeholder="Entrer un nom">
+        <button class="button button-success">Rechercher</button>
+    </form>
+    <section id="section-liste-utilisateurs">
+        <label>La liste des utilisateurs :</label>
         <ul>
             <li>Aurélien Durand <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
             <li>Céline Bernard <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>

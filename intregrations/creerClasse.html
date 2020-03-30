@@ -21,18 +21,24 @@
             </nav>
         </header>
     </section>
-    <div class="title-creer-classe">
-        <h1>Crée une classe</h1>
+    <h1 class="title-creer-classe">Crée une classe</h1>
+    <div>
+        <button class="button button-info" type="submit">Créer la classe</button>
     </div>
-    <div class="nom-cree-classe">
-        <label for="">Nom de la classe : </label>
-        <input type="text" placeholder="Fc Dev">
-    </div>
-    <div class="ajout-etudiant-cree-classe">      
-        <label for="">Ajout d'étudiants : </label>
-        <input type="text" placeholder="Antoine La">
-        <button class="button button-success">Search</button><br/>
-    </div>
+
+    <hr>
+    
+    <form id="form-creeClasse"  action="">
+        <div class="nom-cree-classe">
+            <label>Nom de la classe : </label>
+            <input type="text" placeholder="Fc Dev">
+        </div>
+        <div class="ajout-etudiant-cree-classe">      
+            <label>Ajout d'étudiants : </label>
+            <input type="text" placeholder="Antoine La">
+            <button class="button button-success">Rechercher</button><br/>
+        </div>
+    </form>
     <section id="section-ajoutEtudiants-creer-classe">
         <label>Les étudiants déjà ajoutés à cette classe : </label>
         <ul>
@@ -44,7 +50,7 @@
             <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
             <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
         </ul>
-        <button class="button button-info">Créer la classe</button>
+        
     </section>
        
     
