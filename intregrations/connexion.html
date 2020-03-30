@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="container">
-    <h1>Page de connexion</h1>
+
+    <section id="top-section-header-and-title">
+
+        <header>
+            <img src="res/img/logo.png" alt="logo">
+
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <a href="index.html" target="blank">Retour à l'accueil</a>
+                        </button> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section id="middle-section-connection">
+
+        <div>
+        <i class="far fa-user icon-user"></i>
+        <h1>Bienvenue sur votre page de connexion<br>
+            "L'apprentissage est l'une des clés de la réussite"</h1>
+        </div>
+
+        <form id="form-connection" action="#">
+            <p>
+                <label for="email">Votre email : </label>
+                <input type="email" id="email" required>
+            </p>
+            <p>
+                <label for="motdepasse">Votre mot de passe : </label>
+                <input type="password" id="motdepasse" required>
+            </p>
+            <div>
+            <button id="button-connection" type="submit">
+               <a href="#" target="blank">Connexion</a></button>
+            </div>
+        </form>
+
+        
+    </section>
+
+
+<script src="lib/all.min.js"></script> 
 </body>
 </html>

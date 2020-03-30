@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de mes cours - Formateur</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+
+    <section id="top-section-header-and-title">
+
+        <header>
+            <img src="res/img/logo.png" alt="logo">
+
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.html" target="blank">Déconnexion</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section id="middle-section-studies-teachers">
+
+        <div id="time-studies-teachers">
+            <p>30/03/20 09:00:03</p>
+        </div>
+
+        <div id="welcome-message">
+            <i class="far fa-user icon-user"></i>
+            <h1>Bienvenue sur la page de vos cours<br>
+                "L'enseignement est l'une des clés de la réussite"
+            </h1>
+        </div>
+
+        <div id="lessons-teacher">
+        <div id="lesson-one-teacher">
+            <p><br>
+                JS1
+            </p>
+            <p><br>
+                FC-DEV2
+            </p>
+            <p><br>
+                30/03/20
+            </p>
+            <p id="hour-begin-end">
+                Heure début : 
+                <input type="text" name="hour-begin" id="hour-begin" value="9H00"><br><br>
+           
+                Heure fin : 
+                <input type="text" name="hour-end" id="hour-end" value="13H00">
+            </p>
+            <div>
+                <button id="open-class-teacher" type="submit">
+                    <a href="#">Ouvrir le cours</a>
+                </button>
+            </div>
+            <div>
+                <button id="access-courses" type="submit">
+                    <a href="#">Accéder au cours</a>
+                </button>
+            </div>  
+
+        </div>
+
+        <div id="lesson-two-teacher">
+            <p><br>
+                PHP
+            </p>
+            <p><br>
+                FC-DEV2
+            </p>
+            <p><br>
+                09/04/20
+            </p>
+            <p id="hour-begin-end">
+                Heure début : 
+                <input type="text" name="hour-begin" id="hour-begin" value="14H00"><br><br>
+            
+                Heure fin : 
+                <input type="text" name="hour-end" id="hour-end" value="17H00">
+            </p>
+        </div>
+        <div>
+            <button id="access-courses-two" type="submit">
+                <a href="#">Accéder au cours</a>
+            </button>
+        </div> 
+        <div>
+            <button id="no-access-courses-two" type="submit">
+                <a href="#">Ce cours n'est pas encore disponible</a>
+            </button>
+        </div>
+
+        <div id="lesson-three-teacher">
+            <p><br>
+                HTML/CSS
+            </p>
+            <p><br>
+                FC-DEV2
+            </p>
+            <p><br>
+                15/03/20
+            </p>
+            <p id="hour-begin-end">
+                Heure début : 
+                <input type="text" name="hour-begin" id="hour-begin" value="9H00"><br><br>
+            
+                Heure fin : 
+                <input type="text" name="hour-end" id="hour-end" value="13H00">
+            </p> 
+        </div>
+        <div>
+            <button id="end-courses" type="submit">
+                <a href="#">Voir le rapport</a>
+            </button>
+        </div> 
+        <div>
+            <button id="see-the-report" type="submit">
+                <a href="#">Ce cours est terminé</a>
+            </button>
+        </div>
+    </div>
+    </section>
+
+    <script src="lib/all.min.js"></script>
+    
+</body>
+
+</html>

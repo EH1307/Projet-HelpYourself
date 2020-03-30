@@ -3,21 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="container">
-    <h1>Inscription</h1>
 
-    <form>
+    <section id="top-section-header-and-title">
+
+        <header>
+            <img src="res/img/logo.png" alt="logo">
+
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <a href="index.html" target="blank">Retour à l'accueil</a>
+                        </button> 
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section id="middle-section-registration">
+
         <div>
-            Votre nom : <input type="text" name="nom">
+        <i class="far fa-user icon-user"></i>
+        <h1>Bienvenue sur votre page d'inscription<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
-        <div>
-            Votre prenom : <input type="text" name="prenom">
-        </div>
-        <div>
-            <input type="submit" value="Envoyer">
-        </div>
-    </form>
+
+        <form id="form-registration" action="#">
+            <p>
+                <label for="statut">Votre statut :</label>
+                <br>
+                <select id="statut">
+                    <option value="administrateur">Administrateur</option>
+                    <option value="formateur">Formateur</option>
+                    <option value="étudiant">Étudiant</option>
+                </select>
+            </p>
+            <p>
+                <label for="name">Votre nom : </label>
+                <input type="text" id="name" required>
+            </p>
+            <p>
+                <label for="firstname">Votre prénom : </label>
+                <input type="text" id="firstname" required>
+            </p>
+            <p>
+                <label for="email">Votre email : </label>
+                <input type="email" id="email" required>
+            </p>
+            <p>
+                <label for="password">Votre mot de passe : </label>
+                <input type="password" id="enterpassword" required>
+            </p>
+            <p>
+                <label for="password">Confirmation : </label>
+                <input type="password" id="confirmpassword" required>
+            </p>
+            <div>
+            <button id="button-registration" type="submit">
+               <a href="#" target="blank">Connexion</a></button>
+            </div>
+        </form>
+
+        
+    </section>
+
+
+<script src="lib/all.min.js"></script> 
 </body>
 </html>

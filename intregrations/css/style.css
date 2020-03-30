@@ -44,8 +44,9 @@
 
 /* Fin des styles globaux */
 
-/* font-family du site */
 
+
+/* Font-family du site */
 
 @font-face {
     font-family: 'Rubik-regular';
@@ -61,8 +62,11 @@
     font-family: 'Rubik-regular';
 }
 
+/* Fin font-family du site */
 
-/* header à utiliser sur toutes les pages */
+
+
+/* Header à utiliser sur toutes les pages */
 
 header nav {
     display: flex;
@@ -90,7 +94,7 @@ header nav {
     list-style-type: none;
 }
 
-#top-section-header-and-title nav > ul > li {
+#top-section-header-and-title button {
     padding: 15px;
     margin-left: 10px;
     border: 1px solid black;
@@ -101,17 +105,34 @@ header nav {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    color: whitesmoke;
+    color: white;
     cursor: pointer;
 }
 
-#top-section-header-and-title nav > ul > li > a {
-    color: black;
-    
+#top-section-header-and-title button a {
+    padding: 8px;
+    font-size: 15px;
+    color: white;
 }
 
+#top-section-header-and-title button:hover {
+    background-color: skyblue;
+    border: 1px solid whitesmoke;
+}
 
-/* contenu page accueil Help Yourself */
+.fa-chalkboard-teacher {
+    font-size: 15px;
+}
+
+.fa-address-card {
+    font-size: 15px;
+}
+
+/* Fin header à utiliser sur toutes les pages */
+
+
+
+/* Contenu page d'ACCUEIL Help Yourself */
 
 #middle-section-home {
     display: flex;
@@ -138,6 +159,963 @@ header nav {
     font-family: 'Kaushan-regular';
     color: whitesmoke;
 }
+
+/* Fin du contenu de la page d'accueil Help Yourself */
+
+
+
+/* Contenu de la page d'INSCRIPTION */
+
+#middle-section-registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-registration > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 200px;
+    margin-top: -15px;
+}
+
+#middle-section-registration h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#form-registration {
+    margin-top: -200px;
+    margin-bottom: 10px;
+}
+
+#form-registration p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#form-registration p select {
+    margin: 5px;
+    width: 320px;
+    height: 25px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: grey;
+    color: whitesmoke;
+    align-items: center;
+    
+}
+
+#form-registration p input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+#form-registration div {
+    display: flex;
+    justify-content: center;
+}
+
+#button-registration a {
+    color: whitesmoke;
+}
+
+#button-registration {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 250px;
+    margin-bottom: -40px;
+    margin-top: 20px;   
+}
+
+/* Fin du contenu de la page d'inscription */
+
+
+
+/* Contenu de la page de CONNEXION */
+
+#middle-section-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-connection > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 200px;
+    margin-top: -50px;
+}
+
+#middle-section-connection h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+
+#form-connection {
+    margin-top: -150px;
+    margin-bottom: 80px;
+}
+
+#form-connection p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: 1px solid black;
+    background-color: cadetblue;
+    margin: 20px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#form-connection p input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+#form-connection div {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: -100px;
+}
+
+#button-connection a {
+    color: whitesmoke;
+}
+
+#button-connection {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 250px;   
+}
+
+/* Fin du contenu de la page de connexion */
+
+
+
+/* Contenu de la page d'ACCUEIL FORMATEURS */
+
+#middle-section-home-teachers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-home-teachers > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 300px;
+    margin-top: -200px;
+}
+
+.icon-user {
+    font-size: 20px;
+    color: skyblue;
+    padding-right: 500px;
+}
+
+#middle-section-home-teachers  h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#button-home-teachers {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 350px;
+    margin-top: -100px;  
+}
+
+
+#button-home-teachers-two {
+    color: white;
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 350px;
+    margin-top: -200px;
+    font-size: 17px;
+}
+
+#button-home-teachers a {
+    color: whitesmoke;
+}
+
+#button-home-teachers-two a {
+    color: whitesmoke;
+} 
+
+/* Fin du contenu de la page d'accueil formateurs */
+
+
+
+
+/*  Contenu de la page d'ACCUEIL ÉTUDIANTS  */
+
+#middle-section-home-students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#middle-section-home-students > div {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-top: -100px;
+    margin-bottom: 400px;
+}
+
+.icon-user {
+    font-size: 20px;
+    color: skyblue;
+    padding-right: 500px;
+}
+
+#middle-section-home-students  h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#middle-section-home-students button {
+    border: 2px solid white;
+    background-color: skyblue;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+    padding: 30px 50px;
+    cursor: pointer;
+    font-size: 17px;
+    width: 300px;
+    margin-top: -250px;
+}
+
+#middle-section-home-students button a {
+    color: whitesmoke;
+}
+
+/* Fin du contenu de la page d'ACCUEIL ÉTUDIANTS */
+
+
+
+
+/* Contenu de la page LISTE DE MES COURS -> ÉTUDIANT */
+
+#middle-section-studies-students {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#welcome-message {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 20px;  
+}
+
+#welcome-message h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#time-studies-students {
+    padding: 2px;
+    margin-left: 809px;
+    margin-top: -540px;
+    background-color: cyan;
+    border: 1px solid black;
+    width: 145px;
+}
+
+.icon-user {
+    font-size: 20px;
+    color: skyblue;
+    padding-right: 500px;
+}
+
+#middle-section-studies-students  h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#lessons-student {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: -527px;
+}
+
+#lessons-student p {
+    background-color: gainsboro;
+    width: 100px;
+    border: 1px solid black;
+}
+
+#lessons-student #hour-begin-end {
+    width: 300px;
+}
+
+#lessons-student #hour-begin-end p input {
+    justify-content: space-around;
+}
+
+#lesson-one-student {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    background-color: white;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#lesson-one-student p {
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#open-class {
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: -450px;
+    width: 210px;
+}
+
+#iampresent {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: -400px;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    background-color: green;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#iampresent a {
+    color: white;
+}
+
+#justify-an-absence {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -290px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#justify-an-absence a {
+    color: black;
+}
+
+#report-a-delay {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -135px;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+    background-color: goldenrod;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#report-a-delay a{
+    color: black;
+}
+
+#lesson-two-student {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-top: 1px solid grey;
+    background-color: white;
+    padding-bottom: 25px;
+}
+
+#lesson-two-student p{
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#close-one-class{
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: -500px;
+    width: 330px;
+}
+
+#lesson-three-student {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-top: 1px solid grey;
+    background-color: white;
+    padding-bottom: 25px;
+}
+
+#lesson-three-student p{
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#close-two-class{
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    position: absolute;
+    margin-top: 90px;
+    margin-left: -500px;
+    width: 330px;
+}
+
+#hour-begin-end {
+    padding: 3px;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+#hour-begin-end input{
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Kaushan-regular';
+}
+
+/* Fin de la page liste de mes cours des étudiants */ 
+
+
+
+
+/* Contenu de la page LISTE DE MES COURS -> FORMATEURS */
+
+#middle-section-studies-teachers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#welcome-message {
+    height: 150px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 5px;
+    margin-bottom: 20px;  
+}
+
+#time-studies-teachers {
+    padding: 2px;
+    margin-left: 809px;
+    margin-top: -555px;
+    background-color: cyan;
+    border: 1px solid black;
+    width: 145px;
+}
+
+
+.icon-user {
+    font-size: 20px;
+    color: skyblue;
+    padding-right: 500px;
+}
+
+#middle-section-studies-students  h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#lessons-teacher {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: -527px;
+}
+
+#lessons-teacher p {
+    background-color: gainsboro;
+    width: 100px;
+    border: 1px solid black;
+}
+
+#lessons-teacher #hour-begin-end {
+    width: 300px;
+}
+
+#lessons-teacher #hour-begin-end p input {
+    justify-content: space-around;
+}
+
+#lesson-one-teacher {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    background-color: white;
+    padding-bottom: 45px;
+    position: relative;
+}
+
+#lesson-one-teacher p {
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#open-class-teacher {
+    position: absolute;
+    margin-top: 95px;
+    margin-left: -490px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: green;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#open-class-teacher a {
+    color: black;
+}
+
+#access-courses {
+    position: absolute;
+    margin-top: 95px;
+    margin-left: -335px;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+    background-color: turquoise;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#access-courses a{
+    color: black;
+}
+
+#lesson-two-teacher {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-top: 1px solid grey;
+    background-color: white;
+    padding-bottom: 45px;
+    position: relative;
+}
+
+#lesson-two-teacher p{
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#access-courses-two {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 360px;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+    background-color: turquoise;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#access-courses-two a {
+    color: black;
+}
+
+#no-access-courses-two {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 145px;
+    border-radius: 5px;
+    width: 210px;
+    height: 30px;
+    background-color: gainsboro;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#no-access-courses-two a{
+    color: grey;
+}
+
+#lesson-three-teacher {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid grey;
+    border-top: 1px solid grey;
+    background-color: white;
+    padding-bottom: 45px;
+}
+
+#lesson-three-teacher p{
+    margin: 10px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#end-courses {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 360px;
+    border-radius: 5px;
+    width: 130px;
+    height: 30px;
+    background-color: turquoise;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#end-courses a {
+    color:black;
+}
+
+#see-the-report {
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 145px;
+    border-radius: 5px;
+    width: 210px;
+    height: 30px;
+    background-color: gainsboro;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#see-the-report a {
+    color: grey;
+}
+
+#hour-begin-end {
+    padding: 3px;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+#hour-begin-end input{
+    display: flex;
+    float: right;
+    text-align: center;
+    justify-content: space-between;
+    font-family: 'Kaushan-regular';
+}
+
+/* Fin de la page liste de mes cours des formateurs */ 
+
+
+
+
+/* RELEVÉ DE PRÉSENCE */
+
+#middle-section-presence {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    border: 1px solid black;
+    background-color: blanchedalmond;
+    margin-top: 10px;
+}
+
+#time-presence-teachers {
+    padding: 2px;
+    margin-left: 809px;
+    margin-top: -329px;
+    background-color: cyan;
+    border: 1px solid black;
+    width: 145px;
+}
+
+#welcome-message-presence {
+    height: 130px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 2px;
+    margin-bottom: 20px;  
+}
+
+#welcome-message-presence h1 {
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+#presence-students {
+    height: 130px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: turquoise;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+
+#presence-students p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    color: black;
+}
+
+#names-report p{
+    border: 2px solid black;
+    width: 150px;
+    background-color: #fff;
+}
+
+#name-one-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+}
+
+#name-two-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+}
+
+#name-three-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+}
+
+#name-four-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+}
+
+#name-five-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+}
+
+#name-six-report {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    height: 30px;
+    width: 800px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: gainsboro;
+    padding: 2px;
+    margin-bottom: -500px;
+}
+
+#record {
+    position: absolute;
+    margin-top: 280px;
+    margin-left: -95px;
+    border: 2px solid whitesmoke;
+    border-radius: 9px;
+    width: 210px;
+    height: 30px;
+    background-color: skyblue;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    cursor: pointer;
+}
+
+#record a {
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+/* Fin de relevé de présence */
+
+
+
+
 
 /*********** Page adminAccueil ********/
 
@@ -282,287 +1260,12 @@ header nav {
     
 }
 
-/*  contenu page d'accueil étudiants  */
-
-#middle-section-home-students {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-home-students > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-top: -100px;
-    margin-bottom: 400px;
-}
-
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
-}
-
-#middle-section-home-students  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#middle-section-home-students button {
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 300px;
-    margin-top: -250px;
-}
-
-#middle-section-home-students button a {
-    color: whitesmoke;
-}
 
 
-/* contenu page accueil formateurs */
-
-#middle-section-home-teachers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-home-teachers > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 300px;
-    margin-top: -200px;
-}
-
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
-}
-
-#middle-section-home-teachers  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#button-home-teachers {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-    margin-top: -100px;  
-}
 
 
-#button-home-teachers-two {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-    margin-top: -200px;
-    font-size: 17px;
-}
-
-#button-home-teachers a {
-    color: whitesmoke;
-}
-
-#button-home-teachers-two a {
-    color: whitesmoke;
-} 
 
 
-/* contenu de la page de connexion du formateur */
-
-
-#middle-section-connection-teachers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-connection-teachers > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -50px;
-}
-
-#middle-section-connection-teachers h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-#form-teachers {
-    margin-top: -150px;
-    margin-bottom: 80px;
-}
-
-#form-teachers p{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid black;
-    background-color: cadetblue;
-    margin: 20px;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-#form-teachers p input {
-    width: 320px;
-    height: 25px;
-    
-}
-
-
-#button-connection-teachers {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-     
-}
-
-/* contenu de la page de connexion de l'étudiant */
-
-#middle-section-connection-students {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-connection-students > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -50px;
-}
-
-#middle-section-connection-students h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-#form-students {
-    margin-top: -150px;
-    margin-bottom: 80px;
-}
-
-#form-students p{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid black;
-    background-color: cadetblue;
-    margin: 20px;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-#form-students p input {
-    width: 320px;
-    height: 25px;
-    
-}
-
-
-#button-connection-students {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-     
-}
 
 /*********** Page créer une classe ********/
 
@@ -624,78 +1327,5 @@ header nav {
     color: white;
 }
 
-/* contenu de la page d'inscription de l'étudiant */
 
-
-#middle-section-registration-students {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-registration-students > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -15px;
-}
-
-#middle-section-registration-students h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-#form-students-registration {
-    margin-top: -200px;
-    margin-bottom: 10px;
-}
-
-#form-students-registration p{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid black;
-    background-color: cadetblue;
-    margin: 20px;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-#form-students-registration p input {
-    width: 320px;
-    height: 25px;
-    
-}
-
-
-#button-registration-students {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-     
-}
 
