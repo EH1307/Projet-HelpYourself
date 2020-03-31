@@ -138,13 +138,16 @@ header nav {
 
 /* Page ajout cours */
 
-#select-ajout-cours > select{
-
+.title-ajouter-cours{
+    text-align: center;
 }
 
 #select-ajout-cours {
     display: flex;
     justify-content: center;
+}
+.champs-ajout-cours {
+    padding-top: 20px;
 }
 #calandar-ajout-cours {
     display: flex;
