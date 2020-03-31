@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><?= $PAGE['title']; ?> - Please Help Yourself</title>
+    <link rel="stylesheet" href="integrations/css/style.css">
+</head>
+<body class="container">
+
+
+
+<!-- Inclusion du fichier de la page courante (renseigné dans le PHP juste avant d'inclure le MASTER.phtml) -->
+
+<?php include 'integrations/' . $PAGE['template']; ?>
+
+
+<script src="integrations/lib/all.min.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?php
-loadEnv('.env');
+loadEnv('config/.env');
 
 // Configuration des identifiants de la base de donnée
 define('DATABASE_HOST', getenv('DATABASE_HOST'));
@@ -41,6 +41,6 @@ function loadEnv($filename) {
     $content = file_get_contents($filename);
     $lines = explode("\n", $content);
     foreach ($lines as $line) {
-        putenv($line);
+        putenv(trim($line));
     }
 }
