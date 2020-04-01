@@ -11,4 +11,5 @@ $PAGE = [
     'template' => 'accueilFormateurs.phtml'
 ];
 
+
 include 'integrations/MASTER.phtml';

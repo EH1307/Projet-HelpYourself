@@ -12,4 +12,5 @@ $PAGE = [
     'template' => 'index.phtml'
 ];
 
+
 include 'integrations/MASTER.phtml';
