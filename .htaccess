@@ -1,0 +1,6 @@
+Options -Indexes
+
+<FilesMatch "\.(phtml)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
