@@ -5,31 +5,36 @@
             <nav>
                 <ul>
                     <li>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <a href="connexion.php" alt="" >Déconnexion</a>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
     </section>
-    <h1 id="lesClasses">Liste des Classes</h1>
-    <div>
-        <a href="#" class="button button-info">Ajouter une classe</a>
-    </div>
+    <div class="container-liste-des-classes">
+    
+        <div class="msg-liste-des-classes">
+            <i class="far fa-user icon-user"></i>
+            <h1>Liste des Classes</h1>
+        </div>
 
-    <hr>
-    <form id="recherche-listeClasse">
-        <label>Rechercher une classe :</label> 
-        <input type="text">
-        <button class="button button-success">Rechercher</button>
-    </form>
-    <section id="section-listeDeClasse">
-        <label>La liste des classes :</label> 
-        <ul>
-            <li>Fc Dev <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Chef de Projets <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Fc UX <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Fc Motion Design <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-        </ul>
-    </section>
+        <form id="recherche-liste-des-classes">
+            <label>Rechercher une classe :</label> 
+            <input type="text">
+            <button class="button button-success">Rechercher</button>
+        </form>
+
+        <section id="section-liste-des-classes">
+            <label>La liste des classes :</label> 
+            <ul>
+                <li>Fc Dev <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Chef de Projets <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Fc UX <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Fc Motion Design <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            </ul>
+        </section>
+    </div>
 

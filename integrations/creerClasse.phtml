@@ -5,42 +5,49 @@
             <nav>
                 <ul>
                     <li>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <a href="connexion.php" alt="" >Déconnexion</a>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
     </section>
-    <h1 class="title-creer-classe">Crée une classe</h1>
-    <div>
-        <button class="button button-info" type="submit">Créer la classe</button>
-    </div>
 
-    <hr>
+    <div class="container-creer-classe">
     
-    <form id="form-creeClasse"  action="">
-        <div class="nom-cree-classe">
-            <label>Nom de la classe : </label>
-            <input type="text" placeholder="Fc Dev">
+        <div class="msg-creer-classe">
+            <i class="far fa-user icon-user"></i>
+            <h1>Créer une Classe</h1>
         </div>
-        <div class="ajout-etudiant-cree-classe">      
-            <label>Ajout d'étudiants : </label>
-            <input type="text" placeholder="Antoine La">
-            <button class="button button-success">Rechercher</button><br/>
-        </div>
-    </form>
-    <section id="section-ajoutEtudiants-creer-classe">
-        <label>Les étudiants déjà ajoutés à cette classe : </label>
-        <ul>
-            <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
-            <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
-            <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
-            <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
-            <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
-            <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
-            <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
-        </ul>
         
-    </section>
+        <form id="form-creeClasse"  action="">
+            <div class="nom-cree-classe">
+                <label>Nom de la classe : </label>
+                <input type="text" placeholder="Fc Dev">
+            </div>
+            <div class="ajout-etudiant-cree-classe">      
+                <label>Ajout d'étudiants : </label>
+                <input type="text" placeholder="Antoine La">
+                <button class="button button-success">Rechercher</button><br/>
+            </div>
+        </form>
+        <section id="section-ajoutEtudiants-creer-classe">
+            <label>Les étudiants déjà ajoutés à cette classe : </label>
+            <ul>
+                <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
+                <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
+                <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
+                <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
+                <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
+                <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
+                <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
+            </ul>
+            
+        </section>
+        <div>
+            <button class="button button-info" type="submit">Créer la classe</button>
+        </div>
+    </div>
        
