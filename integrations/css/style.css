@@ -333,7 +333,10 @@ header nav {
     margin-top: 40px;
 }
 #form-creeClasse input {
-    padding: 10px;  
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: small;  
 }
 .button-info {
     margin-top: 20px;
@@ -381,8 +384,22 @@ header nav {
     font-size: larger;
     margin-top: 20px;
 }
-#form-liste-de-cours {
+#form-liste-des-cours {
     margin-top: 40px;
+}
+#form-liste-des-cours select {
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    
+}
+#form-liste-des-cours input {
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    
 }
 #section-liste-des-cours {
     margin-top: 40px;
@@ -424,6 +441,12 @@ header nav {
 .container-liste-des-classes label {
     font-size: larger;
     margin-top: 20px;
+}
+#recherche-liste-des-classes input {
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+    font-size: small;
 }
 #section-liste-des-classes {
     margin-top: 40px;
@@ -541,7 +564,6 @@ header nav {
 }
 
 
-
 /* Page modifier un utilisateur */
 
 .container-modifier-utilisateur {
@@ -654,308 +676,7 @@ header nav {
     margin-left: 30px;
 }
 
-
-
-/*********** Page ajouter & modifier un utilisateur ********/
-/*
-.title-modifier-utilisateur {
-    text-align: center;
-}
-#select-modifier-utilisateur > select {
-    width: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-#select-modifier-utilisateur {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-#modifier-user-labelInput {
-    display: flex;
-    justify-content: center;
-      
-}
-#modifier-user-labelInput > input {
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-}
-#modifier-user-labelInput > label {
-    padding-top: 20px;
-    font-size: medium;
-}
-
-#section-users-modifier-utilisateur {
-    flex-direction: column;
-    width: 500px;
-    padding-top: 20px;
-    
-}
-#section-users-modifier-utilisateur li {
-    padding: 5px;
-    
-}
-#section-users-modifier-utilisateur button {
-    margin-left: 20px;
-}
-#section-users-modifier-utilisateur > label {
-    font-size: large;
-}
-
-*/
-
-/************** Page liste des cours , modifier un cours & modifier une classe *************/
-/*
-#lesCours , #modifier-cours , #title-modifier-classe{
-    text-align: center;
-}
-#form-liste-de-cours , #form-modifier-cours , #form-modifier-classe {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-#form-liste-de-cours select , input , #form-modifier-cours select , input , #form-modifier-classe input {
-    width: 200px;
-    text-align: center;
-    padding: 5px;
-}
-#form-liste-de-cours label , #form-modifier-cours label , #form-modifier-classe label {
-    padding-top: 5px;
-}
-.ajout-etudiant-modifier-classe {
-    margin-left: 20px;
-}
-#section-liste-de-cours , #section-modifier-cours , #section-ajoutEtudiants-modifier-classe {
-    padding-top: 50px;
-}
-#section-liste-de-cours label {
-    font-size: large;
-}
-#section-liste-de-cours , .button-info , #section-modifier-cours , .button-info , #section-ajoutEtudiants-modifier-classe , .button-danger {
-    margin-left: 20px;
-}
-#section-liste-de-cours > ul > li , #section-modifier-cours > ul > li , #section-ajoutEtudiants-modifier-classe > ul > li {
-    width: 500px;
-    margin: 10px;
-}
-*/
-
-/************** Page liste des classes *************/
-/*
-#lesClasses {
-    text-align: center;
-}
-#recherche-listeClasse {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-#recherche-listeClasse label {
-    padding-top: 5px;
-}
-#recherche-listeClasse input {
-    width: 200px;
-    text-align: center;
-}
-#section-listeDeClasse {
-    padding-top: 50px;
-}
-#section-listeDeClasse label {
-    font-size: large;
-}
-#section-listeDeClasse , .button-info {
-    margin-left: 20px;
-}
-#section-listeDeClasse > ul > li {
-    width: 500px;
-    margin: 10px;
-}
-*/
-/*********** Page supprimer un cours , une classe & un utilisateur ***************/
-
-#supprimer-cours , #supprimer-classe , #supprimer-utilisateur {
-    text-align: center;
-}
-.info-suppression {
-    color: red;
-}
-.info-suppression span {
-    font-size: large;
-}
-
-
-/*************** Page utilisateur *****************/
-/*
-#users {
-    text-align: center;
-}
-#form-utilisateurs {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
-}
-#form-utilisateurs select {
-    width: 200px;
-    text-align: center;
-}
-#form-utilisateurs input {
-    width: 200px;
-    text-align: center;
-}
-#form-utilisateurs label {
-    padding-top: 5px;
-}
-#section-liste-utilisateurs {
-    padding-top: 50px;
-}
-#section-liste-utilisateurs label {
-    font-size: large;
-}
-#section-liste-utilisateurs , .button-info {
-    margin-left: 20px;
-}
-#section-liste-utilisateurs > ul > li {
-    width: 500px;
-    margin: 10px;
-}
-*/
-
-
-/*********** Page ajouterUtilisateur ********/
-/*
-.title-ajout-utilisateur {
-    text-align: center;
-}
-#select-ajout-utilisateur > select{
-    width: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;   
-}
-#select-ajout-utilisateur {
-    display: flex;
-    justify-content: center;
-}
-#ajout-user-labelInput {
-    display: flex;
-    justify-content: center;
-    
-    
-}
-#ajout-user-labelInput > input {
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-}
-#ajout-user-labelInput > label {
-    padding-top: 20px;
-    font-size: medium;
-}
-
-#section-users-ajouter {
-    
-    flex-direction: column;
-    width: 500px;
-    align-items: center;
-    
-  
-}
-#section-users-ajouter > label {
-    font-size: large;
-}
-#section-users-ajouter > input {
-    width: 500px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-    display: flex;
-    justify-content: center;
-}
-
-.ajout-user-btn > button {
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: large;
-    background-color: blue;
-    color: white;
-    
-}
-*/
-
-/*********** Page créer une classe ********/
-/*
-.title-creer-classe {
-    text-align: center;
-}
-.nom-cree-classe {
-    display: flex;
-    justify-content: center;
-}
-.nom-cree-classe label {
-    font-size: medium;
-    padding-top: 10px;
-}
-.nom-cree-classe input {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-}
-.ajout-etudiant-cree-classe {
-    display: flex;
-    justify-content: center;
-}
-.ajout-etudiant-cree-classe input {
-    width: 300px;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(248, 246, 246);
-    font-size: medium;
-}
-.ajout-etudiant-cree-classe label {
-    padding-top: 20px;
-    font-size: medium;
-}
-.ajout-etudiant-cree-classe button {
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: large;
-    background-color: green;
-    color: white;
-}
-#section-ajoutEtudiants-creer-classe {
-    padding-top: 50px;
-}
-#section-ajoutEtudiants-creer-classe > ul > li {
-    width: 500px;
-    margin: 10px;
-}
-
-.creer-classe-btn button {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: large;
-    background-color: blue;
-    color: white;
-}
-
-*/
-
-
-
-
-
+/***** fin de la page utilisateurs ******/
 
 
 /* Contenu page d'ACCUEIL Help Yourself */
