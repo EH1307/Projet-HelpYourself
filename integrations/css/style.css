@@ -178,7 +178,7 @@ header nav {
 
 
 
-/*********** Page ajouterUtilisateur ********/
+/*********** Page ajouter & modifier un utilisateur ********/
 
 .title-ajout-utilisateur , .title-modifier-utilisateur {
     text-align: center;
@@ -230,30 +230,37 @@ header nav {
 
 
 
-/************** Page liste des cours & modifier un cours *************/
+/************** Page liste des cours , modifier un cours & modifier une classe *************/
 
-#lesCours , #modifier-cours {
+#lesCours , #modifier-cours , #title-modifier-classe{
     text-align: center;
 }
-#form-liste-de-cours , #form-modifier-cours {
+#form-liste-de-cours , #form-modifier-cours , #form-modifier-classe {
     display: flex;
     justify-content: center;
     padding-top: 20px;
 }
-#form-liste-de-cours select , input , #form-modifier-cours select , input {
-    width: 150px;
+#form-liste-de-cours select , input , #form-modifier-cours select , input , #form-modifier-classe input {
+    width: 200px;
     text-align: center;
+    padding: 5px;
 }
-#form-liste-de-cours label , #form-modifier-cours label {
+#form-liste-de-cours label , #form-modifier-cours label , #form-modifier-classe label {
     padding-top: 5px;
 }
-#section-liste-de-cours , #section-modifier-cours {
-    padding-top: 50px;
-}
-#section-liste-de-cours , .button-info , #section-modifier-cours , .button-info {
+.ajout-etudiant-modifier-classe {
     margin-left: 20px;
 }
-#section-liste-de-cours > ul > li , #section-modifier-cours > ul > li {
+#section-liste-de-cours , #section-modifier-cours , #section-ajoutEtudiants-modifier-classe {
+    padding-top: 50px;
+}
+#section-liste-de-cours label {
+    font-size: large;
+}
+#section-liste-de-cours , .button-info , #section-modifier-cours , .button-info , #section-ajoutEtudiants-modifier-classe , .button-danger {
+    margin-left: 20px;
+}
+#section-liste-de-cours > ul > li , #section-modifier-cours > ul > li , #section-ajoutEtudiants-modifier-classe > ul > li {
     width: 500px;
     margin: 10px;
 }
