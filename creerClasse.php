@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Crée une classe',
+    'title' => 'Créer une Classe',
     'template' => 'creerClasse.phtml'
 ];
 

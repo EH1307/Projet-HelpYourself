@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Modifier une classe',
+    'title' => 'Modifier une Classe',
     'template' => 'modifierClasse.phtml'
 ];
 

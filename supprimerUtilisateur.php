@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Supprimer un utilisateur',
+    'title' => 'Supprimer un Utilisateur',
     'template' => 'supprimerUtilisateur.phtml'
 ];
 

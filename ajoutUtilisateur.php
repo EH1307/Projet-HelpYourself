@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'ajoutUtilisateur',
+    'title' => 'Ajouter un Utilisateur',
     'template' => 'ajoutUtilisateur.phtml'
 ];
 

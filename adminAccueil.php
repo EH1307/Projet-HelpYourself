@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'adminiAccueil',
+    'title' => 'Accueil Administrateur',
     'template' => 'adminAccueil.phtml'
 ];
 

@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'ajouterCours',
+    'title' => 'Ajouter un Cours',
     'template' => 'ajouterCours.phtml'
 ];
 

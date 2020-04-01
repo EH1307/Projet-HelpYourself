@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Modifier un utilisateur',
+    'title' => 'Modifier un Utilisateur',
     'template' => 'modifierUtilisateur.phtml'
 ];
 

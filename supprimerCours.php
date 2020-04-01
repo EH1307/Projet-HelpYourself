@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Supprimer un cours',
+    'title' => 'Supprimer un Cours',
     'template' => 'supprimerCours.phtml'
 ];
 
