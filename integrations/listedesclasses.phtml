@@ -30,10 +30,9 @@
         <section id="section-liste-des-classes">
             <label>La liste des classes :</label> 
             <ul>
-                <li>Fc Dev <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Chef de Projets <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Fc UX <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Fc Motion Design <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            <?php foreach($classes as $classe) : ?>
+                    <li><?= $classe['nom']; ?><button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php endforeach; ?>
             </ul>
         </section>
     </div>
