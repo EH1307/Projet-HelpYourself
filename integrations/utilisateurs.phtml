@@ -41,13 +41,9 @@
         <section id="section-liste-utilisateurs">
             <label>La liste des utilisateurs :</label>
             <ul>
-                <li>Aurélien Durand <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Céline Bernard <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Alain Marechal <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Laure Da Silva <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Etienne Boucher <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Magalie Perret <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Christelle Monget <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php foreach($utilisateurs as $utilisateur) : ?>
+                    <li><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?> <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php endforeach; ?>
             </ul>
         </section>
         
