@@ -37,12 +37,9 @@
         <section id="section-liste-des-cours">
             <label>La liste des cours :</label>
             <ul>
-                <li>Cours de ReactJS (exemple) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Cours de HTML / CSS <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Cours de JavaScript <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Cours de PHP (Laravel) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Crée un site Web avec WordPress <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <li>Le Framework React <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php foreach($listedecours as $cours) : ?>
+                    <li><?= $cours['titre']; ?>  <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php endforeach; ?>
             </ul>
         </section>
     </div>
