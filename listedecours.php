@@ -9,7 +9,7 @@ include 'config/database.php';
 */
 
 $query = $pdo->query(
-    'SELECT  titre  FROM cours'
+    'SELECT titre,etat FROM cours'
 );
 
 $listedecours = $query->fetchAll();

@@ -38,7 +38,7 @@
             <label>La liste des cours :</label>
             <ul>
                 <?php foreach($listedecours as $cours) : ?>
-                    <li><?= $cours['titre']; ?>  <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                    <li><?= $cours['titre']; ?> (<?= $cours['etat']; ?>) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
                 <?php endforeach; ?>
             </ul>
         </section>

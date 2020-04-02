@@ -4,7 +4,7 @@
 include 'config/database.php';
 
 /*
-    Requête SQL permettant d'aller chercher tous les utilisateurs
+    Requête SQL permettant d'aller chercher toutes les classes
     dans la base de données
 */
 
