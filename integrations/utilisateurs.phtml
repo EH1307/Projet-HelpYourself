@@ -5,44 +5,51 @@
             <nav>
                 <ul>
                     <li>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <a href="connexion.php" alt="" >Déconnexion</a>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
     </section>
-    <h1 id="users">Les Utilisateurs</h1>
-    <div>
-        <a href="#" class="button button-info">Ajouter un utilisateur</a>
+    
+    <div class="container-utilisateurs">
+    
+        <div class="msg-utilisateurs">
+            <i class="far fa-user icon-user"></i>
+            <h1>Les Utilisateurs</h1>
+        </div>
+
+        <form id="form-utilisateurs">
+            <label>Filtrer les résultats de la liste :</label><br>
+            <select>
+                <option value="">Administrateur </option>
+                <option value="">Etudiant</option>
+                <option value="">Formateur</option> 
+            </select>
+            <select>
+                <option value="">Fc Dev </option>
+                <option value="">Chef de Projets</option>
+                <option value="">Fc Ux</option>
+                <option value="">Fc Motion Design</option>
+            </select>
+            <input type="text" placeholder="Entrer un nom">
+            <button class="button button-success">Rechercher</button>
+        </form>
+        <section id="section-liste-utilisateurs">
+            <label>La liste des utilisateurs :</label>
+            <ul>
+                <li>Aurélien Durand <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Céline Bernard <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Alain Marechal <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Laure Da Silva <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Etienne Boucher <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Magalie Perret <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Christelle Monget <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            </ul>
+        </section>
+        
     </div>
-    <hr>
-    <form id="form-utilisateurs">
-        <label>Filtrer les résultats de la liste :</label></br>
-        <select>
-            <option value="">Administrateur </option>
-            <option value="">Etudiant</option>
-            <option value="">Formateur</option> 
-        </select>
-        <select>
-            <option value="">Fc Dev </option>
-            <option value="">Chef de Projets</option>
-            <option value="">Fc Ux</option>
-            <option value="">Fc Motion Design</option>
-        </select>
-        <input type="text" placeholder="Entrer un nom">
-        <button class="button button-success">Rechercher</button>
-    </form>
-    <section id="section-liste-utilisateurs">
-        <label>La liste des utilisateurs :</label>
-        <ul>
-            <li>Aurélien Durand <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Céline Bernard <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Alain Marechal <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Laure Da Silva <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Etienne Boucher <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Magalie Perret <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Christelle Monget <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-        </ul>
-    </section>
 

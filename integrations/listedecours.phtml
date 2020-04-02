@@ -5,44 +5,46 @@
             <nav>
                 <ul>
                     <li>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <a href="connexion.php" alt="" >Déconnexion</a>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </header>
     </section>
-    <h1 id="lesCours">Liste des Cours</h1>
-    <div>
-        <a href="#" class="button button-info">Ajouter un cours</a>
+    <div class="container-liste-des-cours">
+    
+        <div class="msg-liste-des-cours">
+            <i class="far fa-user icon-user"></i>
+            <h1>Liste des Cours</h1>
+        </div>
+
+        <form id="form-liste-des-cours">
+            <label>Classe :</label>
+            <select name="" id="">
+                <option value="">Fc Dev </option>
+                <option value="">Chef de Projets</option>
+                <option value="">Fc Ux</option>
+                <option value="">Fc Motion Design</option>
+            </select>
+
+            <label>Date du cours :</label>
+            <input type="date">
+            <button class="button button-success">Rechercher un cours</button>
+        </form>
+        <section id="section-liste-des-cours">
+            <label>La liste des cours :</label>
+            <ul>
+                <li>Cours de ReactJS (exemple) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Cours de HTML / CSS <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Cours de JavaScript <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Cours de PHP (Laravel) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Crée un site Web avec WordPress <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <li>Le Framework React <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+            </ul>
+        </section>
     </div>
-
-    <hr>
-
-    <form id="form-liste-de-cours">
-       <label>Classe :</label>
-        <select name="" id="">
-           <option value="">Fc Dev </option>
-           <option value="">Chef de Projets</option>
-           <option value="">Fc Ux</option>
-           <option value="">Fc Motion Design</option>
-       </select>
-
-       <label>Date du cours :</label>
-       <input type="date">
-       <button class="button button-success">Rechercher un cours</button>
-
-    </form>
-    <section id="section-liste-de-cours">
-        <label>La liste des cours :</label>
-        <ul>
-            <li>Cours de ReactJS (exemple) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Cours de HTML / CSS <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Cours de JavaScript <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Cours de PHP (Laravel) <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Crée un site Web avec WordPress <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-            <li>Le Framework React <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-        </ul>
-    </section>
 
     
