@@ -26,26 +26,36 @@
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
+        <?php if (!empty($ERRORS)) : ?>
+            <div class="error">
+                <ul>
+                <?php foreach ($ERRORS as $error) : ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+
         <form id="form-registration" method="POST" action="inscription.php">
             <p>
                 <label for="name">Votre nom : </label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" value="<?= isset($name) ? $name : ''; ?>">
             </p>
             <p>
                 <label for="firstname">Votre prénom : </label>
-                <input type="text" name="firstname" id="firstname" required>
+                <input type="text" name="firstname" id="firstname" value="<?= isset($firstname) ? $firstname : ''; ?>">
             </p>
             <p>
                 <label for="email">Votre email : </label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" value="<?= isset($email) ? $email : ''; ?>">
             </p>
             <p>
                 <label for="password">Votre mot de passe : </label>
-                <input type="password" name="enterpassword" id="enterpassword" required>
+                <input type="password" name="enterpassword" id="enterpassword">
             </p>
             <p>
                 <label for="password">Confirmation : </label>
-                <input type="password" name="confirmpassword" id="confirmpassword" required>
+                <input type="password" name="confirmpassword" id="confirmpassword">
             </p>
             <div>
                 <button id="button-registration" type="submit">
