@@ -26,31 +26,31 @@
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <form id="form-registration" action="#">
-    
+        <form id="form-registration" method="POST" action="inscription.php">
             <p>
                 <label for="name">Votre nom : </label>
-                <input type="text" id="name" required>
+                <input type="text" name="name" id="name" required>
             </p>
             <p>
                 <label for="firstname">Votre prénom : </label>
-                <input type="text" id="firstname" required>
+                <input type="text" name="firstname" id="firstname" required>
             </p>
             <p>
                 <label for="email">Votre email : </label>
-                <input type="email" id="email" required>
+                <input type="email" name="email" id="email" required>
             </p>
             <p>
                 <label for="password">Votre mot de passe : </label>
-                <input type="password" id="enterpassword" required>
+                <input type="password" name="enterpassword" id="enterpassword" required>
             </p>
             <p>
                 <label for="password">Confirmation : </label>
-                <input type="password" id="confirmpassword" required>
+                <input type="password" name="confirmpassword" id="confirmpassword" required>
             </p>
             <div>
-            <button id="button-registration" type="submit">
-               <a href="connexion.php">Connexion</a></button>
+                <button id="button-registration" type="submit">
+                    Inscription
+                </button>
             </div>
         </form>
 
