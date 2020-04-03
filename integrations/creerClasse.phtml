@@ -39,15 +39,6 @@
             <button class="button button-success" type="submit">Ajouter</button>
         </form>
 
-        <section id="section-ajoutEtudiants-creer-classe">
-            <label>Les étudiants déjà ajoutés à cette classe : </label>
-            <ul>
-                <?php foreach($utilisateurs as $utilisateur) : ?>
-                    <li><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?> <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <?php endforeach; ?>
-            </ul>
-            
-        </section>
         
     </div>
        

@@ -14,13 +14,6 @@ $PAGE = [
     dans la base de données
 */
 
-$query = $pdo->query(
-    'SELECT idUtilisateur, nom, prenom FROM utilisateurs'
-);
-
-$utilisateurs = $query->fetchAll();
-
-
 /*
     Si le formulaire de cette page a été "submitted",
     on exécute ce "if"
@@ -28,8 +21,6 @@ $utilisateurs = $query->fetchAll();
 if ($_POST) {
     $name  = $_POST['name'];
     
-    
-
     // ============================
     // Vérifications diverses liées à une inscription
     $ERRORS = [];
@@ -51,7 +42,6 @@ if ($_POST) {
         "INSERT INTO
             classes (
                 nom
-   
             ) 
             VALUES (
                 :nom   
