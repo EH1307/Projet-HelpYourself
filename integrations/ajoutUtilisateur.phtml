@@ -21,7 +21,7 @@
             <i class="far fa-user icon-user"></i>
             <h1>Ajouter un Utilisateur</h1>
         </div>
-        
+
         <?php if (!empty($ERRORS)) : ?>
             <div class="error">
                 <ul>
@@ -34,13 +34,6 @@
         
         <form id="form-ajout-utilisateur" method="POST" action="ajoutUtilisateur.php">
         <div id="select-ajout-utilisateur">
-        
-        <!--
-        </div>
-            <label for="add-user">Ajouter un utilisateur : </label>
-            <input type="text" name="addUser" id="addUser" value="<?= isset($addUser) ? $addUser : ''; ?>">
-            <br>
--->
 
             <form id="form-addUser" method="POST" action="ajoutUtilisateur.php">
             <p>

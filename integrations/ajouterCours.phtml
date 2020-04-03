@@ -23,21 +23,31 @@
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
+        <?php if (!empty($ERRORS)) : ?>
+            <div class="error">
+                <ul>
+                <?php foreach ($ERRORS as $error) : ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+        
+
         <div class="div-ajouter-cours">
-            <form id="form-ajout-cours">
+            <form id="form-ajout-cours" method="POST" action="ajouterCours.php">
                 <div class="champs-ajout-cours">
                 <input type="text" placeholder="Nom du cours">
                 </div>
                 <div id="select-ajout-cours">
                     <select>
-                        <option value="">Fc Dev </option>
-                        <option value="">Chef de Projets</option>
-                        <option value="">Fc Ux</option>
-                        <option value="">Fc Motion Design</option>
+                        <?php foreach($cours as $cours) : ?>
+                        <option value="<?=$cours['idCours'];?>"><?= $cours['titre']; ?>
+                        </option>
+                        <?php endforeach; ?>  
                     </select>
                 </div>
-            </form>
-            <form id="form-calendrier-ajout-cours">
+            
                 <section id="calandar-ajout-cours">
                     <div class="date-debut">
                         <label for="">Date de début :</label><br>
@@ -49,10 +59,10 @@
                         <input type="date">
                         <input type="time" value="17:30">  
                     </div>
-                    
                 </section>
+                <button class="button button-success" type="submit">Ajouter un cours</button>
             </form>
         </div>
-        <button class="button button-success" type="submit">Ajouter un cours</button>
+        
     </section>    
 
