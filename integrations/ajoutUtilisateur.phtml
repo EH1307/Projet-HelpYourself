@@ -22,6 +22,16 @@
             <h1>Ajouter un Utilisateur</h1>
         </div>
         
+        <?php if (!empty($ERRORS)) : ?>
+            <div class="error">
+                <ul>
+                <?php foreach ($ERRORS as $error) : ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+        
         <form id="form-ajout-utilisateur" method="POST" action="ajoutUtilisateur.php">
         <div id="select-ajout-utilisateur">
         
