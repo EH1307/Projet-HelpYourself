@@ -22,32 +22,32 @@
             <h1>Créer une Classe</h1>
         </div>
         
-        <form id="form-creeClasse"  action="">
-            <div class="nom-cree-classe">
-                <label>Nom de la classe : </label>
-                <input type="text" placeholder="Fc Dev">
+        <?php if (!empty($ERRORS)) : ?>
+            <div class="error">
+                <ul>
+                <?php foreach ($ERRORS as $error) : ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach; ?>
+                </ul>
             </div>
-            <div class="ajout-etudiant-cree-classe">      
-                <label>Ajout d'étudiants : </label>
-                <input type="text" placeholder="Antoine La">
-                <button class="button button-success">Rechercher</button><br/>
-            </div>
+        <?php endif; ?>
+
+
+        <form id="form-creeClasse" method="POST"  action="creerClasse.php" >
+            <label for="name">Nom de la classe : </label>
+            <input type="text" name="name" id="name" placeholder="Nom de la Classe" value="<?= isset($name) ? $name : ''; ?>"><br>
+            <button class="button button-success" type="submit">Ajouter</button>
         </form>
+
         <section id="section-ajoutEtudiants-creer-classe">
             <label>Les étudiants déjà ajoutés à cette classe : </label>
             <ul>
-                <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
-                <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
-                <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
-                <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
-                <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
-                <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
-                <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
+                <?php foreach($utilisateurs as $utilisateur) : ?>
+                    <li><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?> <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                <?php endforeach; ?>
             </ul>
             
         </section>
-        <div>
-            <button class="button button-info" type="submit">Créer la classe</button>
-        </div>
+        
     </div>
        
