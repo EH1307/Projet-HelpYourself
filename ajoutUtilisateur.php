@@ -113,5 +113,6 @@ $query = $pdo->query(
 
 $classes = $query->fetchAll();
 
+
 // Affichage
 include 'integrations/MASTER.phtml';
