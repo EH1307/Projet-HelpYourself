@@ -21,12 +21,61 @@ if ($_POST) {
     $role            = $_POST['role'];
     $idClasse        = $_POST['class'];
 
+    // ============================
+    // Vérifications diverses liées à un ajout d'utilisateur
+    $ERRORS = [];
+    // ============================
+
+    // 1. Est-ce que les champs sont vides ?
+    if (empty($name)) {
+        $ERRORS[] = 'Le champs "nom" doit être rempli';
+    }
+    if (empty($firstname)) {
+        $ERRORS[] = 'Le champs "prenom" doit être rempli';
+    }
+    if (empty($email)) {
+        $ERRORS[] = 'Le champs "email" doit être rempli';
+    }
+    if (empty($enterpassword)) {
+        $ERRORS[] = 'Le champs "mot de passe" doit être rempli';
+    }
+    if (empty($role)) {
+        $ERRORS[] = 'Le champs "rôle" doit être rempli';
+    }
+    if (empty($idClasse)) {
+        $ERRORS[] = 'Le champs "classe" doit être rempli';
+    }
+
+    // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
+    if (!empty($ERRORS)) {
+        include('integrations/MASTER.phtml');
+        return; // Stoppe l'exécution du script ici !
+    }
+
+    // 2. Est-ce que l'adresse email existe déjà en base ?
+    $query = $pdo->prepare(
+        'SELECT * FROM utilisateurs WHERE email=:email'
+    );
+    $query->bindParam(':email', $email, PDO::PARAM_STR);
+    $query->execute();
+    $user = $query->fetch();
+
+      // 3. Est-ce que l'@ email est valide (cad qu'elle respecte la norme RFC standard) ?
+    // https://www.php.net/manual/fr/function.filter-var.php
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        $ERRORS[] = "L'adresse email utilisée est invalide !";
+        include('integrations/MASTER.phtml');
+        return; // Stoppe l'exécution du script ici !
+    }
+
+    // 5. Hachage du mot de passe avant l'insertion
+    $hashPassword = hash('sha256', $enterpassword);
+
 
     // Insertion en base de données des informations
     $query = $pdo->prepare(
     "INSERT INTO
         utilisateurs (
-            idUtilisateur,
             nom,
             prenom,
             email,
@@ -34,9 +83,8 @@ if ($_POST) {
             role,
             idClasse
         ) VALUES (
-            NULL,
             :nom,
-            :prenom
+            :prenom,
             :email,
             :motDePasse,
             :role,
@@ -48,7 +96,7 @@ if ($_POST) {
     $query->bindParam(':nom', $name, PDO::PARAM_STR);
     $query->bindParam(':prenom', $firstname, PDO::PARAM_STR);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
-    $query->bindParam(':motDePasse', $enterpassword, PDO::PARAM_STR);
+    $query->bindParam(':motDePasse', $hashPassword, PDO::PARAM_STR);
     $query->bindParam(':role', $role, PDO::PARAM_STR);
     $query->bindParam(':idClasse', $idClasse, PDO::PARAM_INT);
 
