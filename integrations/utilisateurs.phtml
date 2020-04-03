@@ -42,7 +42,11 @@
             <label>La liste des utilisateurs :</label>
             <ul>
                 <?php foreach($utilisateurs as $utilisateur) : ?>
-                    <li><?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?> <button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
+                    <li>
+                        <?= $utilisateur['prenom']; ?> <?= $utilisateur['nom']; ?>
+                        <a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>" class="button button-info">Modifier</a>
+                        <a href="#" class="button button-danger">Supprimer</a>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </section>
