@@ -15,11 +15,12 @@
         </header>
     </section>
     
-    <div class="container-ajout-utilisateur">
+    <section id="middle-section">
         
-        <div class="msg-ajout-utilisateur">
+        <div class="title-message">
             <i class="far fa-user icon-user"></i>
-            <h1>Ajouter un Utilisateur</h1>
+            <h1>Créer un nouvel utilisateur<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
         <?php if (!empty($ERRORS)) : ?>
@@ -32,22 +33,19 @@
             </div>
         <?php endif; ?>
         
-        <form id="form-ajout-utilisateur" method="POST" action="ajoutUtilisateur.php">
-        <div id="select-ajout-utilisateur">
-
-            <form id="form-addUser" method="POST" action="ajoutUtilisateur.php">
+        <form id="form" method="POST" action="ajoutUtilisateur.php">
             <p>
-            <select name="role">
-                <option value="administrateur">Administrateur</option>
-                <option value="etudiant">Etudiant</option>
-                <option value="formateur">Formateur</option> 
-            </select>
-            <select name="class" id="">
-                <option>N/A</option>
-            <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
-                <?php endforeach; ?>
-            </select>
+                <select name="role">
+                    <option value="administrateur">Administrateur</option>
+                    <option value="etudiant">Etudiant</option>
+                    <option value="formateur">Formateur</option> 
+                </select>
+                <select name="class" id="">
+                    <option>N/A</option>
+                <?php foreach($classes as $classe) : ?>
+                        <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
+                    <?php endforeach; ?>
+                </select>
             </p>
             <p>
                 <label for="name">Votre nom : </label>
@@ -65,7 +63,6 @@
                 <label for="password">Votre mot de passe : </label>
                 <input type="password" name="enterpassword" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
             </p>
-            <div>
-            <button class="button button-info" type="submit">Ajouter un utilisateur</button>
+            <button class="button button-success" type="submit">Créer un nouvel utilisateur</button>
         </form>
-    </div>
+</section>

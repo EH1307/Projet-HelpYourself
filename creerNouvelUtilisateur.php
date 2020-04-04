@@ -6,7 +6,7 @@ include 'config/database.php';
 // Configuration de la page
 $PAGE = [
     'title' => 'Ajouter un Utilisateur',
-    'template' => 'ajoutUtilisateur.phtml'
+    'template' => 'creerNouvelUtilisateur.phtml'
 ];
 
 /*

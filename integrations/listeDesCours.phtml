@@ -1,0 +1,48 @@
+
+    <section id="top-section-header-and-title">
+        <header>
+            <img src="integrations/res/img/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section id="middle-section">
+    
+        <div class="title-message">
+            <i class="far fa-user icon-user"></i>
+            <h1>Liste des Cours<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
+        </div>
+
+        <form id="form">
+            <p>
+                <label>Les sessions de cours planifiées :</label>
+                <select>
+                    <?php foreach($listedecours as $cours) : ?>
+                    <option value="<?= $cours['titre']; ?>">(<?= $cours['etat']; ?>)</option>
+                    <?php endforeach; ?>
+                </select>
+            </p>
+            <p>
+                <label>Classe :</label>
+                <select>
+                    <option value="">Fc Dev </option>
+                    <option value="">Chef de Projets</option>
+                    <option value="">Fc Ux</option>
+                    <option value="">Fc Motion Design</option>
+                </select>
+            </p>
+            <button class="button button-success" type="submit">Créer un nouveau cours</button>    
+        </form>
+        
+</section>
+
+    

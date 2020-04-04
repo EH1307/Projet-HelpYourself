@@ -18,14 +18,14 @@
         </header>
     </section>
 
-    <section id="middle-section-registration">
+    <section id="middle-section">
 
-        <div>
+        <div class="title-message">
         <i class="far fa-user icon-user"></i>
         <h1>Bienvenue sur votre page d'inscription<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
-
+    
         <?php if (!empty($ERRORS)) : ?>
             <div class="error">
                 <ul>
@@ -36,7 +36,7 @@
             </div>
         <?php endif; ?>
 
-        <form id="form-registration" method="POST" action="inscription.php">
+        <form id="form" method="POST" action="inscription.php">
             <p>
                 <label for="name">Votre nom : </label>
                 <input type="text" name="name" id="name" value="<?= isset($name) ? $name : ''; ?>">
@@ -58,12 +58,12 @@
                 <input type="password" name="confirmpassword" id="confirmpassword">
             </p>
             <div>
-                <button id="button-registration" type="submit">
+                <button class="button button-success" type="submit">
                     Inscription
                 </button>
             </div>
         </form>
-
-        
     </section>
+        
+    
 

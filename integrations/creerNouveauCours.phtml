@@ -19,7 +19,7 @@
 
         <div class="title-message">
         <i class="far fa-user icon-user"></i>
-        <h1>Modifier un cours<br>
+        <h1>Ajouter un cours<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
@@ -33,11 +33,7 @@
             </div>
         <?php endif; ?>
     
-        <form id="form" method="POST" action="modifierCours.php">
-            <p>
-                <label>Le cours à modifier est :</label>
-                <?php var_dump($cours); ?>
-            </p>
+        <form id="form" method="POST" action="ajouterCours.php">
             <p>
                 <label>Nom du cours</label>
                 <input type="text" placeholder="Nom du cours">
@@ -64,7 +60,7 @@
                     <input type="time" value="17:30">  
                 </p>
             </section>
-            <button class="button button-info" type="submit">Modifier ce cours</button>
+            <button class="button button-success" type="submit">Ajouter un cours</button>
         </form>
     </section>    
 

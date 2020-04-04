@@ -4,6 +4,30 @@
 include 'config/database.php';
 
 
+// Vérification de l'existence d'un ID dans l'URL
+/*
+if (!array_key_exists('id', $_GET)) {
+    header('Location: listedesclasses.php');
+    exit();
+}
+
+$id = $_GET['id'];
+*/
+// Récupération des infos de la liste des cours
+
+$query = $pdo->prepare(
+    'SELECT * FROM cours WHERE idCours = :id'
+);
+$query->bindParam(':id', $id, PDO::PARAM_INT);
+$query->execute();
+$cours = $query->fetch();
+
+// Et Récupération de la liste des classes
+$query = $pdo->query(
+    'SELECT idClasse, nom FROM classes'
+);
+$classes = $query->fetchAll();
+
 
 // Affichage
 $PAGE = [

@@ -8,7 +8,7 @@ include 'config/database.php';
 // Affichage
 $PAGE = [
     'title' => 'Accueil Administrateur',
-    'template' => 'adminAccueil.phtml'
+    'template' => 'accueilAdministrateur.phtml'
 ];
 
 include 'integrations/MASTER.phtml';

@@ -24,13 +24,17 @@
     border: thin solid rgba(255, 0, 0, 0.5);
 }
 .button.button-success {
-    background-color: green;
-    border: thin solid darkgreen;
+    background-color: cadetblue;
+    border: 2px solid whitesmoke;
     color: white;
+    padding: 10px 20px;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
 }
 .button.button-success:hover {
-    background-color: lightgreen;
-    border: thin solid lightgreen;
+    background-color: skyblue;
+    border: 2px solid whitesmoke;
 }
 .button.button-info {
     background-color: rgb(0, 132, 255);
@@ -139,111 +143,73 @@ header nav {
 /* Fin header à utiliser sur toutes les pages */
 
 
-/*********** Page adminAccueil ********/
 
-#container-admin-accueil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    height: 700px;
+/* middle section a utilisé sur toutes les pages */
+
+#middle-section {
+    height: 900px;
     border: 1px solid black;
     background-color: blanchedalmond;
-
-
-
+    margin-top: 10px;
 }
-
-#container-admin-accueil > .msg-admin-accueil {
+.title-message {
+    align-items: center;
     height: 150px;
     width: 500px;
     text-align: center;
     border: 2px solid skyblue;
     background-color: green;
     padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -15px;
+    margin: 25px auto;  
 }
-
-#container-admin-accueil h1 {
+#middle-section h1 {
     font-family: 'Kaushan-regular';
     color: whitesmoke;
 }
-
-#section-admin-accueil , #top-section-header-and-title ,a {
-    text-decoration: none;
-    
-}
-#section-admin-accueil {
+#form {
     display: flex;
-    justify-content: center;
-}
-.title-admin-accueil  {
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
     
 }
-#section-admin-accueil > div {
-    border: 2px skyblue solid;
-    display: inline-flex;
-    width: 200px;
-    margin: 10px;
-    padding: 5px;
+#form p{
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    text-align: center;
-    margin-bottom: 50px;
-   
-}
-
-/* Page ajouter un cours */
-
-#container-ajout-cours {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    height: 700px;
+    color: black;
     border: 1px solid black;
-    background-color: blanchedalmond;
-}
-
-#container-ajout-cours > .msg-ajout-cours {
-    height: 150px;
+    background-color: cadetblue;
+    margin: 20px;
     width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    
-    
+}
+#form p input {
+    width: 320px;
+    height: 25px;
+    text-align: center;
 }
 
-#container-ajout-cours h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
+select {
+    width: 200px;
+    padding: 5px 20px;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 }
-.div-ajouter-cours {
-    display: flex;
-    flex-direction: column;
-}
-#form-ajout-cours {
-    font-size: large;
-    
-    align-items: center;
-    margin-top: 150px;
-
-}
-#form-calendrier-ajout-cours {
-    margin-top: 50px;
-    align-items: center;
-    
+#date-cours > p input {
+    width: 100px;
 }
 
-.button-success {
-    margin-top: 50px;
-    padding: 5px;
-}
+/* Fin de middle section a utilisé sur toutes les pages */
+
+
 
 
 /* Page ajouter un utilisateur */
@@ -499,63 +465,6 @@ header nav {
     color: whitesmoke;
 }
 
-/* Page liste de cours */
-
-.container-liste-des-cours {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-liste-des-cours {
-    margin-top: 50px;
-}
-.container-liste-des-cours > .msg-liste-des-cours {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-liste-des-cours h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-liste-des-cours label {
-    font-size: larger;
-    margin-top: 20px;
-}
-#form-liste-des-cours {
-    margin-top: 40px;
-}
-#form-liste-des-cours select {
-    width: 200px;
-    padding: 5px;
-    text-align: center;
-    font-size: small;
-    
-}
-#form-liste-des-cours input {
-    width: 200px;
-    padding: 5px;
-    text-align: center;
-    font-size: small;
-    
-}
-#section-liste-des-cours {
-    margin-top: 40px;
-}
-#section-liste-des-cours label {
-    margin-left: -40px;
-    
-}
 
 /* Page liste des classes */
 
@@ -863,196 +772,6 @@ header nav {
 }
 
 /* Fin du contenu de la page d'accueil Help Yourself */
-
-
-
-/* Contenu de la page d'INSCRIPTION */
-
-#middle-section-registration {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 750px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-registration > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -15px;
-}
-
-#middle-section-registration h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#form-registration {
-    margin-top: -200px;
-    width: 550px;
-    margin-bottom: 10px;
-}
-
-#form-registration p{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid black;
-    background-color: cadetblue;
-    margin: 20px;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-#form-registration p select {
-    margin: 5px;
-    width: 320px;
-    height: 25px;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: grey;
-    color: whitesmoke;
-    align-items: center;
-    
-}
-
-#form-registration p input {
-    width: 320px;
-    height: 25px;
-    
-}
-
-#form-registration div {
-    display: flex;
-    justify-content: center;
-}
-
-#button-registration a {
-    color: whitesmoke;
-}
-
-#button-registration {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 10px 10px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 250px;
-    margin-bottom: -40px;
-    margin-top: 20px;   
-}
-
-/* Fin du contenu de la page d'inscription */
-
-
-
-
-/* Contenu de la page de CONNEXION */
-
-#middle-section-connection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-connection > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 200px;
-    margin-top: -50px;
-}
-
-#middle-section-connection h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-#form-connection {
-    margin-top: -150px;
-    margin-bottom: 80px;
-}
-
-#form-connection p{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: 1px solid black;
-    background-color: cadetblue;
-    margin: 20px;
-    width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-#form-connection p input {
-    width: 320px;
-    height: 25px;
-    
-}
-
-#form-connection div {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: -100px;
-}
-
-#button-connection a {
-    color: whitesmoke;
-}
-
-#button-connection {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 10px 10px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 250px;   
-}
-
-/* Fin du contenu de la page de connexion */
-
-
 
 
 

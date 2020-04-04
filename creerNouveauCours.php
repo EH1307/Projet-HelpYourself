@@ -6,7 +6,7 @@ include 'config/database.php';
 // Configuration de la page
 $PAGE = [
     'title' => 'Ajouter un Cours',
-    'template' => 'ajouterCours.phtml'
+    'template' => 'creerNouveauCours.phtml'
 ];
 
 /*
@@ -85,10 +85,10 @@ if ($_POST) {
 
 
 $query = $pdo->query(
-    'SELECT idCours, titre FROM cours'
+    'SELECT idClasse, nom FROM classes'
 );
 
-$cours = $query->fetchAll();
+$classes = $query->fetchAll();
 
 
 // Affichage

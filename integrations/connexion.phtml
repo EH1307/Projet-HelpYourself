@@ -18,15 +18,25 @@
     </header>
 </section>
 
-<section id="middle-section-connection">
+<section id="middle-section">
 
-    <div>
+    <div class="title-message">
     <i class="far fa-user icon-user"></i>
     <h1>Bienvenue sur votre page de connexion<br>
         "L'apprentissage est l'une des clés de la réussite"</h1>
     </div>
 
-    <form id="form-connection" action="#">
+    <?php if (!empty($ERRORS)) : ?>
+            <div class="error">
+                <ul>
+                <?php foreach ($ERRORS as $error) : ?>
+                    <li><?= $error; ?></li>
+                <?php endforeach; ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+
+    <form id="form" action="connexion.php">
         <p>
             <label for="email">Votre email : </label>
             <input type="email" id="email" required>
@@ -36,8 +46,7 @@
             <input type="password" id="motdepasse" required>
         </p>
         <div>
-        <button id="button-connection" type="submit">
-            <a href="#">Connexion</a></button>
+        <button class="button button-success" type="submit">Connexion</button>
         </div>
     </form>
 

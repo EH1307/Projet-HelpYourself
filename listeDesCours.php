@@ -12,12 +12,12 @@ $query = $pdo->query(
     'SELECT titre,etat FROM cours'
 );
 
-$listedecours = $query->fetchAll();
+$listeDesCours = $query->fetchAll();
 
 // Affichage
 $PAGE = [
     'title' => 'Liste des Cours',
-    'template' => 'listedecours.phtml'
+    'template' => 'listeDesCours.phtml'
 ];
 
 include 'integrations/MASTER.phtml';
