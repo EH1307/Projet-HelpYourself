@@ -4,8 +4,9 @@
 include 'config/database.php';
 
 // Vérification de l'existence d'un ID dans l'URL
+/*
 if (!array_key_exists('id', $_GET)) {
-    header('Location:utilisateurs.php');
+    header('Location:modifierUtilisateur.php');
     exit();
 }
 
@@ -18,7 +19,7 @@ $query = $pdo->prepare(
 $query->bindParam(':id', $id, PDO::PARAM_INT);
 $query->execute();
 $utilisateur = $query->fetch();
-
+*/
 // Et Récupération de la liste des classes
 $query = $pdo->query(
     'SELECT idClasse, nom FROM classes'

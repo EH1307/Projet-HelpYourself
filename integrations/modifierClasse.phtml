@@ -15,40 +15,21 @@
         </header>
     </section>
     
-    <div class="container-modifier-classe">
+    <section id="middle-section">
     
-        <div class="msg-modifier-classe">
+        <div class="title-message">
             <i class="far fa-user icon-user"></i>
-            <h1>Modifier une Classe</h1>
+            <h1>Modifier une Classe<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <form id="form-modifier-classe">
-            <div class="nom-modifier-classe">
+        <form id="form" method="POST"  action="modifierClasse.php" >
+            <p>
                 <label>Nom de la classe : </label>
-                <input type="text" placeholder="Fc Dev">
-            </div>
-            <div class="ajout-etudiant-modifier-classe">
-                <label>Ajout d'étudiants : </label>
-                <input type="text" placeholder="Antoine La">
-                <button class="button button-success">Rechercher</button>
-            </div>
+                <input type="text" name="name" id="name" placeholder="Nom de la Classe" value="<?= isset($name) ? $name : ''; ?>">
+            </p>
+            <button class="button button-success" type="submit">Modifier une classe</button>
         </form>
-
-        <section id="section-ajout-etudiants-modifier-classe">
-            <label>Les étudiants déjà ajoutés à cette classe : </label><br/>
-            <ul>
-                <li>Aurélien Durand <button class="button button-danger">Supprimer</button></li>
-                <li>Céline Bernard <button class="button button-danger">Supprimer</button></li>
-                <li>Alain Marechal <button class="button button-danger">Supprimer</button></li>
-                <li>Laure Da Silva <button class="button button-danger">Supprimer</button></li>
-                <li>Etienne Boucher <button class="button button-danger">Supprimer</button></li>
-                <li>Magalie Perret <button class="button button-danger">Supprimer</button></li>
-                <li>Christelle Monget <button class="button button-danger">Supprimer</button></li>
-            </ul>
-            
-        </section>
-        <div>
-            <button class="button button-info" type="submit">Modifier la classe</button>
-        </div>
-    </div>
+        
+    </section>
 

@@ -1,0 +1,73 @@
+
+    <section id="top-section-header-and-title">
+        <header>
+            <img src="integrations/res/img/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <a href="connexion.php" alt="" >Déconnexion</a>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    
+    <section id="middle-section">
+    
+        <div class="title-message">
+            <i class="far fa-user icon-user"></i>
+            <h1>Les Utilisateurs<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
+        </div>
+
+        <form id="form" method="POST" action="listeDesUtilisateurs.php">
+            <p>
+                <select>
+                    <option value="">Administrateur </option>
+                    <option value="">Etudiant</option>
+                    <option value="">Formateur</option> 
+                </select>
+                <select>
+                    <option value="">Fc Dev </option>
+                    <option value="">Chef de Projets</option>
+                    <option value="">Fc Ux</option>
+                    <option value="">Fc Motion Design</option>
+                </select>
+            </p>
+            <p>
+            <label>Entrer un nom : </label>   
+            <input type="text">
+            </p>
+                <button class="button button-success">Rechercher</button>
+            
+        
+            
+                <p>
+                    <label>La liste des utilisateurs :</label>
+                    <select>
+                        <option>N/A</option>
+                        <?php foreach($utilisateurs as $utilisateur) : ?>
+                            <option value="<?=$utilisateur['idUtilisateur'];?>"><?= $utilisateur['nom']; ?> <?= $utilisateur['prenom']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+
+                </p>
+                <div class="info-danger-btn">
+                    <div class="danger-btn">
+                        <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a></button>
+                    </div>
+                    <div class="info-btn">
+                        <button class="button button-info" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a></button>
+                    </div>
+                    
+                </div>
+
+        </form>
+        
+    </section>
+
+
+    

@@ -15,31 +15,29 @@
         </header>
     </section>
     
-    <div class="container-modifier-utilisateur">
+    <section id="middle-section">
     
-        <div class="msg-modifier-utilisateur">
+        <div class="title-message">
             <i class="far fa-user icon-user"></i>
-            <h1>Modifier un Utilisateur</h1>
+            <h1>Modifier un Utilisateur<br>
+            "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <p>L'utilisateur à modifier est :</p>
-        <?php var_dump($utilisateur); ?>
-
-        <form method="POST" action="modifierUtilisateur.php">
+        <form id="form" method="POST" action="modifierUtilisateur.php">
             <p>
-            <select name="role">
-                <option value="administrateur" <?= ($utilisateur['role'] === 'administrateur' ? 'selected' : ''); ?>>Administrateur</option>
-                <option value="etudiant" <?= ($utilisateur['role'] === 'etudiant' ? 'selected' : ''); ?>>Etudiant</option>
-                <option value="formateur" <?= ($utilisateur['role'] === 'formateur' ? 'selected' : ''); ?>>Formateur</option> 
-            </select>
-            <select name="class" id="">
-                <option>N/A</option>
-                <?php foreach($classes as $classe) : ?>
-                    <option <?= ($utilisateur['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>">
-                        <?= $classe['nom']; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
+                <select name="role">
+                    <option value="administrateur" <?= ($utilisateur['role'] === 'administrateur' ? 'selected' : ''); ?>>Administrateur</option>
+                    <option value="etudiant" <?= ($utilisateur['role'] === 'etudiant' ? 'selected' : ''); ?>>Etudiant</option>
+                    <option value="formateur" <?= ($utilisateur['role'] === 'formateur' ? 'selected' : ''); ?>>Formateur</option> 
+                </select>
+                <select>
+                    <option>N/A</option>
+                    <?php foreach($classes as $classe) : ?>
+                        <option <?= ($utilisateur['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>">
+                            <?= $classe['nom']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
             </p>
             <p>
                 <label for="name">Votre nom : </label>
@@ -57,8 +55,8 @@
                 <label for="password">Votre mot de passe : </label>
                 <input type="password" name="enterpassword" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
             </p>
-            <div>
+            
             <button class="button button-info" type="submit">Modifier cet utilisateur</button>
         </form>
-    </div>
+    </section>
     

@@ -7,7 +7,7 @@ include 'config/database.php';
 // Vérification de l'existence d'un ID dans l'URL
 /*
 if (!array_key_exists('id', $_GET)) {
-    header('Location: listedesclasses.php');
+    header('Location: modifierCours.php');
     exit();
 }
 

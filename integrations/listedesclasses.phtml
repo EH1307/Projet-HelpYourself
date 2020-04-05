@@ -14,27 +14,41 @@
             </nav>
         </header>
     </section>
-    <div class="container-liste-des-classes">
+    <section id="middle-section">
     
-        <div class="msg-liste-des-classes">
+        <div class="title-message">
             <i class="far fa-user icon-user"></i>
             <h1>Liste des Classes<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <form id="recherche-liste-des-classes">
-            <label>Rechercher une classe :</label> 
-            <input type="text" placeholder="Fc Dev">
-            <button class="button button-success">Rechercher</button>
+        <form id="form" method="POST" action="listeDesClasses.php">
+            <div class="name-class">
+                <p>
+                    <label>Nom de la classe :</label> 
+                    <input type="text" placeholder="Fc Dev">
+                    <button class="button button-success">Rechercher</button>
+                </p>
+                <p>
+                    <label>La liste des classes :</label> 
+                    <select>
+                        <?php foreach($classes as $classe) : ?>
+                        <option value="<?= $classe['nom']; ?>"></option>
+                        <?php endforeach; ?> 
+                    </select>
+                    
+                </p>   
+            </div> 
+            <div class="list-class-btn">
+                <div class="info-btn">
+                    <button class="button button-info" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a></button>
+                </div>
+                <div class="danger-btn">
+                    <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a></button>
+                </div>
+            </div>   
+            
+            <button class="button button-success">Créer nouvelle classe</button>
         </form>
-
-        <section id="section-liste-des-classes">
-            <label>La liste des classes :</label> 
-            <ul>
-            <?php foreach($classes as $classe) : ?>
-                    <li><?= $classe['nom']; ?><button class="button button-info">Modifier</button><button class="button button-danger">Supprimer</button></li>
-                <?php endforeach; ?>
-            </ul>
-        </section>
-    </div>
+    </section>
 

@@ -16,9 +16,18 @@
 }
 .button.button-danger {
     background-color: red;
-    border: thin solid red;
+    border: 2px solid red;
+    padding: 10px 20px;
+    color: white;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
+}
+.button.button-danger a , .button.button-info a ,.button.button-success a {
+    text-decoration: none;
     color: white;
 }
+
 .button.button-danger:hover {
     background-color: rgba(255, 0, 0, 0.5);
     border: thin solid rgba(255, 0, 0, 0.5);
@@ -31,6 +40,7 @@
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .button.button-success:hover {
     background-color: skyblue;
@@ -38,8 +48,12 @@
 }
 .button.button-info {
     background-color: rgb(0, 132, 255);
-    border: thin solid rgb(0, 132, 255);
+    border: 2px solid rgb(0, 132, 255);
+    padding: 10px 20px;
     color: white;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 30px;
 }
 .button.button-info:hover {
     background-color: rgb(102, 181, 255);
@@ -125,6 +139,7 @@ header nav {
     padding: 8px;
     font-size: 15px;
     color: white;
+    text-decoration: none;
 }
 
 #top-section-header-and-title button:hover {
@@ -207,163 +222,15 @@ select {
     width: 100px;
 }
 
-/* Fin de middle section a utilisé sur toutes les pages */
+/* Les 3 pages de suppression */
 
-
-
-
-/* Page ajouter un utilisateur */
-
-.container-ajout-utilisateur {
+.message-delete {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-
-}
-.msg-ajout-utilisateur {
-    margin-top: 50px;
-}
-#select-ajout-utilisateur select {
-    margin-top: 50px;
-    padding: 20px 30px;
-    font-size: medium;
-}
-
-.container-ajout-utilisateur > .msg-ajout-utilisateur {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-
-.container-ajout-utilisateur h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#form-ajout-utilisateur input {
-    padding: 10px;
-    
-}
-#section-users-ajouter-utilisateur {
-    margin-top: 20px;
-}
-#section-users-ajouter-utilisateur label {
-    font-size: large;
-    margin-left: -50px;
-    
-}
-#section-users-ajouter-utilisateur > ul > li {
-    padding: 5px;
-}
-.ajout-user-btn {
-    margin-top: 20px;
-}
-
-
-/* Page créer une classe */
-
-.container-creer-classe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-creer-classe {
-    margin-top: 50px;
-}
-.container-creer-classe > .msg-creer-classe {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-creer-classe h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-creer-classe label {
-    font-size: larger;
-}
-.button-success {
-    padding: 5px;
-}
-.ajout-etudiant-cree-classe {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-.ajout-etudiant-cree-classe label {
-    margin-top: 10px;
-}
-#form-creeClasse {
     margin-top: 100px;
-   
-}
-#form-creeClasse input {
-    padding: 10px;
-    width: 200px;
-    text-align: center;
-    font-size: small;  
-}
-#section-ajoutEtudiants-creer-classe {
-    margin-top: 40px;
-}
-#section-ajoutEtudiants-creer-classe label {
-    margin-left: -60px;
-}
-#section-ajoutEtudiants-creer-classe > ul > li {
-    padding: 5px;
-}
-
-
-
-/* Supprimer une classe */
-
-
-#middle-section-delete-class {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 750px;
-        border: 1px solid black;
-        background-color: blanchedalmond;
-        margin-top: 10px;
-    }
     
-#middle-section-delete-class > div {
-        height: 150px;
-        width: 500px;
-        text-align: center;
-        border: 2px solid skyblue;
-        background-color: green;
-        padding: 5px;
-        margin-bottom: 150px;
-        margin-top: -15px;
-    }
-    
-#middle-section-delete-class h1 {
-        font-family: 'Kaushan-regular';
-        color: whitesmoke;
-    }
+}
 
 .info-suppression {
     display: flex;
@@ -400,346 +267,40 @@ select {
     float: left;
     margin-top: 15px;
 }
+.delete-btn {
+    display: flex;
+}
 
 
+/* Liste des utilisateurs */
 
-/* supprimer un cours */
+.info-danger-btn {
+    display: flex;
+    
+}
+.button-danger{
+    margin-right: 30px;
+}
 
 
-#middle-section-delete-studies {
+/* Liste des classes */
+
+.name-class p {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 750px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
+    margin: 50px; 
 }
-
-#middle-section-delete-studies > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 150px;
-    margin-top: -15px;
+.name-class label {
+    padding: 10px 0;
 }
-
-#middle-section-delete-studies h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-
-/* supprimer un utilisateur */
-
-
-#middle-section-delete-user {
+.list-class-btn {
     display: flex;
-    flex-direction: column;
+    
     align-items: center;
-    justify-content: center;
-    height: 750px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
 }
-
-#middle-section-delete-user > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 150px;
-    margin-top: -15px;
-}
-
-#middle-section-delete-user h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-
-/* Page liste des classes */
-
-.container-liste-des-classes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-liste-des-classes {
-    margin-top: 50px;
-}
-.container-liste-des-classes > .msg-liste-des-classes {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-liste-des-classes h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-liste-des-classes label {
-    font-size: larger;
-    margin-top: 20px;
-}
-#recherche-liste-des-classes input {
-    width: 200px;
-    padding: 5px;
-    text-align: center;
-    font-size: small;
-}
-#section-liste-des-classes {
-    margin-top: 40px;
-}
-#section-liste-des-classes label {
-    margin-left: -40px;
-    
-}
-
-
-/* Page modifier une classe */
-
-.container-modifier-classe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-modifier-classe {
-    margin-top: 50px;
-}
-.container-modifier-classe > .msg-modifier-classe {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-modifier-classe h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-modifier-classe label {
-    font-size: larger;
-}
-.nom-modifier-classe {
-    margin-bottom: -40px;
-}
-#form-modifier-classe {
-    margin-top: 40px;
-}
-#form-modifier-classe input {
-    width: 200px;
-    padding: 10px;
-    text-align: center;  
-}
-#section-ajout-etudiants-modifier-classe {
-    margin-top: 40px;
-}
-#section-ajout-etudiants-modifier-classe label {
-    margin-left: -60px;
-}
-#section-ajout-etudiants-modifier-classe > ul > li {
-    padding: 5px;
-}
-.button-danger {
-    margin-left: 20px;
-}
-.button-info {
-    margin-top: 20px;
-}
-
-
-/* Page modifier un cours */
-
-.container-modifier-cours {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-modifier-cours {
-    margin-top: 50px;
-}
-.container-modifier-cours > .msg-modifier-cours {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-modifier-cours h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-modifier-cours label {
-    font-size: larger;
-}
-.nom-modifier-cours {
-    margin-bottom: -40px;
-}
-#form-modifier-cours select {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-}
-#form-modifier-cours input {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-}
-
-
-/* Page modifier un utilisateur */
-
-.container-modifier-utilisateur {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-modifier-utilisateur {
-    margin-top: 50px;
-}
-.container-modifier-utilisateur > .msg-modifier-utilisateur {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-modifier-utilisateur h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-modifier-utilisateur label {
-    font-size: larger;
-}
-#form-modifier-utilisateur {
-    margin-top: 30px;
-}
-#form-modifier-utilisateur select {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    font-size: medium;
-}
-#form-modifier-utilisateur input {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    font-size: medium;
-}
-#section-modifier-utilisateur {
-    margin-top: 60px;
-}
-#section-modifier-utilisateur label {
-    margin-left: -60px;
-}
-
-
-/* Page utilisateurs */
-
-.container-utilisateurs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    height: auto;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    
-}
-.msg-utilisateurs {
-    margin-top: 50px;
-}
-.container-utilisateurs > .msg-utilisateurs {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 1,nn0px;
-    
-}
-.container-utilisateurs h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-.container-utilisateurs label {
-    font-size: larger;
-}
-#form-utilisateurs {
-    margin-top: 60px;
-}
-#form-utilisateurs select {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    font-size: medium;
-}
-#form-utilisateurs input {
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    font-size: medium;
-}
-#section-liste-utilisateurs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-#section-liste-utilisateurs label {
-    margin-left: -60px;
-}
-.button-info {
+.list-class-btn > .danger-btn {
     margin-left: 30px;
 }
-
-/***** fin de la page utilisateurs ******/
-
-
-
 
 
 
@@ -1129,13 +690,6 @@ select {
 }
 
 /* Fin de la page liste de mes cours des étudiants */ 
-
-
-
-
-
-
-
 
 
 
