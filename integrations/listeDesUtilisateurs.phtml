@@ -42,12 +42,11 @@
             <input type="text">
             </p>
                 <button class="button button-success">Rechercher</button>
-            
-        
+                    
             
                 <p>
                     <label>La liste des utilisateurs :</label>
-                    <select>
+                    <select id="user_selected">
                         <option>N/A</option>
                         <?php foreach($utilisateurs as $utilisateur) : ?>
                             <option value="<?=$utilisateur['idUtilisateur'];?>"><?= $utilisateur['nom']; ?> <?= $utilisateur['prenom']; ?></option>
@@ -60,7 +59,7 @@
                         <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a></button>
                     </div>
                     <div class="info-btn">
-                        <button class="button button-info" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a></button>
+                        <button class="button button-info">Modifier</button>
                     </div>
                     
                 </div>
@@ -69,5 +68,13 @@
         
     </section>
 
-
+<script>
+    $(document).ready(function() {
+        $('.button-info').on('click', function(event){
+            event.preventDefault();
+            let id = $('#user_selected').val();
+            window.location.href = "modifierUtilisateur.php?id="+id;
+        });
+    });
+</script>
     
