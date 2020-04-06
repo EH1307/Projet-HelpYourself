@@ -7,7 +7,7 @@ include 'config/database.php';
 
 // Affichage
 $PAGE = [
-    'title' => 'Connexion',
+    'title' => 'Cours Formateur',
     'template' => 'coursFormateur.phtml'
 ];
 

@@ -37,21 +37,14 @@
                     <option value="">Fc Motion Design</option>
                 </select>
             </p>
-            <p>
-            <label>Entrer un nom : </label>   
-            <input type="text">
+            <p>  
+            <input type="text" placeholder="Entrer un nom">
+            <button class="button button-success">Rechercher</button>
             </p>
-                <button class="button button-success">Rechercher</button>
+                
                     
             
-                <p>
-                    <label>La liste des utilisateurs :</label>
-                    <select id="user_selected">
-                        <option>N/A</option>
-                        <?php foreach($utilisateurs as $utilisateur) : ?>
-                            <option value="<?=$utilisateur['idUtilisateur'];?>"><?= $utilisateur['nom']; ?> <?= $utilisateur['prenom']; ?></option>
-                        <?php endforeach; ?>
-                    </select>
+                
 
                     <table id="user_list">
   <tr>
@@ -59,7 +52,7 @@
     <th>Prénom</th>
     <th>Email</th>
     <th>Role</th>
-    <th></th>
+    <th>Actions</th>
   </tr>
   <?php foreach($utilisateurs as $utilisateur) : ?>
   <tr>
@@ -68,27 +61,16 @@
     <td><?= $utilisateur['email']; ?></td>
     <td><?= $utilisateur['role']; ?></td>
     <td>
+        <div class="user_list_btn">
         <a class="button button-info" href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a>
         <a class="button button-danger" href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a>
+        </div>
     </td>
   </tr>
   <?php endforeach; ?>
   
 </table>
-
-                </p>
-                <div class="info-danger-btn">
-                    <div class="danger-btn">
-                        <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a></button>
-                    </div>
-                    <div class="info-btn">
-                        <button class="button button-info">Modifier</button>
-                    </div>
-                    
-                </div>
-
-        </form>
-        
+        </form>  
     </section>
 
 <script>
@@ -96,11 +78,13 @@
     $(document).ready(function() {
         $('.button-danger').on('click', function(event){
             event.preventDefault();
-            if(confirm('Voulez vous vraiement supprimer cet utilisateur ?') == true){
+            if(confirm('Voulez vous vraiment supprimer cet utilisateur ?') == true){
                 window.location.href = $(this).attr('href');
             }
         });
     });
+
+
 
    /* $(document).ready(function() {
         $('.button-info').on('click', function(event){
