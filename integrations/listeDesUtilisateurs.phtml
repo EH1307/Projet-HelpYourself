@@ -53,6 +53,29 @@
                         <?php endforeach; ?>
                     </select>
 
+                    <table id="user_list">
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th></th>
+  </tr>
+  <?php foreach($utilisateurs as $utilisateur) : ?>
+  <tr>
+    <td><?= $utilisateur['nom']; ?></td>
+    <td><?= $utilisateur['prenom']; ?></td>
+    <td><?= $utilisateur['email']; ?></td>
+    <td><?= $utilisateur['role']; ?></td>
+    <td>
+        <a class="button button-info" href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a>
+        <a class="button button-danger" href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a>
+    </td>
+  </tr>
+  <?php endforeach; ?>
+  
+</table>
+
                 </p>
                 <div class="info-danger-btn">
                     <div class="danger-btn">
@@ -69,12 +92,22 @@
     </section>
 
 <script>
+
     $(document).ready(function() {
+        $('.button-danger').on('click', function(event){
+            event.preventDefault();
+            if(confirm('Voulez vous vraiement supprimer cet utilisateur ?') == true){
+                window.location.href = $(this).attr('href');
+            }
+        });
+    });
+
+   /* $(document).ready(function() {
         $('.button-info').on('click', function(event){
             event.preventDefault();
             let id = $('#user_selected').val();
             window.location.href = "modifierUtilisateur.php?id="+id;
         });
-    });
+    }); */
 </script>
     
