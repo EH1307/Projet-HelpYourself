@@ -19,9 +19,8 @@ $query = $pdo->prepare(
 $query->bindParam(':id', $id, PDO::PARAM_INT);
 $query->execute();
 $utilisateur = $query->fetch();
-*/
-/*
-    Requête SQL permettant d'aller chercher tous les utilisateurs
+
+// Requête SQL permettant d'aller chercher tous les utilisateurs
     dans la base de données
 */
 

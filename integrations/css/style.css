@@ -181,6 +181,7 @@ header nav {
     font-family: 'Kaushan-regular';
     color: whitesmoke;
 }
+
 #form {
     display: flex;
     flex-direction: column;
@@ -302,251 +303,41 @@ select {
     margin-left: 30px;
 }
 
+/* Liste des cours Etudiants et Formateurs */
 
-
-/* Contenu page d'ACCUEIL Help Yourself */
-
-#middle-section-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-}
-
-#middle-section-home  h1 {
-    height: 180px;
-    width: 180px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 50px ;
-    border-radius: 360px;
-    -webkit-border-radius: 360px;
-    -moz-border-radius: 360px;
-    -ms-border-radius: 360px;
-    -o-border-radius: 360px;
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-/* Fin du contenu de la page d'accueil Help Yourself */
-
-
-
-/* Contenu de la page d'ACCUEIL FORMATEURS */
-
-#middle-section-home-teachers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-home-teachers > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 300px;
-    margin-top: -200px;
-}
-
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
-}
-
-#middle-section-home-teachers  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#button-home-teachers {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-    margin-top: -100px;  
-}
-
-
-#button-home-teachers-two {
-    color: white;
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 350px;
-    margin-top: -200px;
-    font-size: 17px;
-}
-
-#button-home-teachers a {
-    color: whitesmoke;
-}
-
-#button-home-teachers-two a {
-    color: whitesmoke;
-} 
-
-/* Fin du contenu de la page d'accueil formateurs */
-
-
-
-
-/*  Contenu de la page d'ACCUEIL ÉTUDIANTS  */
-
-#middle-section-home-students {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#middle-section-home-students > div {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-top: -100px;
-    margin-bottom: 400px;
-}
-
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
-}
-
-#middle-section-home-students  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#middle-section-home-students button {
-    border: 2px solid white;
-    background-color: skyblue;
-    border-radius: 15px ;
-    -webkit-border-radius: 15px ;
-    -moz-border-radius: 15px ;
-    -ms-border-radius: 15px ;
-    -o-border-radius: 15px ;
-    padding: 30px 50px;
-    cursor: pointer;
-    font-size: 17px;
-    width: 300px;
-    margin-top: -250px;
-}
-
-#middle-section-home-students button a {
-    color: whitesmoke;
-}
-
-/* Fin du contenu de la page d'ACCUEIL ÉTUDIANTS */
-
-
-
-
-/* Contenu de la page LISTE DE MES COURS -> ÉTUDIANT */
-
-#middle-section-studies-students {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 750px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
-}
-
-#welcome-message {
-    height: 150px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 5px;
-    margin-bottom: 20px;  
-}
-
-#welcome-message h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
 
 #time-studies-students {
     padding: 2px;
-    margin-left: 809px;
-    margin-top: -540px;
     background-color: cyan;
     border: 1px solid black;
     width: 145px;
 }
 
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
-}
-
-#middle-section-studies-students  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#lessons-student {
+#lessons-list {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: -527px;
+    align-items: center;
+    margin-bottom: 300px; 
+}
+#lessons-list a {
+    text-decoration: none;
 }
 
-#lessons-student p {
+#lessons-list p {
     background-color: gainsboro;
     width: 100px;
     border: 1px solid black;
 }
 
-#lessons-student #hour-begin-end {
+#lessons-list #hour-begin-end {
     width: 300px;
 }
 
-#lessons-student #hour-begin-end p input {
+#lessons-list #hour-begin-end p input {
     justify-content: space-around;
 }
 
-#lesson-one-student {
+#lesson-one {
     display: flex;
     justify-content: space-between;
     border: 2px solid grey;
@@ -555,22 +346,29 @@ select {
     position: relative;
 }
 
-#lesson-one-student p {
+#lesson-one p {
     margin: 10px;
     text-align: center;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#open-class {
+#message-open-close-lesson {
     font-family: 'Courier New', Courier, monospace;
     color: green;
     position: absolute;
-    margin-top: 115px;
+    margin-top: 90px;
     margin-left: -450px;
-    width: 210px;
+    width: 350px;
 }
-
+.three-btn {
+    margin-top: -20px;
+    
+}
+.three-btn a {
+    text-decoration: none;
+    
+}
 #iampresent {
     position: absolute;
     margin-top: 135px;
@@ -624,16 +422,16 @@ select {
     color: black;
 }
 
-#lesson-two-student {
+#lesson-two {
     display: flex;
     justify-content: space-between;
     border: 2px solid grey;
     border-top: 1px solid grey;
     background-color: white;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
-#lesson-two-student p{
+#lesson-two p{
     margin: 10px;
     text-align: center;
     flex-direction: column;
@@ -649,16 +447,16 @@ select {
     width: 330px;
 }
 
-#lesson-three-student {
+#lesson-three {
     display: flex;
     justify-content: space-between;
     border: 2px solid grey;
     border-top: 1px solid grey;
     background-color: white;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
-#lesson-three-student p{
+#lesson-three p{
     margin: 10px;
     text-align: center;
     flex-direction: column;
@@ -688,23 +486,69 @@ select {
     justify-content: space-between;
     font-family: 'Kaushan-regular';
 }
-
-/* Fin de la page liste de mes cours des étudiants */ 
-
-
-
-/* Contenu de la page LISTE DE MES COURS -> FORMATEURS */
-
-#middle-section-studies-teachers {
+.btn-home-teacher {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+.btn-home-teacher > .button-success {
+    margin: 20px;
+}
+
+
+/* Page relevé de présence */
+
+
+#presence-students {
+    height: 130px;
+    width: 500px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: turquoise;
+    padding: 2px;
+    margin-bottom: 20px;
+}
+
+#presence-students p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    color: black;
+}
+
+
+
+
+/* Contenu page d'ACCUEIL Help Yourself */
+
+#middle-section-home {
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 780px;
+    margin-top: 10px;
+    height: 700px;
     border: 1px solid black;
     background-color: blanchedalmond;
-    margin-top: 10px;
 }
+
+#middle-section-home  h1 {
+    height: 180px;
+    width: 180px;
+    text-align: center;
+    border: 2px solid skyblue;
+    background-color: green;
+    padding: 50px ;
+    border-radius: 360px;
+    -webkit-border-radius: 360px;
+    -moz-border-radius: 360px;
+    -ms-border-radius: 360px;
+    -o-border-radius: 360px;
+    font-family: 'Kaushan-regular';
+    color: whitesmoke;
+}
+
+/* Fin du contenu de la page d'accueil Help Yourself */
+
+
 
 #welcome-message {
     height: 150px;
@@ -724,56 +568,10 @@ select {
     border: 1px solid black;
     width: 145px;
 }
-
-
-.icon-user {
-    font-size: 20px;
-    color: skyblue;
-    padding-right: 500px;
+.btn-two-access-lesson {
+    margin-left: -700px;
+    
 }
-
-#middle-section-studies-students  h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#lessons-teacher {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: -527px;
-}
-
-#lessons-teacher p {
-    background-color: gainsboro;
-    width: 100px;
-    border: 1px solid black;
-}
-
-#lessons-teacher #hour-begin-end {
-    width: 300px;
-}
-
-#lessons-teacher #hour-begin-end p input {
-    justify-content: space-around;
-}
-
-#lesson-one-teacher {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid grey;
-    background-color: white;
-    padding-bottom: 45px;
-    position: relative;
-}
-
-#lesson-one-teacher p {
-    margin: 10px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 
 #open-class-teacher {
     position: absolute;
@@ -809,23 +607,6 @@ select {
 
 #access-courses a{
     color: black;
-}
-
-#lesson-two-teacher {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid grey;
-    border-top: 1px solid grey;
-    background-color: white;
-    padding-bottom: 45px;
-    position: relative;
-}
-
-#lesson-two-teacher p{
-    margin: 10px;
-    text-align: center;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 #access-courses-two {
@@ -916,28 +697,9 @@ select {
     color: grey;
 }
 
-#hour-begin-end {
-    padding: 3px;
-    justify-content: space-between;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-}
-
-#hour-begin-end input{
-    display: flex;
-    float: right;
-    text-align: center;
-    justify-content: space-between;
-    font-family: 'Kaushan-regular';
-}
-
-/* Fin de la page liste de mes cours des formateurs */ 
-
-
-
 
 /* RELEVÉ DE PRÉSENCE */
-
+/*
 #middle-section-presence {
     display: flex;
     flex-direction: column;
