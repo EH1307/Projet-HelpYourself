@@ -21,12 +21,5 @@ $query->bindParam(':id', $id, PDO::PARAM_INT);
 $query->execute();
 
 
-
-
-
-
-
-
-
 header('Location: listeDesUtilisateurs.php');
 exit();

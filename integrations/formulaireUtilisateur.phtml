@@ -51,7 +51,7 @@
             </p>
             <p>
             <label>Classe  : </label>
-                <select>
+                <select name="idClasse">
                     <option>N/A</option>
                     <?php foreach($classes as $classe) : ?>
                         <option <?= ($utilisateur['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>">
