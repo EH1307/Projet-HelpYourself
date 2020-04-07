@@ -33,49 +33,57 @@
 
         <div id="presence-students">
             <div>
+                <select>
+                    <?php foreach($cours as $cour) : ?>
+                    <option value="<?= $cour['idCours']; ?>"><?= $cour['titre']; ?></option>
+                    <?php endforeach; ?>
+                </select>
                 <p>
-                    Cours de JS1 en date du 30 mars 2020 <br><br>
-                    Classe : FC - DEV2 <br><br>
-                    9H00 - 13h00
+                    
+                    <input type="date">
+                    <input type="time" value="09:30">
+                    <input type="time" value="17:30">
                 </p>
+                <select>
+                    
+                    <?php foreach($classes as $classe) : ?>
+                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?></option>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                
             </div>
         </div>
 
         <form id="form" method="POST" action="relevePresence.php">
-            <p>
-                <label>Entrer un nom : </label>   
-                <input type="text">
-            </p>
-            <button class="button button-success">Rechercher</button>
-
-            <p>
-                <label>La liste des élèves :</label>
-                <select>
-                    <option>N/A</option>
-                    <?php foreach($utilisateurs as $utilisateur) : ?>
-                        <option value="<?=$utilisateur['idUtilisateur'];?>"><?= $utilisateur['nom']; ?> <?= $utilisateur['prenom']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-
-            </p>
-
-            <div class="info-danger-btn">
-                <div class="danger-btn">
-                    <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Absent</a></button>
-                </div>
-                <div class="info-btn">
-                    <button class="button button-info" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">En retard</a></button>
-                </div>
-                <div class="success-btn">
-                    <button class="button button-success" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Présent</a></button>
-                </div>     
-            </div>
-        
-            <div>
-                <button class="button button-success" type="submit">
-                    <a href="#">Enregistrer</a>   
-                </button>
-            </div>
+           
+            <table id="user_list">
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            <?php foreach($utilisateurs as $utilisateur) : ?>
+            <tr>
+                <td><?= $utilisateur['nom']; ?></td>
+                <td><?= $utilisateur['prenom']; ?></td>
+                <td>
+                    <select name="status">
+                        <option value="present">Présent</option>
+                        <option value="absent">Absent</option>
+                        <option value="retard">Retard</option> 
+                    </select></td>
+                <td>
+                    <button class="button button-success" type="submit">
+                        <a href="#">Enregistrer</a>   
+                    </button>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+            
+            </table>
+            
         </form>     
     </section>
 

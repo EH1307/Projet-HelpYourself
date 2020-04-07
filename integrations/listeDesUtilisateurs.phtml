@@ -31,6 +31,7 @@
                     <option value="formateur">Formateur</option> 
                 </select>
                 <select>
+                <option>N/A</option>
                 <?php foreach($classes as $classe) : ?>
                     <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?></option>
                 <?php endforeach; ?>
