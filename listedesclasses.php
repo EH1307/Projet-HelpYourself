@@ -13,10 +13,11 @@ include 'config/database.php';
 $query = $pdo->query(
     'SELECT idClasse, nom FROM classes'
 );
-
+$query->execute();
 $classes = $query->fetchAll();
 
 // Affichage
+
 $PAGE = [
     'title' => 'Liste des classes',
     'template' => 'listeDesClasses.phtml'

@@ -28,8 +28,19 @@
                 <label>Nom de la classe : </label>
                 <input type="text" name="name" id="name" placeholder="Nom de la Classe" value="<?= isset($name) ? $name : ''; ?>">
             </p>
-            <button class="button button-success" type="submit">Modifier une classe</button>
+            <a class="button button-info" href="modifierClasse.php?id=<?= $classe['idClasse']; ?>">Modifier</a>
+            <!--<button class="button button-success" type="submit">Modifier une classe</button>-->
         </form>
         
     </section>
+
+    <script>
+    $(document).ready(function() {
+        $('.button-info').on('click', function(event){
+            event.preventDefault();
+            let id = $('#user_selected').val();
+            window.location.href = "modifierClasse.php?id="+id;
+        });
+    });
+    </script>
 

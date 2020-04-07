@@ -25,16 +25,15 @@
 
         <form id="form" method="POST" action="listeDesUtilisateurs.php">
             <p>
-                <select>
-                    <option value="">Administrateur </option>
-                    <option value="">Etudiant</option>
-                    <option value="">Formateur</option> 
+            <select name="role">
+                    <option value="administrateur">Administrateur</option>
+                    <option value="etudiant">Etudiant</option>
+                    <option value="formateur">Formateur</option> 
                 </select>
                 <select>
-                    <option value="">Fc Dev </option>
-                    <option value="">Chef de Projets</option>
-                    <option value="">Fc Ux</option>
-                    <option value="">Fc Motion Design</option>
+                <?php foreach($classes as $classe) : ?>
+                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?></option>
+                <?php endforeach; ?>
                 </select>
             </p>
             <p>  
@@ -46,7 +45,7 @@
             
                 
 
-                    <table id="user_list">
+<table id="user_list">
   <tr>
     <th>Nom</th>
     <th>Prénom</th>

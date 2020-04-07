@@ -6,10 +6,20 @@ include 'config/database.php';
 
 // Récupération des infos de l'utilisateurs
 $query = $pdo->prepare(
+    'SELECT * FROM classes'
+);
+$query->execute();
+$classes = $query->fetchAll();
+
+
+
+$query = $pdo->prepare(
     'SELECT * FROM utilisateurs'
 );
 $query->execute();
 $utilisateurs = $query->fetchAll();
+
+
 
 
 // Affichage
