@@ -237,28 +237,31 @@ header nav {
 }
 
 #form {
+	margin: 0 auto;
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	margin-bottom: 300px;
+	border: 1px solid black;
+	background-color: cadetblue;
+	width: 600px;
+	border-radius: 5px;
+	padding-bottom: 20px;
 }
 #form p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	color: black;
-	border: 1px solid black;
-	background-color: cadetblue;
 	margin: 20px;
+	
 	width: 500px;
 	padding: 10px;
 	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
+	padding: 10px;
 	text-align: center;
 }
+
 #form p input {
 	width: 320px;
 	height: 25px;
@@ -266,7 +269,7 @@ header nav {
 }
 
 select {
-	width: 200px;
+	width: 320px;
 	padding: 5px 20px;
 	font-size: small;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
