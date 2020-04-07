@@ -27,11 +27,11 @@
             
             <p>
                 <label for="name">Nom : </label>
-                <input type="text" name="name" id="name" value="<?= isset($name) ? $name : $utilisateur['nom']; ?>">
+                <input type="text" name="nom" id="name" value="<?= isset($name) ? $name : $utilisateur['nom']; ?>">
             </p>
             <p>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" value="<?= isset($firstname) ? $firstname : $utilisateur['prenom']; ?>">
+                <input type="text" name="prenom" id="firstname" value="<?= isset($firstname) ? $firstname : $utilisateur['prenom']; ?>">
             </p>
             <p>
                 <label for="email">Email : </label>
@@ -39,7 +39,7 @@
             </p>
             <p>
                 <label for="password">Mot de passe : </label>
-                <input type="password" name="enterpassword" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
+                <input type="password" name="motDePasse" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
             </p>
             <p>
                 <label>Rôle  : </label>
