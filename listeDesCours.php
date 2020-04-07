@@ -20,4 +20,6 @@ $PAGE = [
     'template' => 'listeDesCours.phtml'
 ];
 
+$navigation = "cour";
+
 include 'integrations/MASTER.phtml';

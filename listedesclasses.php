@@ -23,4 +23,6 @@ $PAGE = [
     'template' => 'listeDesClasses.phtml'
 ];
 
+$navigation = "classe";
+
 include 'integrations/MASTER.phtml';

@@ -28,4 +28,6 @@ $PAGE = [
     'template' => 'listeDesUtilisateurs.phtml'
 ];
 
+$navigation = "utilisateur";
+
 include 'integrations/MASTER.phtml';
