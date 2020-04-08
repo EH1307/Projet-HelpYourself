@@ -9,10 +9,17 @@ include 'config/database.php';
 */
 
 $query = $pdo->query(
-    'SELECT titre,etat FROM cours'
+    'SELECT * FROM cours'
 );
+$query ->execute();
+$cours = $query->fetchAll();
 
-$listeDesCours = $query->fetchAll();
+$query = $pdo->query(
+    'SELECT idClasse, nom FROM classes'
+);
+$classes = $query->fetchAll();
+
+
 
 // Affichage
 $PAGE = [

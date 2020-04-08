@@ -8,27 +8,61 @@
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <form id="form">
-            <p>
-                <label>Les sessions de cours planifiées :</label>
-                <select>
-                    <?php foreach($listedecours as $cours) : ?>
-                    <option value="<?= $cours['titre']; ?>">(<?= $cours['etat']; ?>)</option>
-                    <?php endforeach; ?>
-                </select>
+        <form id="form-list-cours" method="POST" action="listeDesCours.php">
+            <p>  
+            <input type="text" placeholder="Entrer un nom">
+            <button class="button button-success">Rechercher</button>
             </p>
-            <p>
-                <label>Classe :</label>
-                <select>
-                    <option value="">Fc Dev </option>
-                    <option value="">Chef de Projets</option>
-                    <option value="">Fc Ux</option>
-                    <option value="">Fc Motion Design</option>
-                </select>
-            </p>
-            <button class="button button-success" type="submit">Créer un nouveau cours</button>    
-        </form>
-        
-</section>
+                
+            <table id="user_list">
+                <tr>
+                    <th>Titre</th>
+                    <th>Date de début</th>
+                    <th>Date de fin</th>
+                    <th>Classe</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                    </tr>
+                        <?php foreach($cours as $cour) : ?>
+                    <tr>
+                
+                    <td><?= $cour['titre']; ?></td>
+                    <td><?= $cour['dateDebut']; ?></td>
+                    <td><?= $cour['dateFin']; ?></td>
+                    <td><?= $cour['idClasse']; ?></td>
+                    <td><?= $cour['etat']; ?></td>
+                    
+                    <td>
+                        <div class="user_list_btn">
+                        <a class="button button-info" href="formulaireCour.php?id=<?= $cour['idCours']; ?>">Modifier</a>
+                        <a class="button button-danger" href="supprimerCour.php?id=<?= $cour['idCours']; ?>">Supprimer</a>
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                
+            </table>
+        </form>  
+    </section>
 
-    
+                <script>
+
+                    $(document).ready(function() {
+                        $('.button-danger').on('click', function(event){
+                            event.preventDefault();
+                            if(confirm('Voulez vous vraiment supprimer cet utilisateur ?') == true){
+                                window.location.href = $(this).attr('href');
+                            }
+                        });
+                    });
+
+
+
+                /* $(document).ready(function() {
+                        $('.button-info').on('click', function(event){
+                            event.preventDefault();
+                            let id = $('#user_selected').val();
+                            window.location.href = "modifierUtilisateur.php?id="+id;
+                        });
+                    }); */
+                </script>
