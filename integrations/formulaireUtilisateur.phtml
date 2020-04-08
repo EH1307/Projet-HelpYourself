@@ -60,7 +60,7 @@
                     <?php endforeach; ?>
                 </select>
             </p>
-            
+            <input type="hidden" name="idUtilisateur" value="<?= isset($idUtilisateur) ? $idUtilisateur : $utilisateur['idUtilisateur']; ?>" />
             <button class="button button-info" type="submit">Modifier</button>
         </form>
     </section>
