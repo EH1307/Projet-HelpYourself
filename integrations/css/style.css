@@ -327,6 +327,14 @@ select {
 	display: flex;
 }
 
+
+/* middle section de la page liste des utilisateurs */
+
+#form-list-users  p {
+	display: flex;
+	justify-content: end;
+}
+
 /* Liste des utilisateurs */
 
 .info-danger-btn {

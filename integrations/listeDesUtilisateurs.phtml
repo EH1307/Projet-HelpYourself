@@ -9,20 +9,7 @@
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
 
-        <form id="form" method="POST" action="listeDesUtilisateurs.php">
-            <p>
-            <select name="role">
-                    <option value="administrateur">Administrateur</option>
-                    <option value="etudiant">Etudiant</option>
-                    <option value="formateur">Formateur</option> 
-                </select>
-                <select>
-                <option>N/A</option>
-                <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?></option>
-                <?php endforeach; ?>
-                </select>
-            </p>
+        <form id="form-list-users" method="POST" action="listeDesUtilisateurs.php">
             <p>  
             <input type="text" placeholder="Entrer un nom">
             <button class="button button-success">Rechercher</button>
@@ -38,6 +25,7 @@
     <th>Prénom</th>
     <th>Email</th>
     <th>Role</th>
+    <th>Classe</th>
     <th>Actions</th>
   </tr>
   <?php foreach($utilisateurs as $utilisateur) : ?>
@@ -46,6 +34,7 @@
     <td><?= $utilisateur['prenom']; ?></td>
     <td><?= $utilisateur['email']; ?></td>
     <td><?= $utilisateur['role']; ?></td>
+    <td><?= $utilisateur['idClasse']; ?></td>
     <td>
         <div class="user_list_btn">
         <a class="button button-info" href="formulaireUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a>
