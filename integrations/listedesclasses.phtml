@@ -1,40 +1,34 @@
 <?php include 'integrations/part/navbar.part.php'; ?>
-    
-    <section id="middle-section">
-    
-        <div class="title-message">
-            <i class="far fa-user icon-user"></i>
-            <h1>Liste des Classes<br>
+
+<section id="middle-section">
+
+    <div class="title-message">
+        <i class="far fa-user icon-user"></i>
+        <h1>Liste des Classes<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
-        </div>
+    </div>
 
-        <form id="form" method="POST" action="listeDesClasses.php">
-            <div class="name-class">
-                <p>
-                    <label>Nom de la classe :</label> 
-                    <input type="text" placeholder="Fc Dev">
-                    <button class="button button-success">Rechercher</button>
-                </p>
-                <p>
-                    <label>La liste des classes :</label> 
-                    <select>
-                        <?php foreach($classes as $classe) : ?>
-                        <option value="<?= $classe['nom']; ?>"></option>
-                        <?php endforeach; ?> 
-                    </select>
-                    
-                </p>   
-            </div> 
-            <div class="list-class-btn">
-                <div class="info-btn">
-                    <button class="button button-info" type="submit"><a href="modifierUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a></button>
-                </div>
-                <div class="danger-btn">
-                    <button class="button button-danger" type="submit"><a href="supprimerUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Supprimer</a></button>
-                </div>
-            </div>   
-            
-            <button class="button button-success">Créer nouvelle classe</button>
-        </form>
-    </section>
+    <form id="form" method="POST" action="listeDesClasses.php">
 
+        <table id="user_list">
+            <tr>
+                <th>Classes</th>
+                <th>Actions</th>
+            </tr>
+            <?php foreach ($classes as $classe) : ?>
+                <tr>
+                    <td><?= $classe['nom']; ?></td>
+                    <td>
+                        <div class="user_list_btn">
+                            <a class="button button-info" href="formulaireClasse.php?id=<?= $classe['nom']; ?>">Modifier</a>
+                            <a class="button button-danger" href="supprimerClasse.php?id=<?= $classe['nom']; ?>">Supprimer</a>
+                        </div>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+
+        </table>
+
+    </form>
+    
+</section>

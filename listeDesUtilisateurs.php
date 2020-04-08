@@ -11,8 +11,6 @@ $query = $pdo->prepare(
 $query->execute();
 $classes = $query->fetchAll();
 
-
-
 $query = $pdo->prepare(
     'SELECT * FROM utilisateurs'
 );
