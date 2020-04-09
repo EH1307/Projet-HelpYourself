@@ -332,7 +332,7 @@ select {
 
 #form-list-users  p {
 	display: flex;
-	justify-content: end;
+	justify-content: center;
 }
 
 /* Liste des utilisateurs */
@@ -363,18 +363,21 @@ select {
 	margin-left: 30px;
 }
 
-/* Liste des cours */
+/* Liste des cours , classe et utilisateurs */
 
-#form-list-cours {
-	
-	
+#add-btn {
+	display: flex;
+	justify-content: flex-end;
+	margin: 20px;
+}
+#add-btn a {
+	text-decoration: none;
+}
+#search-btn  {
+	display: flex;
+	justify-content: center;
 }
 
-#ajout-cours-btn button {
-	
-	font-size: medium;
-	background-color: green;
-}
 
 /* Liste des cours Etudiants et Formateurs */
 

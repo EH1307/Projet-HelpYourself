@@ -1,12 +1,12 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 // Configuration de la page
 $PAGE = [
-    'title' => 'Ajouter un Utilisateur',
-    'template' => 'creerNouvelUtilisateur.phtml'
+    'title' => 'Créer un nouvel Utilisateur',
+    'template' => '../Utilisateurs/formulaireAjoutUtilisateur.phtml'
 ];
 
 /*
@@ -20,6 +20,8 @@ if ($_POST) {
     $enterpassword   = $_POST['enterpassword'];
     $role            = $_POST['role'];
     $idClasse        = $_POST['class'];
+
+
 
     // ============================
     // Vérifications diverses liées à un ajout d'utilisateur
@@ -48,7 +50,7 @@ if ($_POST) {
 
     // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
     if (!empty($ERRORS)) {
-        include('integrations/MASTER.phtml');
+        include('../integrations/MASTER.phtml');
         return; // Stoppe l'exécution du script ici !
     }
 
@@ -115,4 +117,7 @@ $classes = $query->fetchAll();
 
 
 // Affichage
-include 'integrations/MASTER.phtml';
+
+$navigation = "utilisateur";
+
+include '../integrations/MASTER.phtml';

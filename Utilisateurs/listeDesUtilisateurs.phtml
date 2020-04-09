@@ -8,12 +8,18 @@
             <h1>Les Utilisateurs<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
         </div>
+        
+            
+        
 
         <form id="form-list-users" method="POST" action="listeDesUtilisateurs.php">
-                <p>  
+                <p id="search-btn">  
                 <input type="text" placeholder="Entrer un nom">
                 <button class="button button-success">Rechercher</button>
                 </p>
+                <div id="add-btn">
+                    <a class="button button-info" href="formulaireAjoutUtilisateur.php">Ajouter</a>
+                </div>
                     
             <table id="user_list">
             <tr>
