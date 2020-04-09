@@ -31,8 +31,8 @@ $query = $pdo->prepare(
 );
 $query->bindParam(':idCours', $idCour, PDO::PARAM_INT);
 $query->bindParam(':titre', $titre, PDO::PARAM_STR);
-$query->bindParam(':dateDebut', $dateDebut, PDO::PARAM_INT);
-$query->bindParam(':dateFin', $dateFin, PDO::PARAM_INT);
+$query->bindParam(':dateDebut', $dateDebut, PDO::PARAM_STR);
+$query->bindParam(':dateFin', $dateFin, PDO::PARAM_STR);
 $query->bindParam(':idClasse', $idClasse, PDO::PARAM_INT);
 $query->bindParam(':etat', $etat, PDO::PARAM_STR);
 
