@@ -32,3 +32,15 @@
     </form>
     
 </section>
+
+<script>
+
+    $(document).ready(function() {
+        $('.button-danger').on('click', function(event){
+            event.preventDefault();
+            if(confirm('Voulez vous vraiment supprimer cet utilisateur ?') == true){
+                window.location.href = $(this).attr('href');
+            }
+        });
+    });
+</script>

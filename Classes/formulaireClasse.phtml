@@ -1,19 +1,4 @@
-
-    <section id="top-section-header-and-title">
-        <header>
-            <img src="integrations/res/img/logo.png" alt="logo">
-            <nav>
-                <ul>
-                    <li>
-                        <button type="button">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <a href="connexion.php" alt="" >Déconnexion</a>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
+<?php include '../integrations/part/navbar.part.php'; ?>
     
     <section id="middle-section">
     
@@ -33,13 +18,3 @@
         </form>
         
     </section>
-
-    <script>
-    $(document).ready(function() {
-        $('.button-info').on('click', function(event){
-            event.preventDefault();
-            let id = $('#user_selected').val();
-            window.location.href = "modifierClasse.php?id="+id;
-        });
-    });
-    </script>

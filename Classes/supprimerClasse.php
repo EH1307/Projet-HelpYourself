@@ -5,10 +5,23 @@ include '../config/database.php';
 
 
 
-// Affichage
-$PAGE = [
-    'title' => 'Supprimer une Classe',
-    'template' => 'supprimerClasse.phtml'
-];
+// Suppression de l'utilisateur dans la base de donnée
 
-include '../integrations/MASTER.phtml';
+if (!array_key_exists('id', $_GET)) {
+    header('Location: listeDesClasses.php');
+    exit();
+  }
+  
+  $id = $_GET['id'];
+  
+  
+  
+  $query = $pdo->prepare(
+    'DELETE FROM classes WHERE idClasse = :id'
+  );
+  $query->bindParam(':id', $id, PDO::PARAM_INT);
+  $query->execute();
+  
+  
+  header('Location: listeDesClasses.php');
+  exit();
