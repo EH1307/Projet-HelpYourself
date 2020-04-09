@@ -26,5 +26,6 @@ $PAGE = [
     'template' => 'formulaireClasse.phtml'
 ];
 
+$navigation = "classe";
 
 include '../integrations/MASTER.phtml';
