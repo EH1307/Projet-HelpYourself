@@ -1,5 +1,5 @@
 <?php
-loadEnv('config/.env');
+loadEnv('../config/.env');
 
 // Configuration des identifiants de la base de donnée
 define('DATABASE_HOST', getenv('DATABASE_HOST'));
