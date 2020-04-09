@@ -5,10 +5,23 @@ include '../config/database.php';
 
 
 
-// Affichage
-$PAGE = [
-    'title' => 'Supprimer un Cours',
-    'template' => 'supprimerCours.phtml'
-];
+// Suppression du cours dans la base de donnée
 
-include '../integrations/MASTER.phtml';
+if (!array_key_exists('id', $_GET)) {
+    header('Location: listeDesCours.php');
+    exit();
+  }
+  
+  $id = $_GET['id'];
+  
+  
+  
+  $query = $pdo->prepare(
+    'DELETE FROM cours WHERE idCours = :id'
+  );
+  $query->bindParam(':id', $id, PDO::PARAM_INT);
+  $query->execute();
+  
+  
+  header('Location: listeDesCours.php');
+  exit();
