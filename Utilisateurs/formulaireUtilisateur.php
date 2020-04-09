@@ -32,4 +32,6 @@ $PAGE = [
     'template' => '../Utilisateurs/formulaireUtilisateur.phtml'
 ];
 
+$navigation = "utilisateur";
+
 include '../integrations/MASTER.phtml';
