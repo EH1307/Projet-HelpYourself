@@ -13,7 +13,10 @@
             <input type="text" placeholder="Entrer un nom">
             <button class="button button-success">Rechercher</button>
             </p>
-                
+
+            <div id="ajout-cours-btn">
+            <button class="button button-success">Ajouter un cours</button>
+            </div>
             <table id="user_list">
                 <tr>
                     <th>Titre</th>
@@ -50,7 +53,7 @@
                     $(document).ready(function() {
                         $('.button-danger').on('click', function(event){
                             event.preventDefault();
-                            if(confirm('Voulez vous vraiment supprimer cet utilisateur ?') == true){
+                            if(confirm('Voulez vous vraiment supprimer ce cours ?') == true){
                                 window.location.href = $(this).attr('href');
                             }
                         });

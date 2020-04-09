@@ -363,6 +363,19 @@ select {
 	margin-left: 30px;
 }
 
+/* Liste des cours */
+
+#form-list-cours {
+	
+	
+}
+
+#ajout-cours-btn button {
+	
+	font-size: medium;
+	background-color: green;
+}
+
 /* Liste des cours Etudiants et Formateurs */
 
 #time-studies-students {
