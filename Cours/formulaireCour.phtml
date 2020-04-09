@@ -1,7 +1,7 @@
 
     <section id="top-section-header-and-title">
         <header>
-            <img src="integrations/res/img/logo.png" alt="logo">
+            <img src="../integrations/res/img/logo.png" alt="logo">
             <nav>
                 <ul>
                     <li>
@@ -41,22 +41,30 @@
             </p>
             <p>
                 <label for="dateDebut">Date de Début : </label>
-                <input type="date" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['dateDebut']; ?>">
-                <input type="time" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['nom']; ?>">
+                <input type="datetime" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['dateDebut']; ?>">
+                
             </p>
             <p>
                 <label for="dateFin">Date de fin : </label>
-                <input type="date" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
-                <input type="time" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
+                <input type="datetime" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['dateFin']; ?>">
+                
             </p>
             
             <p>
                 <label>Classe associée à ce cours</label>
-                <select>
+                <select name="idClasse">
                     <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?>
+                    <option <?= ($classe['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
+
                     </option>
                     <?php endforeach; ?>  
+                </select>
+            </p>
+            <p>
+                <label>Etat de ce cours</label>
+                <select name="etat">
+                    <option value="ouvert">ouvert</option>  
+                    <option value="ferme">ferme</option>
                 </select>
             </p>
             <input type="hidden" name="idCours" value="<?= isset($idCour) ? $idCour : $cour['idCours']; ?>" />

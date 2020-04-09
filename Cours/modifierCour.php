@@ -1,7 +1,7 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 
 // Vérification de l'existence d'un ID dans l'URL
@@ -10,11 +10,14 @@ if (!array_key_exists('idCours', $_POST)) {
     header('Location:listeDesCours.php');
     exit();
 }
+// Debug 
+// print_r($_POST);
+// exit();
 
 $idCour         = $_POST['idCours'];
 $titre          = $_POST['titre'];
-$dateDebut      = $_POST['dateDebut'];
-$dateFin        = $_POST['dateFin'];
+$dateDebut = date("Y-m-d H:i:s",strtotime($_POST['dateDebut']));
+$dateFin = date("Y-m-d H:i:s",strtotime($_POST['dateFin']));
 $idClasse       = $_POST['idClasse'];
 $etat           = $_POST['etat'];
 
