@@ -1,7 +1,7 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 // Vérification de l'existence d'un ID dans l'URL
 
@@ -27,4 +27,4 @@ $PAGE = [
 ];
 
 
-include 'integrations/MASTER.phtml';
+include '../integrations/MASTER.phtml';
