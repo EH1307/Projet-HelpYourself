@@ -378,6 +378,16 @@ select {
 	justify-content: center;
 }
 
+#add-class-btn {
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px 190px 20px 0;
+}
+
+#add-class-btn a {
+	text-decoration: none;
+}
+
 
 /* Liste des cours Etudiants et Formateurs */
 
