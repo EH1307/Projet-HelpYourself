@@ -24,7 +24,7 @@ $classes = $query->fetchAll();
 // Affichage
 $PAGE = [
     'title' => 'Liste des Cours',
-    'template' => 'listeDesCours.phtml'
+    'template' => '../Cours/listeDesCours.phtml'
 ];
 
 $navigation = "cour";

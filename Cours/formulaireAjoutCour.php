@@ -1,12 +1,12 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 // Configuration de la page
 $PAGE = [
-    'title' => 'Ajouter un Cours',
-    'template' => 'creerNouveauCours.phtml'
+    'title' => 'Ajouter un Cour',
+    'template' => '../Cours/formulaireAjoutCour.phtml'
 ];
 
 /*
@@ -15,8 +15,8 @@ $PAGE = [
 */
 if ($_POST) {
     $title          = $_POST['titre'];
-    $beginDate      = $_POST['dateDebut'];
-    $endDate        = $_POST['dateFin'];
+    $dateDebut      = date("Y-m-d H:i:s",strtotime($_POST['dateDebut']));
+    $dateFin        = date("Y-m-d H:i:s",strtotime($_POST['dateFin']));
     $idClass        = $_POST['idClasse'];
     $state          = $_POST['etat'];
     
@@ -46,7 +46,7 @@ if ($_POST) {
 
     // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
     if (!empty($ERRORS)) {
-        include('integrations/MASTER.phtml');
+        include('../integrations/MASTER.phtml');
         return; // Stoppe l'exécution du script ici !
     }
 
@@ -79,7 +79,7 @@ if ($_POST) {
 
     $query->execute();
 
-    echo "L'utilisateur a bien été créé !";
+    echo "Le cour a bien été créé !";
 
 }
 
@@ -92,4 +92,7 @@ $classes = $query->fetchAll();
 
 
 // Affichage
-include 'integrations/MASTER.phtml';
+
+$navigation = "cour";
+
+include '../integrations/MASTER.phtml';

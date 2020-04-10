@@ -14,7 +14,7 @@ if (!array_key_exists('idCours', $_POST)) {
 // print_r($_POST);
 // exit();
 
-$idCour         = $_POST['idCours'];
+
 $titre          = $_POST['titre'];
 $dateDebut      = date("Y-m-d H:i:s",strtotime($_POST['dateDebut']));
 $dateFin        = date("Y-m-d H:i:s",strtotime($_POST['dateFin']));
@@ -25,11 +25,11 @@ $etat           = $_POST['etat'];
 
 // Récupération des infos des cours
 $query = $pdo->prepare(
-    'UPDATE cours
-    SET   titre = :titre , dateDebut = :dateDebut, dateFin = :dateFin , idClasse = :idClasse , etat = :etat
-    WHERE idCours = :idCours'
+    'INSERT INTO cours
+    VALUE   titre = :titre , dateDebut = :dateDebut, dateFin = :dateFin , idClasse = :idClasse , etat = :etat'
+    
 );
-$query->bindParam(':idCours', $idCour, PDO::PARAM_INT);
+
 $query->bindParam(':titre', $titre, PDO::PARAM_STR);
 $query->bindParam(':dateDebut', $dateDebut, PDO::PARAM_STR);
 $query->bindParam(':dateFin', $dateFin, PDO::PARAM_STR);

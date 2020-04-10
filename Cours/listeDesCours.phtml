@@ -9,13 +9,13 @@
         </div>
 
         <form id="form-list-cours" method="POST" action="listeDesCours.php">
-            <p>  
+            <p id="search-btn">  
             <input type="text" placeholder="Entrer un nom">
             <button class="button button-success">Rechercher</button>
             </p>
 
-            <div id="ajout-cours-btn">
-            <button class="button button-success">Ajouter</button>
+            <div id="add-btn">
+                <a class="button button-info" href="formulaireAjoutCour.php">Ajouter</a>
             </div>
             <table id="user_list">
                 <tr>
@@ -36,10 +36,10 @@
                     <td><?= $cour['etat']; ?></td>
                     
                     <td>
-                        <div class="user_list_btn">
+                    <div class="user_list_btn">
                         <a class="button button-info" href="formulaireCour.php?id=<?= $cour['idCours']; ?>">Modifier</a>
-                        <a class="button button-danger" href="supprimerCours.php?id=<?= $cour['idCours']; ?>">Supprimer</a>
-                        </div>
+                        <a class="button button-danger" href="supprimerCour.php?id=<?= $cour['idCours']; ?>">Supprimer</a>
+                    </div>
                     </td>
                 </tr>
                 <?php endforeach; ?>
