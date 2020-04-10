@@ -29,21 +29,24 @@ if ($_POST) {
     }
    
 
-    // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
-    if (!empty($ERRORS)) {
-        include('../integrations/MASTER.phtml');
-        return; // Stoppe l'exécution du script ici !
-    }
-
-    
     // 2. Est-ce que la classe existe déjà en base ?
     $query = $pdo->prepare(
         'SELECT * FROM classes WHERE nom=:nom'
     );
     $query->bindParam(':nom', $name, PDO::PARAM_STR);
     $query->execute();
-    $user = $query->fetch();
+    $nbUser = $query->rowCount();
 
+    if($nbUser>0){
+        $ERRORS[] = 'Cette classe existe déjà';
+    }
+    
+
+    // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
+    if (!empty($ERRORS)) {
+        include('../integrations/MASTER.phtml');
+        return; // Stoppe l'exécution du script ici !
+    }
 
 
     // Insertion en base de données des informations
