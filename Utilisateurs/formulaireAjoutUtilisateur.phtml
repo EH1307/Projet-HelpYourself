@@ -20,19 +20,6 @@
         
         <form id="form" method="POST" action="formulaireAjoutUtilisateur.php">
             <p>
-                <select name="role">
-                    <option value="administrateur">Administrateur</option>
-                    <option value="etudiant">Etudiant</option>
-                    <option value="formateur">Formateur</option> 
-                </select>
-                <select name="class" id="">
-                    <option>N/A</option>
-                <?php foreach($classes as $classe) : ?>
-                        <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </p>
-            <p>
                 <label for="name">Votre nom : </label>
                 <input type="text" name="name" id="name" value="<?= isset($name) ? $name : ''; ?>">
             </p>
@@ -47,6 +34,23 @@
             <p>
                 <label for="password">Votre mot de passe : </label>
                 <input type="password" name="enterpassword" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
+            </p>
+            <p>
+                <label for="role">Role : </label>
+                <select name="role">
+                    <option value="administrateur">Administrateur</option>
+                    <option value="etudiant">Etudiant</option>
+                    <option value="formateur">Formateur</option> 
+                </select>
+            </p>
+            <p>
+                <label for="class">Classe : </label>
+                <select name="class">
+                    <option>N/A</option>
+                <?php foreach($classes as $classe) : ?>
+                        <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
+                    <?php endforeach; ?>
+                </select>
             </p>
             <input type="hidden" name="idUtilisateur" value="<?= isset($idUtilisateur) ? $idUtilisateur : $utilisateur['idUtilisateur']; ?>" />
             <button class="button button-success" type="submit">Enregistrer</button>

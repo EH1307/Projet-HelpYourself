@@ -9,6 +9,14 @@ $PAGE = [
     'template' => '../Utilisateurs/formulaireAjoutUtilisateur.phtml'
 ];
 
+$navigation = "utilisateur";
+
+$query = $pdo->query(
+    'SELECT idClasse, nom FROM classes'
+);
+
+$classes = $query->fetchAll();
+
 /*
     Si le formulaire de cette page a été "submitted",
     on exécute ce "if"
@@ -104,20 +112,9 @@ if ($_POST) {
 
     $query->execute();
 
-    echo "L'utilisateur a bien été créé !";
+    header('Location: listeDesUtilisateurs.php');
+    exit();
 
 }
-
-
-$query = $pdo->query(
-    'SELECT idClasse, nom FROM classes'
-);
-
-$classes = $query->fetchAll();
-
-
-// Affichage
-
-$navigation = "utilisateur";
 
 include '../integrations/MASTER.phtml';
