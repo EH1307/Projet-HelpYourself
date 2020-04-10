@@ -29,4 +29,6 @@ $PAGE = [
 
 $navigation = "cour";
 
+setlocale(LC_TIME, "fr_FR");
+
 include '../integrations/MASTER.phtml';
