@@ -32,4 +32,6 @@ $PAGE = [
     'template' => 'formulaireCour.phtml'
 ];
 
+
+$navigation = "cour";
 include '../integrations/MASTER.phtml';

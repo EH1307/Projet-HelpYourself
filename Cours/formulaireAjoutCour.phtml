@@ -1,19 +1,4 @@
-
-    <section id="top-section-header-and-title">
-        <header>
-            <img src="integrations/res/img/logo.png" alt="logo">
-            <nav>
-                <ul>
-                    <li>
-                        <button type="button">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <a href="connexion.php" alt="" >Déconnexion</a>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
+<?php include '../integrations/part/navbar.part.php'; ?>
 
     <section id="middle-section">
 
@@ -33,7 +18,7 @@
             </div>
         <?php endif; ?>
     
-        <form id="form" method="POST" action="modifierCour.php">
+        <form id="form" method="POST" action="formulaireAjoutCour.php">
             <p>
                 <label>Nom du cours</label>
                 <input type="text" placeholder="Nom du cours">
@@ -58,8 +43,8 @@
                 <input type="date" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
                 <input type="time" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
             </p>
-
-            <button class="button button-info" type="submit">Enregistrer</button>
+            <input type="hidden" name="idCour" value="<?= isset($idCour) ? $idCour : $Cour['idCour']; ?>" />
+            <button class="button button-success" type="submit">Enregistrer</button>
         </form>
     </section>    
 

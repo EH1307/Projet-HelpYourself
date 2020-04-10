@@ -5,7 +5,7 @@ include '../config/database.php';
 
 // Configuration de la page
 $PAGE = [
-    'title' => 'Créer un nouvel Utilisateur',
+    'title' => 'Ajouter un nouvel Utilisateur',
     'template' => '../Utilisateurs/formulaireAjoutUtilisateur.phtml'
 ];
 
@@ -66,7 +66,7 @@ if ($_POST) {
     // https://www.php.net/manual/fr/function.filter-var.php
     if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
         $ERRORS[] = "L'adresse email utilisée est invalide !";
-        include('integrations/MASTER.phtml');
+        include('../integrations/MASTER.phtml');
         return; // Stoppe l'exécution du script ici !
     }
 
