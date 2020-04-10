@@ -56,19 +56,24 @@ if ($_POST) {
         $ERRORS[] = 'Le champs "classe" doit être rempli';
     }
 
-    // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
-    if (!empty($ERRORS)) {
-        include('../integrations/MASTER.phtml');
-        return; // Stoppe l'exécution du script ici !
-    }
-
     // 2. Est-ce que l'adresse email existe déjà en base ?
     $query = $pdo->prepare(
         'SELECT * FROM utilisateurs WHERE email=:email'
     );
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->execute();
-    $user = $query->fetch();
+    $nbUser = $query->rowCount();
+
+    if($nbUser>0){
+        $ERRORS[] = 'Ce mail est déjà utilisé';
+    }
+
+    // Si à ce stade on a détecté des erreurs, on s'arrête là et on renvoie les erreurs au client
+    if (!empty($ERRORS)) {
+        include('../integrations/MASTER.phtml');
+        return; // Stoppe l'exécution du script ici !
+    }
+
 
       // 3. Est-ce que l'@ email est valide (cad qu'elle respecte la norme RFC standard) ?
     // https://www.php.net/manual/fr/function.filter-var.php
