@@ -21,28 +21,35 @@
         <form id="form" method="POST" action="formulaireAjoutCour.php">
             <p>
                 <label>Nom du cours</label>
-                <input type="text" placeholder="Nom du cours">
+                <input type="text" name="titre" placeholder="Nom du cours">
+            </p>
+            <p>
+                <label for="dateDebut">Date de Début : </label>
+                <input type="datetime-local" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : ''; ?>">
+                
+            </p>
+            <p>
+                <label for="dateFin">Date de fin : </label>
+                <input type="datetime-local" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : ''; ?>">
+                
             </p>
             <p>
                 <label>Classe associée à ce cours</label>
-                <select>
+                <select name="idClasse">
                     <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?>
+                    <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
                     </option>
                     <?php endforeach; ?>  
                 </select>
             </p>
+            <p>
+                <label>Etat de ce cours</label>
+                <select name="etat">
+                    <option value="ouvert">ouvert</option>  
+                    <option value="ferme">ferme</option>
+                </select>
+            </p>
 
-            <p>
-                <label for="dateDebut">Date de Début : </label>
-                <input type="date" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['dateDebut']; ?>">
-                <input type="time" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['nom']; ?>">
-            </p>
-            <p>
-                <label for="dateFin">Date de fin : </label>
-                <input type="date" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
-                <input type="time" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['nom']; ?>">
-            </p>
             <input type="hidden" name="idCour" value="<?= isset($idCour) ? $idCour : $Cour['idCour']; ?>" />
             <button class="button button-success" type="submit">Enregistrer</button>
         </form>
