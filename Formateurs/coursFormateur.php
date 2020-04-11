@@ -1,14 +1,14 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 
 
 // Affichage
 $PAGE = [
     'title' => 'Cours Formateur',
-    'template' => 'coursFormateur.phtml'
+    'template' => '../Formateurs/coursFormateur.phtml'
 ];
-
-include 'integrations/MASTER.phtml';
+$navigation = "formateurCours";
+include '../integrations/MASTER.phtml';
