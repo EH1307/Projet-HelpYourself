@@ -8,7 +8,7 @@ include '../config/database.php';
 // Affichage
 $PAGE = [
     'title' => 'Cours Formateur',
-    'template' => 'coursFormateur.phtml'
+    'template' => '../Formateurs/coursFormateur.phtml'
 ];
-
+$navigation = "formateurCours";
 include '../integrations/MASTER.phtml';

@@ -8,7 +8,7 @@ include '../config/database.php';
 // Affichage
 $PAGE = [
     'title' => 'Accueil Étudiant',
-    'template' => 'accueilEtudiant.phtml'
+    'template' => '../Etudiants/accueilEtudiant.phtml'
 ];
 
 include '../integrations/MASTER.phtml';

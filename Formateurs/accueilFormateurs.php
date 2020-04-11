@@ -8,8 +8,9 @@ include '../config/database.php';
 // Affichage
 $PAGE = [
     'title' => 'Accueil Formateur',
-    'template' => 'accueilFormateurs.phtml'
+    'template' => '../Formateurs/accueilFormateurs.phtml'
 ];
 
+$navigation = "accueilFormateurs";
 
 include '../integrations/MASTER.phtml';

@@ -1,12 +1,12 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 // Configuration de la page
 $PAGE = [
     'title' => 'Inscription',
-    'template' => 'inscription.phtml'
+    'template' => '../Accueil/inscription.phtml'
 ];
 
 // Exemples de hachage d'un mot de passe avec l'algorithme "SHA256"
@@ -119,4 +119,7 @@ if ($_POST) {
 }
 
 // Affichage
-include 'integrations/MASTER.phtml';
+
+$navigation = "inscription";
+
+include '../integrations/MASTER.phtml';
