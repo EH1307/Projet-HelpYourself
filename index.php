@@ -1,7 +1,7 @@
 <?php
 
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
-include 'config/database.php';
+include '../config/database.php';
 
 /*
     Requête SQL qui va compter le nombre d'éléments
@@ -17,8 +17,8 @@ $nbUtilisateurs = $result['nbUtilisateurs'];
 // Affichage
 $PAGE = [
     'title' => 'Accueil',
-    'template' => 'index.phtml'
+    'template' => '../Accueil/index.phtml'
 ];
 
 
-include 'integrations/MASTER.phtml';
+include '../integrations/MASTER.phtml';
