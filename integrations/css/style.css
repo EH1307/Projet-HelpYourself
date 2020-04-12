@@ -347,10 +347,11 @@ select {
 
 /* middle section de la page liste des utilisateurs */
 
-#form-list-users  p {
+#form-list  p {
 	display: flex;
 	justify-content: center;
 }
+#form-list 
 
 /* Liste des utilisateurs */
 
@@ -385,14 +386,28 @@ select {
 #add-btn {
 	display: flex;
 	justify-content: flex-end;
-	margin: 20px;
+	margin:0 215px 10px 0;
+	
 }
 #add-btn a {
 	text-decoration: none;
+	background-color: orange;
+	border: 1px solid orangered;
+	color: red;
+	font-size: 13px;
 }
-#search-btn  {
-	display: flex;
-	justify-content: center;
+#add-btn a:hover {
+	background-color: palevioletred;
+}
+#search-btn input {
+	width: 250px;
+	text-align: center;
+	margin-left: 110px;
+}
+#search-btn button {
+	margin: 0 20px;
+	text-align: center;
+	
 }
 
 #add-class-btn {
@@ -764,8 +779,10 @@ select {
 #user_list {
 	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
-	width: 100%;
+	width: 80%;
+	margin: 0 auto;
 	text-align: center;
+	background-color: white;
 }
 
 #user_list td,
@@ -775,7 +792,7 @@ select {
 }
 
 #user_list tr:nth-child(even) {
-	background-color: #f2f2f2;
+	
 }
 
 #user_list tr:hover {
@@ -786,8 +803,9 @@ select {
 	padding-top: 12px;
 	padding-bottom: 12px;
 	text-align: center;
-	background-color: cadetblue;
-	color: white;
+	background-color: #ddd;
+	color: black;
+	text-transform: uppercase;
 	
 }
 
