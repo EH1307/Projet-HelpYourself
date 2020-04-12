@@ -806,5 +806,34 @@ select {
 #form-connexion input{
 	width: 250px;
 	text-align: center;
+	padding: 2px;
 }
+
+/* Inscription */
+
+.form-inscription-one {
+	text-align: center;
+	margin: -40px 0 0 -150px;
+}
+
+.form-inscription-one input{
+	width: 250px;
+	text-align: center;
+	padding: 2px;
+}
+.form-inscription-two {
+	text-align: center;
+	margin: -120px 0 0 405px;
+}
+
+.form-inscription-two input{
+	width: 250px;
+	text-align: center;
+	padding: 2px;
+}
+#form-inscription button {
+	margin: -114px 0 0 865px;
+}
+
+
 

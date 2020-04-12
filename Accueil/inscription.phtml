@@ -19,27 +19,26 @@
             </div>
         <?php endif; ?>
 
-        <form id="form" method="POST" action="inscription.php">
-            <p>
-                <label for="name">Votre nom : </label>
-                <input type="text" name="name" id="name" value="<?= isset($name) ? $name : ''; ?>">
-            </p>
-            <p>
-                <label for="firstname">Votre prénom : </label>
-                <input type="text" name="firstname" id="firstname" value="<?= isset($firstname) ? $firstname : ''; ?>">
-            </p>
-            <p>
-                <label for="email">Votre email : </label>
-                <input type="email" name="email" id="email" value="<?= isset($email) ? $email : ''; ?>">
-            </p>
-            <p>
-                <label for="password">Votre mot de passe : </label>
-                <input type="password" name="enterpassword" id="enterpassword">
-            </p>
-            <p>
-                <label for="password">Confirmation : </label>
-                <input type="password" name="confirmpassword" id="confirmpassword">
-            </p>
+        <form id="form-inscription" method="POST" action="inscription.php">
+            <div class="form-inscription-one">
+                <p>
+                    <input type="text" name="name" id="name" placeholder="Taper votre nom" value="<?= isset($name) ? $name : ''; ?>">
+                </p>
+                <p>
+                    <input type="text" name="firstname" id="firstname" placeholder="Taper votre prénom" value="<?= isset($firstname) ? $firstname : ''; ?>">
+                </p>
+                <p>
+                    <input type="email" name="email" id="email" placeholder="Taper votre Email" value="<?= isset($email) ? $email : ''; ?>">
+                </p>
+            </div>
+            <div class="form-inscription-two">
+                <p>   
+                <input type="password" name="enterpassword" id="enterpassword" placeholder="Taper votre mot de passe" >
+                </p>
+                <p>
+                    <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirmer votre mot de passe" >
+                </p>
+            </div>
             <div>
                 <button class="button button-success" type="submit">
                     Inscription
