@@ -18,41 +18,44 @@
             </div>
         <?php endif; ?>
         
-        <form id="form" method="POST" action="formulaireAjoutUtilisateur.php">
-            <p>
-                <label for="name">Votre nom : </label>
-                <input type="text" name="name" id="name" value="<?= isset($name) ? $name : ''; ?>">
-            </p>
-            <p>
-                <label for="firstname">Votre prénom : </label>
-                <input type="text" name="firstname" id="firstname" value="<?= isset($firstname) ? $firstname : ''; ?>">
-            </p>
-            <p>
-                <label for="email">Votre email : </label>
-                <input type="email" name="email" id="email" value="<?= isset($email) ? $email : ''; ?>">
-            </p>
-            <p>
-                <label for="password">Votre mot de passe : </label>
-                <input type="password" name="enterpassword" id="enterpassword" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
-            </p>
-            <p>
-                <label for="role">Role : </label>
-                <select name="role">
-                    <option value="administrateur">Administrateur</option>
-                    <option value="etudiant">Etudiant</option>
-                    <option value="formateur">Formateur</option> 
-                </select>
-            </p>
-            <p>
-                <label for="class">Classe : </label>
-                <select name="class">
-                    <option>N/A</option>
-                <?php foreach($classes as $classe) : ?>
-                        <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </p>
-            <input type="hidden" name="idUtilisateur" value="<?= isset($idUtilisateur) ? $idUtilisateur : $utilisateur['idUtilisateur']; ?>" />
-            <button class="button button-success" type="submit">Enregistrer</button>
+        <form id="form-inscription" method="POST" action="formulaireAjoutUtilisateur.php">
+            <div class="form-inscription-one">
+                <p>
+                    
+                    <input type="text" name="name" id="name" placeholder="Taper le nom" value="<?= isset($name) ? $name : ''; ?>">
+                </p>
+                <p>
+                    
+                    <input type="text" name="firstname" id="firstname" placeholder="Taper le prénom" value="<?= isset($firstname) ? $firstname : ''; ?>">
+                </p>
+                <p>
+                    
+                    <input type="email" name="email" id="email" placeholder="Taper l'email" value="<?= isset($email) ? $email : ''; ?>">
+                </p>
+            </div>
+            <div class="form-inscription-two">
+                <p>
+                    
+                    <input type="password" name="enterpassword" id="enterpassword" placeholder="taper le mot de passe" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
+                </p>
+                <p>
+                    <select name="role">
+                        <option value="administrateur">Administrateur</option>
+                        <option value="etudiant">Etudiant</option>
+                        <option value="formateur">Formateur</option> 
+                    </select>
+                </p>
+                <p>
+                    <select name="class">
+                        <option>N/A</option>
+                    <?php foreach($classes as $classe) : ?>
+                            <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </p>
+            
+                <input type="hidden" name="idUtilisateur" value="<?= isset($idUtilisateur) ? $idUtilisateur : $utilisateur['idUtilisateur']; ?>" />
+                <button class="button button-success" type="submit">Enregistrer</button>
+            </div>
         </form>
 </section>
