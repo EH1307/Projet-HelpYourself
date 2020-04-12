@@ -3,11 +3,9 @@
  */
 
 .container {
-	max-width: 60rem;
+	width: 100%;
 	margin: 0 auto;
-	
 }
-
 .button {
 	display: inline-block;
 	padding: 0.5rem 1rem;
@@ -38,7 +36,7 @@
 	
 	border: 2px solid whitesmoke;
 	color: #2C314E;
-	padding: 10px 20px;
+	padding: 5px;
 	font-size: small;
 	font-family: 'Courier New', Courier, monospace;
 }
@@ -169,7 +167,7 @@ header nav {
 #top-section-header-and-title {
 	position: fixed;
 	border-bottom: 2px solid red;
-	width: 60rem;
+	width: 100%;
 }
 
 #top-section-header-and-title > header {
@@ -234,22 +232,24 @@ header nav {
 	min-height: 900px;
 	background-image: url(../res/img/nordwood-themes.jpg);
 	padding-top: 102.5px;
+	width: 100%;
+	height: 100%;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .title-message {
 	align-items: center;
-	
-	
 	text-align: center;
-	
-	
 	padding: 5px;
 	margin: 25px auto;
 }
 #middle-section h1 {
 	font-family: 'Kaushan-regular';
 	color: whitesmoke;
-	font-size: xx-large;
+	font-size: 25px;
+	margin-left: 120px;
+	margin-top: -30px;
 }
 
 #form {
@@ -613,34 +613,6 @@ select {
 	color: black;
 }
 
-/* Contenu page d'ACCUEIL Help Yourself */
-
-#middle-section-home {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 150px;
-	background-color: blanchedalmond;
-}
-
-#middle-section-home h1 {
-	height: 180px;
-	width: 180px;
-	text-align: center;
-	border: 2px solid skyblue;
-	background-color: green;
-	padding: 50px;
-	border-radius: 360px;
-	-webkit-border-radius: 360px;
-	-moz-border-radius: 360px;
-	-ms-border-radius: 360px;
-	-o-border-radius: 360px;
-	font-family: 'Kaushan-regular';
-	color: whitesmoke;
-}
-
-/* Fin du contenu de la page d'accueil Help Yourself */
-
 #welcome-message {
 	height: 150px;
 	width: 500px;
@@ -822,171 +794,17 @@ select {
 #user_list a {
 	text-decoration: none;
 }
-/*
-.user_list_btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}*/
 
 
-/* RELEVÉ DE PRÉSENCE */
-/*
-#middle-section-presence {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    margin-top: 10px;
+/* Connexion */
+
+#form-connexion {
+	text-align: center;
+	margin: -30px 0 0 130px;
 }
 
-#time-presence-teachers {
-    padding: 2px;
-    margin-left: 809px;
-    margin-top: -329px;
-    background-color: cyan;
-    border: 1px solid black;
-    width: 145px;
+#form-connexion input{
+	width: 250px;
+	text-align: center;
 }
 
-#welcome-message-presence {
-    height: 130px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid skyblue;
-    background-color: green;
-    padding: 2px;
-    margin-bottom: 20px;  
-}
-
-#welcome-message-presence h1 {
-    font-family: 'Kaushan-regular';
-    color: whitesmoke;
-}
-
-#presence-students {
-    height: 130px;
-    width: 500px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: turquoise;
-    padding: 2px;
-    margin-bottom: 20px;
-}
-
-#presence-students p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 17px;
-    color: black;
-}
-
-#names-report p{
-    border: 2px solid black;
-    width: 150px;
-    background-color: #fff;
-}
-
-#name-one-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-}
-
-#name-two-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-}
-
-#name-three-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-}
-
-#name-four-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-}
-
-#name-five-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-}
-
-#name-six-report {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 5px;
-    height: 30px;
-    width: 810px;
-    text-align: center;
-    border: 2px solid black;
-    background-color: gainsboro;
-    padding: 2px;
-    margin-bottom: -500px;
-}
-
-#record {
-    position: absolute;
-    margin-top: 280px;
-    margin-left: -95px;
-    border: 2px solid whitesmoke;
-    border-radius: 9px;
-    width: 210px;
-    height: 30px;
-    background-color: skyblue;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    -ms-border-radius: 9px;
-    -o-border-radius: 9px;
-    cursor: pointer;
-}
-
-#record a {
-    color: whitesmoke;
-    font-size: 15px;
-}
-
-/* Fin de relevé de présence */
