@@ -11,8 +11,7 @@
                         
                         <a <?php if($navigation=="connexion"){ echo 'class="active"'; } ?> href="../Accueil/connexion.php" id="login">Connexion</a>
                         
-                        
-                       
+  
                     </div> 
                         
                     </li>

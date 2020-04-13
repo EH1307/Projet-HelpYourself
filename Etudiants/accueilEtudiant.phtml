@@ -3,10 +3,6 @@
 
     <section id="middle-section">
 
-        <div id="time-studies-students">
-            <p>30/03/20 09:03:23</p>
-        </div>
-
         <div class="title-message">
             <i class="far fa-user icon-user"></i>
             <h1>Bienvenue sur votre page d'accueil étudiant<br>
@@ -14,92 +10,40 @@
             </h1>
         </div>
 
-        <div id="lessons-list">
-            <div id="lesson-one">
-                <p><br>
-                    JS1
-                </p>
-                <p><br>
-                    FC-DEV2
-                </p>
-                <p><br>
-                    30/03/20
-                </p>
-                <p id="hour-begin-end">
-                    Heure début : 
-                    <input type="text" name="hour-begin" id="hour-begin" value="9H00"><br><br>
+        <form id="form-list" method="POST" action="relevePresence.php">
             
-                    Heure fin : 
-                    <input type="text" name="hour-end" id="hour-end" value="12H00">
-                </p>
-                <div>
-                    <div id="message-open-close-lesson">Ce cours est ouvert !</div>
-                </div>
-                <div class="three-btn">
-                    <div>
-                    <button id="iampresent" type="submit">
-                        <a href="#">Je suis présent</a>
-                    </button>
-                    </div> 
-                    <div>
-                        <button id="justify-an-absence" type="submit">
-                            <a href="#">Justifier une absence</a>
-                        </button>
-                    </div>
-                    <div>
-                        <button id="report-a-delay" type="submit">
-                            <a href="#">Signaler un retard</a>
-                        </button>
-                    </div> 
-                </div> 
+            <table id="user_list">
+                <tr>
+                    <th>Titre</th>
+                    <th>Classe</th>
+                    <th>Date de Début</th>
+                    <th>Date de Fin</th>
+                    <th>Actions</th>
+                </tr>
 
-            </div>
+                <?php foreach($cours as $cour) : ?>
+                        
+                <tr>
+                    <td><?= $cour['titre']; ?></td>
+                    <td><?= $cour['idClasse']; ?></td>
+                    <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateDebut'])); ?></td>
+                    <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateFin'])); ?></td>
+                    <td>
+                        <div class="user_list_btn">
+                            <input type="hidden" name="idClasse" value="<?= isset($idClasse) ? $idClasse : $classe['idClasse']; ?>" />
+                            <button class="button button-info" type="submit">Présent</button>
 
-            <div id="lesson-two">
-                <p><br>
-                    PHP
-                </p>
-                <p><br>
-                    FC-DEV2
-                </p>
-                <p><br>
-                    30/03/20
-                </p>
-                <p id="hour-begin-end">
-                    Heure début : 
-                    <input type="text" name="hour-begin" id="hour-begin" value="13H00"><br><br>
-                
-                    Heure fin : 
-                    <input type="text" name="hour-end" id="hour-end" value="16H00">
-                </p>
-                <div>
-                    <div id="message-open-close-lesson">Ce cours n'est pas encore ouvert !</div>
-                </div>
-            </div>
+                            <input type="hidden" name="idClasse" value="<?= isset($idClasse) ? $idClasse : $classe['idClasse']; ?>" />
+                            <button class="button button-danger" type="submit">Retard</button>
 
-            <div id="lesson-three">
-                <p><br>
-                    HTML/CSS
-                </p>
-                <p><br>
-                    FC-DEV2
-                </p>
-                <p><br>
-                    30/03/20
-                </p>
-                <p id="hour-begin-end">
-                    Heure début : 
-                    <input type="text" name="hour-begin" id="hour-begin" value="16H30"><br><br>
-                
-                    Heure fin : 
-                    <input type="text" name="hour-end" id="hour-end" value="19H30">
-                </p>
-                <div>
-                    <div id="message-open-close-lesson">Ce cours est terminé !</div>
-                </div>  
-            </div>
-        </div>
+                            <input type="hidden" name="idClasse" value="<?= isset($idClasse) ? $idClasse : $classe['idClasse']; ?>" />
+                            <button class="button button-success" type="submit">Absent</button>
 
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </form>
     </section>
 
-   

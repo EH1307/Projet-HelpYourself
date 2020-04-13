@@ -19,34 +19,27 @@
         <?php endif; ?>
     
         <form id="form-inscription" method="POST" action="formulaireAjoutCour.php">
+
             <div class="form-inscription-one">
-                <p>
                     <input type="text" name="titre" placeholder="Nom du cours" autofocus >
-                </p>
-                <p>
+
                     <input type="datetime-local" name="dateDebut" id="dateDebut" placeholder="Date de Début" value="<?= isset($dateDebut) ? $dateDebut : ''; ?>">
                     
-                </p>
-                <p>
                     <input type="datetime-local" name="dateFin" id="dateFin" placeholder="Date de fin" value="<?= isset($dateFin) ? $dateFin : ''; ?>">
-                    
-                </p>
             </div>
+
             <div class="form-inscription-two">
-                <p>
                     <select name="idClasse">
                         <?php foreach($classes as $classe) : ?>
                         <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
                         </option>
                         <?php endforeach; ?>  
                     </select>
-                </p>
-                <p>
+
                     <select name="etat">
                         <option value="ouvert">ouvert</option>  
                         <option value="ferme">ferme</option>
                     </select>
-                </p>
 
                 <input type="hidden" name="idCour" value="<?= isset($idCour) ? $idCour : $Cour['idCour']; ?>" />
                 <button class="button button-success" type="submit">Enregistrer</button>

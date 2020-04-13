@@ -21,7 +21,7 @@ $classes = $query->fetchAll();
 
 
 $query = $pdo->query(
-'SELECT idUtilisateur, nom, prenom FROM utilisateurs'
+'SELECT idUtilisateur, nom, prenom , idClasse FROM utilisateurs'
 );
 $query->execute();
 $utilisateurs = $query->fetchAll();

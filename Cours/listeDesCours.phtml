@@ -48,24 +48,24 @@
         </form>  
     </section>
 
-                <script>
+    <script>
 
-                    $(document).ready(function() {
-                        $('.button-danger').on('click', function(event){
-                            event.preventDefault();
-                            if(confirm('Voulez vous vraiment supprimer ce cours ?') == true){
-                                window.location.href = $(this).attr('href');
-                            }
-                        });
-                    });
+        $(document).ready(function() {
+            $('.button-danger').on('click', function(event){
+                event.preventDefault();
+                if(confirm('Voulez vous vraiment supprimer ce cours ?') == true){
+                    window.location.href = $(this).attr('href');
+                }
+            });
+        });
 
 
 
-                /* $(document).ready(function() {
-                        $('.button-info').on('click', function(event){
-                            event.preventDefault();
-                            let id = $('#user_selected').val();
-                            window.location.href = "modifierUtilisateur.php?id="+id;
-                        });
-                    }); */
-                </script>
+    /* $(document).ready(function() {
+            $('.button-info').on('click', function(event){
+                event.preventDefault();
+                let id = $('#user_selected').val();
+                window.location.href = "modifierUtilisateur.php?id="+id;
+            });
+        }); */
+    </script>
