@@ -827,7 +827,7 @@ select {
 
 .form-inscription-one {
 	text-align: center;
-	margin: -40px 0 0 -150px;
+	margin: -50px 0 0 -150px;
 }
 .form-inscription p {
 	margin: 3px;
@@ -847,10 +847,6 @@ select {
 	width: 250px;
 	text-align: center;
 	padding: 2px;
-}
-.form-inscription-two button {
-	
-	
 }
 
 #form-inscription button {
