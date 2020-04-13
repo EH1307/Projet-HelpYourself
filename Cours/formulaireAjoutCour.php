@@ -30,7 +30,7 @@ if ($_POST) {
     $idClasse       = $_POST['idClasse'];
     $etat          = $_POST['etat'];
     
-/*
+
     // ============================
     // Vérifications diverses liées à un ajout d'un cours
     $ERRORS = [];
@@ -58,7 +58,7 @@ if ($_POST) {
         include('../integrations/MASTER.phtml');
         return; // Stoppe l'exécution du script ici !
     }
-*/
+
     // Insertion en base de données des informations
     $query = $pdo->prepare(
     "INSERT INTO

@@ -3,10 +3,6 @@
 
     <section id="middle-section">
 
-        <div id="time-studies-students">
-            <p>30/03/20 09:10:40</p>
-        </div>
-
         <div class="title-message">
             <i class="far fa-user icon-user"></i>
             <h1>Relevé de présence du jour<br>
@@ -14,100 +10,40 @@
             </h1>
         </div>
 
-        <div id="presence-students">
-            <div>
-                <select>
-                    <?php foreach($cours as $cour) : ?>
-                    <option value="<?= $cour['idCours']; ?>"><?= $cour['titre']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <p>
-                    
-                    <input type="date">
-                    <input type="time" value="09:30">
-                    <input type="time" value="17:30">
-                </p>
-                <select>
-                    
-                    <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classes['idClasse'];?>"><?= $classe['nom']; ?></option>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-                
-            </div>
+        <div id="add-btn">
+            <a class="button button-info" href="#">Enregistrer</a>
         </div>
-        <form id="form-list-cours" method="POST" action="listeDesCours.php">
-            <p id="search-btn">  
-            <input type="text" placeholder="Entrer un nom">
-            <button class="button button-success">Rechercher</button>
-            </p>
-
-            <div id="add-btn">
-                <a class="button button-info" href="formulaireAjoutCour.php">Ajouter</a>
-            </div>
-            <table id="user_list">
-                <tr>
-                    <th>Titre</th>
-                    <th>Classe</th>
-                    <th>Date</th>
-                    <th>Heure Début</th>
-                    <th>Heure Fin</th>
-                    <th>Actions</th>
-                    
-                </tr>
-                    <?php foreach($cours as $cour) : ?>
-                <tr>
-                
-                    <td><?= $cour['titre']; ?></td>
-                    <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateDebut'])); ?></td>
-                    <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateFin'])); ?></td>
-                    <td><?= $cour['idClasse']; ?></td>
-                    <td><?= $cour['etat']; ?></td>
-                    
-                    <td>
-                    <div class="user_list_btn">
-                        <a class="button button-info" href="formulaireCour.php?id=<?= $cour['idCours']; ?>">Modifier</a>
-                        <a class="button button-danger" href="supprimerCour.php?id=<?= $cour['idCours']; ?>">Supprimer</a>
-                    </div>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-                
-            </table>
-        </form>
-<!--
-        <form id="form" method="POST" action="relevePresence.php">
+           
+        <form id="form-list-cours" method="POST" action="relevePresence.php">
            
             <table id="user_list">
             <tr>
                 <th>Nom</th>
                 <th>Prénom</th>
+                <th>Classe</th>
                 <th>Status</th>
-                <th>Actions</th>
+                
             </tr>
             <?php foreach($utilisateurs as $utilisateur) : ?>
             <tr>
                 <td><?= $utilisateur['nom']; ?></td>
                 <td><?= $utilisateur['prenom']; ?></td>
+                <td><?= $utilisateur['idClasse']; ?></td>
+
                 <td>
                     <select name="status">
                         <option value="present">Présent</option>
                         <option value="absent">Absent</option>
                         <option value="retard">Retard</option> 
                     </select></td>
-                <td>
-                    <button class="button button-success" type="submit">
-                        <a href="#">Enregistrer</a>   
-                    </button>
-                </td>
+                
             </tr>
             <?php endforeach; ?>
             
             </table>
             
         </form>
--->     
+    
     </section>
 
 

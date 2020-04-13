@@ -6,7 +6,7 @@
         <i class="far fa-user icon-user"></i>
         <h1>Ajouter un cours<br>
             "L'enseignement est l'une des clés de la réussite"</h1>
-        </div>
+        </div class="error">
 
         <?php if (!empty($ERRORS)) : ?>
             <div class="error">
@@ -18,40 +18,32 @@
             </div>
         <?php endif; ?>
     
-        <form id="form" method="POST" action="formulaireAjoutCour.php">
-            <p>
-                <label>Nom du cours</label>
-                <input type="text" name="titre" placeholder="Nom du cours">
-            </p>
-            <p>
-                <label for="dateDebut">Date de Début : </label>
-                <input type="datetime-local" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : ''; ?>">
-                
-            </p>
-            <p>
-                <label for="dateFin">Date de fin : </label>
-                <input type="datetime-local" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : ''; ?>">
-                
-            </p>
-            <p>
-                <label>Classe associée à ce cours</label>
-                <select name="idClasse">
-                    <?php foreach($classes as $classe) : ?>
-                    <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
-                    </option>
-                    <?php endforeach; ?>  
-                </select>
-            </p>
-            <p>
-                <label>Etat de ce cours</label>
-                <select name="etat">
-                    <option value="ouvert">ouvert</option>  
-                    <option value="ferme">ferme</option>
-                </select>
-            </p>
+        <form id="form-inscription" method="POST" action="formulaireAjoutCour.php">
 
-            <input type="hidden" name="idCour" value="<?= isset($idCour) ? $idCour : $Cour['idCour']; ?>" />
-            <button class="button button-success" type="submit">Enregistrer</button>
+            <div class="form-inscription-one">
+                    <input type="text" name="titre" placeholder="Nom du cours" autofocus >
+
+                    <input type="datetime-local" name="dateDebut" id="dateDebut" placeholder="Date de Début" value="<?= isset($dateDebut) ? $dateDebut : ''; ?>">
+                    
+                    <input type="datetime-local" name="dateFin" id="dateFin" placeholder="Date de fin" value="<?= isset($dateFin) ? $dateFin : ''; ?>">
+            </div>
+
+            <div class="form-inscription-two">
+                    <select name="idClasse">
+                        <?php foreach($classes as $classe) : ?>
+                        <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
+                        </option>
+                        <?php endforeach; ?>  
+                    </select>
+
+                    <select name="etat">
+                        <option value="ouvert">ouvert</option>  
+                        <option value="ferme">ferme</option>
+                    </select>
+
+                <input type="hidden" name="idCour" value="<?= isset($idCour) ? $idCour : $Cour['idCour']; ?>" />
+                <button class="button button-success" type="submit">Enregistrer</button>
+            </div>
         </form>
     </section>    
 

@@ -18,47 +18,31 @@
             </div>
         <?php endif; ?>
     
-        <form id="form" method="POST" action="modifierCour.php">
-            
-            <p>
-                <label for="titre">Titre: </label>
-                <input type="text" name="titre" id="titre" value="<?= isset($titre) ? $titre : $cour['titre']; ?>">
-            </p>
-            <p>
-                <label for="dateDebut">Date de Début : </label>
-                <input type="datetime" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['dateDebut']; ?>">
-                
-                
-            </p>
-            <p>
-                <label for="dateFin">Date de fin : </label>
-                <input type="datetime" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['dateFin']; ?>">
-                
-                
-                
-            </p>
-            
-            <p>
-                <label>Classe associée à ce cours</label>
-                <select name="idClasse">
-                    <?php foreach($classes as $classe) : ?>
-                    <option <?= ($classe['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
+        <form id="form-inscription" method="POST" action="modifierCour.php">
+            <div class="form-inscription-one">
+                    <input type="text" name="titre" id="titre" value="<?= isset($titre) ? $titre : $cour['titre']; ?>"autofocus>
 
-                    </option>
-                    <?php endforeach; ?>  
-                </select>
-            </p>
-            <p>
-                <label>Etat de ce cours</label>
-                <select name="etat">
-                    <option value="ouvert">ouvert</option>  
-                    <option value="ferme">ferme</option>
-                </select>
-            </p>
-            <input type="hidden" name="idCours" value="<?= isset($idCour) ? $idCour : $cour['idCours']; ?>" />
-            <button class="button button-info" type="submit">Modifier</button> 
+                    <input type="datetime" name="dateDebut" id="dateDebut" value="<?= isset($dateDebut) ? $dateDebut : $cour['dateDebut']; ?>">  
 
-            
+                    <input type="datetime" name="dateFin" id="dateFin" value="<?= isset($dateFin) ? $dateFin : $cour['dateFin']; ?>">  
+
+            </div>
+            <div class="form-inscription-two">
+                    <select name="idClasse">
+                        <?php foreach($classes as $classe) : ?>
+                        <option <?= ($classe['idClasse'] == $classe['idClasse'] ? 'selected' : ''); ?> value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?>
+                        </option>
+                        <?php endforeach; ?>  
+                    </select>
+
+                    <select name="etat">
+                        <option value="ouvert">ouvert</option>  
+                        <option value="ferme">ferme</option>
+                    </select>
+
+                <input type="hidden" name="idCours" value="<?= isset($idCour) ? $idCour : $cour['idCours']; ?>" />
+                <button class="button button-info" type="submit">Modifier</button> 
+            </div>
         </form>
     </section>    
 
