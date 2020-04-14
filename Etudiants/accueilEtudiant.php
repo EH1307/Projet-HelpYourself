@@ -16,10 +16,17 @@ $query = $pdo->query(
 $query ->execute();
 $cours = $query->fetchAll();
 
+// classes
 $query = $pdo->query(
     'SELECT idClasse, nom FROM classes'
 );
-$classes = $query->fetchAll();
+$result = $query->fetchAll();
+
+$classes = array();
+for($j=0; $j<count($result); $j++){
+    $classes[$result[$j]['idClasse']] = $result[$j]['nom'];
+}
+
 
 // Affichage
 $PAGE = [
