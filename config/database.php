@@ -1,8 +1,8 @@
 <?php
 
-$HOST_URL = "http://localhost/Projet-HelpYourself/";
+define("HOST_URL","http://localhost/Projet-HelpYourself/");
 
-loadEnv($HOST_URL . 'config/.env');
+loadEnv(HOST_URL . 'config/.env');
 
 
 // Configuration des identifiants de la base de donnée
@@ -47,4 +47,12 @@ function loadEnv($filename) {
     foreach ($lines as $line) {
         putenv(trim($line));
     }
+}
+
+function onlyAccessableBy($role){
+	session_start();
+	if($_SESSION['role'] != $role){
+		header('Location:'.HOST_URL.'index.php');
+    exit();
+	}
 }
