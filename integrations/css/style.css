@@ -91,10 +91,11 @@
 	text-transform: uppercase;
   }
   .topnav > #login {
-	  border: 1px solid red;  
+	  border: 1px solid #2C314E;
+	  color: #2C314E  
   }
   .topnav > #login:hover{
-	 background-color: red;
+	 background-color:#2C314E;
 	 color: white;
 }
  
