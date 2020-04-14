@@ -1,5 +1,9 @@
 <?php
-loadEnv('../config/.env');
+
+$HOST_URL = "http://localhost/Projet-HelpYourself/";
+
+loadEnv($HOST_URL . 'config/.env');
+
 
 // Configuration des identifiants de la base de donnée
 define('DATABASE_HOST', getenv('DATABASE_HOST'));

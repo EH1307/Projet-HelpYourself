@@ -6,7 +6,7 @@ include '../config/database.php';
 // Configuration de la page
 $PAGE = [
     'title' => 'Inscription',
-    'template' => '../Accueil/inscription.phtml'
+    'template' => 'inscription.phtml'
 ];
 
 // Exemples de hachage d'un mot de passe avec l'algorithme "SHA256"
