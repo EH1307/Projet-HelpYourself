@@ -21,6 +21,19 @@ if ($_POST) {
         session_start();
         $_SESSION['role'] = $user['role'];
         $_SESSION['prenom'] = $user['prenom'];
+
+        switch($user['role']){
+            case "administrateur":
+                header('Location: ../Administrateur/accueilAdministrateur.php');
+                exit();
+            case "formateur":
+                header('Location: ../Formateurs/accueilFormateurs.php');
+                exit();
+            default:
+                header('Location: ../Etudiants/accueilEtudiant.php');
+                exit();
+            break;
+        }
     }else{
         header('Location: connexion.php?error=1');
         exit();
