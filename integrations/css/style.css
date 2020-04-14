@@ -291,7 +291,7 @@ header nav {
 
 select {
 	width: 200px;
-	padding: 2px 10px;
+	padding: 5px 10px;
 	margin-top: 2px;
 	font-size: small;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -828,11 +828,12 @@ select {
 #form-connexion input{
 	width: 250px;
 	text-align: center;
-	padding: 2px;
+	padding: 5px;
 	margin: 5px;
 }
 #form-connexion button {
 	margin-top: 10px;
+	padding: 5px;
 }
 
 .form-inscription-one {
@@ -840,7 +841,7 @@ select {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	margin: -50px 0 0 -150px;
+	margin: -40px 0 0 -150px;
 }
 .form-inscription p {
 	margin: 3px;
@@ -849,6 +850,7 @@ select {
 .form-inscription-one input{
 	width: 250px;
 	margin: 5px;
+	padding: 5px;
 	text-align: center;
 	
 }
@@ -857,20 +859,21 @@ select {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	margin: -96px 0 0 405px;
+	margin: -125px 0 0 405px;
 }
 
 .form-inscription-two input{
 	width: 250px;
 	text-align: center;
-	padding: 1px;
+	padding: 5px;
 	margin: 5px;
 }
+
 
 #form-inscription button {
 	margin-top: -114px;
 	text-align: center;
-	padding: 1px;
+	padding: 5px;
 	margin-top: 10px;
 }
 .form-ajout-classe {
@@ -882,6 +885,7 @@ select {
 .form-ajout-classe input {
 	text-align: center;
 	width: 250px;
+	padding: 5px;
 }
 .form-ajout-classe button {
 	padding: 3px;
