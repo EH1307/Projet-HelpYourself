@@ -11,6 +11,6 @@ $PAGE = [
     'template' => '../Administrateur/accueilAdministrateur.phtml'
 ];
 
-$navigation = "utilisateur";
+$navigation = "accueil";
 
 include '../integrations/MASTER.phtml';
