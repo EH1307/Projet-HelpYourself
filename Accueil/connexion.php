@@ -15,10 +15,22 @@ if ($_POST) {
     $query->execute();
     $user = $query->fetch();
 
-    print_r($user);
-    exit();
+    if($query->rowCount() == 1){
+        
+        // utilisateur connecté
+        session_start();
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['prenom'] = $user['prenom'];
+    }else{
+        header('Location: connexion.php?error=1');
+        exit();
+    }
+    
 }
 
+if(isset($_GET['error'])){
+    $ERRORS[] = "Identifiants invalides !";
+}
 
 // Affichage
 $PAGE = [
