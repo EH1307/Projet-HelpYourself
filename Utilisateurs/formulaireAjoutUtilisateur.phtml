@@ -27,7 +27,7 @@
                 
                     <input type="email" name="email" id="email" placeholder="Taper l'email" value="<?= isset($email) ? $email : ''; ?>">
                 
-                    <input type="password" name="enterpassword" id="enterpassword" placeholder="taper le mot de passe" value="<?= isset($enterpassword) ? $enterpassword : ''; ?>">
+                    <input type="password" name="motDePasse" id="motDePasse" placeholder="taper le mot de passe" value="<?= isset($motDePasse) ? $motDePasse : ''; ?>">
                 
             </div>
             <div class="form-inscription-two">
@@ -38,7 +38,6 @@
                 </select>
 
                 <select name="class">
-                    <option>N/A</option>
                 <?php foreach($classes as $classe) : ?>
                         <option value="<?=$classe['idClasse'];?>"><?= $classe['nom']; ?></option>
                     <?php endforeach; ?>

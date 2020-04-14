@@ -3,6 +3,8 @@
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
 include '../config/database.php';
 
+onlyAccessableBy('administrateur');
+
 // Configuration de la page
 $PAGE = [
     'title' => 'Ajouter un nouvel Utilisateur',
@@ -25,7 +27,7 @@ if ($_POST) {
     $name            = $_POST['name'];
     $firstname       = $_POST['firstname'];
     $email           = $_POST['email'];
-    $enterpassword   = $_POST['enterpassword'];
+    $motDePasse      = $_POST['motDePasse'];
     $role            = $_POST['role'];
     $idClasse        = $_POST['class'];
 
@@ -46,7 +48,7 @@ if ($_POST) {
     if (empty($email)) {
         $ERRORS[] = 'Le champs "email" doit être rempli';
     }
-    if (empty($enterpassword)) {
+    if (empty($motDePasse)) {
         $ERRORS[] = 'Le champs "mot de passe" doit être rempli';
     }
     if (empty($role)) {
@@ -84,7 +86,7 @@ if ($_POST) {
     }
 
     // 5. Hachage du mot de passe avant l'insertion
-    $hashPassword = hash('sha256', $enterpassword);
+    $hashPassword = hash('sha256', $motDePasse);
 
 
     // Insertion en base de données des informations

@@ -32,7 +32,7 @@
                     <td><?= $cour['titre']; ?></td>
                     <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateDebut'])); ?></td>
                     <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateFin'])); ?></td>
-                    <td><?= $cour['idClasse']; ?></td>
+                    <td><?= $classes[$cour['idClasse']]; ?></td>
                     <td><?= $cour['etat']; ?></td>
                     
                     <td>

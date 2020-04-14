@@ -33,7 +33,7 @@
                 <td><?= $utilisateur['prenom']; ?></td>
                 <td><?= $utilisateur['email']; ?></td>
                 <td><?= $utilisateur['role']; ?></td>
-                <td><?= $utilisateur['idClasse']; ?></td>
+                <td><?= $classes[$utilisateur['idClasse']]; ?></td>
                 <td>
                     <div class="user_list_btn">
                     <a class="button button-info" href="formulaireUtilisateur.php?id=<?= $utilisateur['idUtilisateur']; ?>">Modifier</a>

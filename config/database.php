@@ -1,6 +1,6 @@
 <?php
 
-define("HOST_URL","http://localhost/Projet-HelpYourself/");
+define("HOST_URL","http://localhost:8888/Projet-HelpYourself/");
 
 loadEnv(HOST_URL . 'config/.env');
 

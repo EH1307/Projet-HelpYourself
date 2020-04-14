@@ -30,7 +30,7 @@ if ($_POST) {
     $name            = $_POST['name'];
     $firstname       = $_POST['firstname'];
     $email           = $_POST['email'];
-    $enterpassword   = $_POST['enterpassword'];
+    $motDePasse      = $_POST['motDePasse'];
     $confirmpassword = $_POST['confirmpassword'];
 
     // ============================
@@ -48,7 +48,7 @@ if ($_POST) {
     if (empty($email)) {
         $ERRORS[] = 'Le champs "email" doit être rempli';
     }
-    if (empty($enterpassword)) {
+    if (empty($motDePasse)) {
         $ERRORS[] = 'Le champs "mot de passe" doit être rempli';
     }
 
@@ -82,14 +82,14 @@ if ($_POST) {
     }
 
     // 4. Vérification si les mots de passe correspondent
-    if ($enterpassword !== $confirmpassword) {
+    if ($motDePasse !== $confirmpassword) {
         $ERRORS[] = "Les mots de passes ne correspondent pas !";
         include('integrations/MASTER.phtml');
         return; // Stoppe l'exécution du script ici !
     }
 
     // 5. Hachage du mot de passe avant l'insertion
-    $hashPassword = hash('sha256', $enterpassword);
+    $hashPassword = hash('sha256', $motDePasse);
 
     // Insertion en base de données des informations
     $query = $pdo->prepare(
