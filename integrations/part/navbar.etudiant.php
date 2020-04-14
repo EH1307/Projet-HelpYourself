@@ -6,7 +6,7 @@
                     <li>
                     <div class="topnav">
                         
-                        <a href="../Accueil/connexion.php" id="login">Déconnexion
+                        <a href="../Accueil/deconnexion.php" id="login">Déconnexion
                             <i class="fas fa-chalkboard-teacher"></i></a>
                     </div> 
                         
