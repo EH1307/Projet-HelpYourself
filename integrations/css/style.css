@@ -167,6 +167,13 @@ header nav {
 	display: flex;
 	align-items: center;
 }
+.name-user {
+	display: flex;
+	align-items: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 15px;
+	color: #2C314E;
+}
 
 #top-section-header-and-title {
 	position: fixed;
