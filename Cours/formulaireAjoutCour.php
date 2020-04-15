@@ -18,6 +18,11 @@ $query = $pdo->query(
 
 $classes = $query->fetchAll();
 
+$query = $pdo->query(
+    "SELECT * FROM utilisateurs WHERE role = 'formateur'"
+);
+
+$utilisateurs = $query->fetchAll();
 
 /*
     Si le formulaire de cette page a été "submitted",
@@ -28,7 +33,8 @@ if ($_POST) {
     $dateDebut      = date("Y-m-d H:i:s",strtotime($_POST['dateDebut']));
     $dateFin        = date("Y-m-d H:i:s",strtotime($_POST['dateFin']));
     $idClasse       = $_POST['idClasse'];
-    $etat          = $_POST['etat'];
+    $idUtilisateurs = $_POST['idUtilisateurs'];
+    $etat           = $_POST['etat'];
     
 
     // ============================
@@ -67,6 +73,7 @@ if ($_POST) {
             dateDebut,
             dateFin,
             idClasse,
+            idUtilisateurs,
             etat
             
         ) VALUES (
@@ -74,6 +81,7 @@ if ($_POST) {
             :dateDebut,
             :dateFin,
             :idClasse,
+            :idUtilisateurs,
             :etat
         )"
     ); 
@@ -83,6 +91,7 @@ if ($_POST) {
     $query->bindParam(':dateDebut', $dateDebut, PDO::PARAM_STR);
     $query->bindParam(':dateFin', $dateFin, PDO::PARAM_STR);
     $query->bindParam(':idClasse', $idClasse, PDO::PARAM_INT);
+    $query->bindParam(':idUtilisateurs', $idUtilisateurs, PDO::PARAM_INT);
     $query->bindParam(':etat', $etat, PDO::PARAM_STR);
     
 

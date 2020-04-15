@@ -19,6 +19,18 @@ $query = $pdo->query(
 );
 $classes = $query->fetchAll();
 
+// utilisateurs
+
+$query = $pdo->query(
+    'SELECT * FROM utilisateurs'
+);
+$result = $query->fetchAll();
+
+$utilisateurs = array();
+for($i=0; $i<count($result); $i++){
+    $utilisateurs[$result[$i]['idUtilisateur']] = $result[$i]['nom']. ' '.$result[$i]['prenom'];
+}
+
 // classes
 $query = $pdo->query(
     'SELECT idClasse, nom FROM classes'

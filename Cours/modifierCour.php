@@ -19,6 +19,7 @@ $titre          = $_POST['titre'];
 $dateDebut      = date("Y-m-d H:i:s",strtotime($_POST['dateDebut']));
 $dateFin        = date("Y-m-d H:i:s",strtotime($_POST['dateFin']));
 $idClasse       = $_POST['idClasse'];
+$idUtilisateurs = $_POST['idUtilisateurs'];
 $etat           = $_POST['etat'];
 
 
@@ -26,7 +27,7 @@ $etat           = $_POST['etat'];
 // Récupération des infos des cours
 $query = $pdo->prepare(
     'UPDATE cours
-    SET   titre = :titre , dateDebut = :dateDebut, dateFin = :dateFin , idClasse = :idClasse , etat = :etat
+    SET   titre = :titre , dateDebut = :dateDebut, dateFin = :dateFin , idClasse = :idClasse ,idUtilisateurs = :idUtilisateurs , etat = :etat
     WHERE idCours = :idCours'
 );
 $query->bindParam(':idCours', $idCour, PDO::PARAM_INT);
@@ -34,6 +35,7 @@ $query->bindParam(':titre', $titre, PDO::PARAM_STR);
 $query->bindParam(':dateDebut', $dateDebut, PDO::PARAM_STR);
 $query->bindParam(':dateFin', $dateFin, PDO::PARAM_STR);
 $query->bindParam(':idClasse', $idClasse, PDO::PARAM_INT);
+$query->bindParam(':idUtilisateurs', $idUtilisateurs, PDO::PARAM_INT);
 $query->bindParam(':etat', $etat, PDO::PARAM_STR);
 
 

@@ -34,6 +34,13 @@
                         </option>
                         <?php endforeach; ?>  
                     </select>
+                    
+                    <select name="idUtilisateurs">
+                        <?php foreach($utilisateurs as $utilisateur) : ?>
+                        <option value="<?=$utilisateur['idUtilisateur'];?>"><?= $utilisateur['nom']. ' '. $utilisateur['prenom']; ?>
+                        </option>
+                        <?php endforeach; ?>  
+                    </select>
 
                     <select name="etat">
                         <option value="ouvert">ouvert</option>  

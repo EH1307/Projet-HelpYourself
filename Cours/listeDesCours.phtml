@@ -23,6 +23,7 @@
                     <th>Date de Début</th>
                     <th>Date de Fin</th>
                     <th>Classe</th>
+                    <th>Formateur</th>
                     <th>Etat</th>
                     <th>Actions</th>
                     </tr>
@@ -33,6 +34,7 @@
                     <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateDebut'])); ?></td>
                     <td><?= strftime("%d %b %Y à %H:%M",strtotime($cour['dateFin'])); ?></td>
                     <td><?= $classes[$cour['idClasse']]; ?></td>
+                    <td><?= $utilisateurs[$cour['idUtilisateurs']]; ?></td>
                     <td><?= $cour['etat']; ?></td>
                     
                     <td>

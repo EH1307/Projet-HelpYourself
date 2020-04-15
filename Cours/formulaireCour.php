@@ -26,6 +26,13 @@ $query = $pdo->query(
 );
 $classes = $query->fetchAll();
 
+// récuperation des roles formateurs
+$query = $pdo->query(
+    "SELECT * FROM utilisateurs WHERE role = 'formateur'"
+);
+
+$utilisateurs = $query->fetchAll();
+
 // Affichage
 $PAGE = [
     'title' => 'Modifier un cour',
