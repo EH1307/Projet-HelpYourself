@@ -3,6 +3,8 @@
 // Inclusion de la configuration de la base de données afin que ce fichier puisse faire les appels en base correctement
 include '../config/database.php';
 
+onlyAccessableBy('administrateur');
+
 // Configuration de la page
 $PAGE = [
     'title' => 'Ajouter un Cour',
