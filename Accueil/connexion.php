@@ -21,8 +21,9 @@ if ($_POST) {
         session_start();
         $_SESSION['role'] = $user['role'];
         $_SESSION['prenom'] = $user['prenom'];
+        $_SESSION['nom'] = $user['nom'];
         $_SESSION['idUtilisateur'] = $user['idUtilisateur'];
-
+        $_SESSION['idClasse'] = $user['idClasse'];
 
         switch($user['role']){
             case "administrateur":

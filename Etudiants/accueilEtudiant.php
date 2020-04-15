@@ -10,9 +10,10 @@ onlyAccessableBy('etudiant');
     dans la base de données
 */
 
-$query = $pdo->query(
-    'SELECT * FROM cours'
+$query = $pdo->prepare(
+    'SELECT * FROM cours WHERE idClasse = :idClasse'
 );
+$query->bindParam(':idClasse', $_SESSION['idClasse'], PDO::PARAM_INT);
 $query ->execute();
 $cours = $query->fetchAll();
 
