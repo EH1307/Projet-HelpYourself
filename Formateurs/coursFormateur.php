@@ -10,13 +10,14 @@ onlyAccessableBy('formateur');
     dans la base de données
 */
 
-$query = $pdo->query(
-    'SELECT * FROM cours'
+$query = $pdo->prepare(
+    'SELECT * FROM cours WHERE idUtilisateurs = :idUtilisateur'
 );
+$query->bindParam(':idUtilisateur', $_SESSION['idUtilisateur'], PDO::PARAM_INT);
 $query ->execute();
 $cours = $query->fetchAll();
 
-$query = $pdo->query(
+$query = $pdo->query( 
     'SELECT idClasse, nom FROM classes'
 );
 $classes = $query->fetchAll();
